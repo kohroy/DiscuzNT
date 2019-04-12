@@ -1,6 +1,4 @@
-﻿using System;
-using System.Text;
-
+﻿
 using Discuz.Entity;
 using Discuz.Config;
 using Discuz.Common;

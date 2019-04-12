@@ -2,13 +2,11 @@
 using System.Text;
 using System.Collections;
 using System.Net.Sockets;
-using System.Web.Mail;
-using System.Net;
 
 namespace Discuz.Plugin.Mail
 {
-	
-	#region Discuz!NT邮件发送程序
+
+    #region Discuz!NT邮件发送程序
 
     /// <summary>
     /// Discuz!NT邮件发送程序

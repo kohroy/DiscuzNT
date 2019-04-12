@@ -1,13 +1,12 @@
-using System;
 using System.Text;
 using Discuz.Entity;
 
 namespace Discuz.Space.Entities
 {
-	/// <summary>
-	/// EditbarTemplate 的摘要说明。
-	/// </summary>
-	public class EditbarTemplate : ISpaceTemplate
+    /// <summary>
+    /// EditbarTemplate 的摘要说明。
+    /// </summary>
+    public class EditbarTemplate : ISpaceTemplate
 	{
 	    public static readonly ISpaceTemplate Instance = new EditbarTemplate();
         private EditbarTemplate()

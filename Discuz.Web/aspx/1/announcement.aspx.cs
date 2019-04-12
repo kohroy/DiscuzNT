@@ -1,16 +1,14 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Web.UI;
 
 namespace Discuz.Web
 {
-	/// <summary>
-	/// 公告列表
-	/// </summary>
-	public class announcement : PageBase
+    /// <summary>
+    /// 公告列表
+    /// </summary>
+    public class announcement : PageBase
     {
         #region 变量声明
         /// <summary>

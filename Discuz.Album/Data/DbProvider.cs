@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Discuz.Album.Data
+﻿namespace Discuz.Album.Data
 {
     public class DbProvider
     {

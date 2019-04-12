@@ -1,16 +1,13 @@
 using Discuz.Common;
-using Discuz.Forum;
- 
-using Discuz.Space.Utilities;
 using Discuz.Config;
 using Discuz.Space.Provider;
 
 namespace Discuz.Space.Modules
 {
-	/// <summary>
-	/// LinkModule 的摘要说明。
-	/// </summary>
-	public class LinkModule : BlogModule
+    /// <summary>
+    /// LinkModule 的摘要说明。
+    /// </summary>
+    public class LinkModule : BlogModule
 	{
 		
 		private string filename = BaseConfigs.GetForumPath+"/space/Modules/builtin/blog/defaultmodule.config";

@@ -7,19 +7,17 @@ using System.Web.Services.Description;
 using System.Web.Services.Protocols;
 using System.Xml.Serialization;
 using System;
-using System.Reflection;
 using System.Xml;
 using Discuz.Common;
-using Discuz.Forum;
 using Discuz.Config;
 
 namespace Discuz.Forum
 {
 
-	/// <summary>
-	/// 此类为引用webservice时系统自动生成
-	/// </summary>
-	[DebuggerStepThrough()]
+    /// <summary>
+    /// 此类为引用webservice时系统自动生成
+    /// </summary>
+    [DebuggerStepThrough()]
 	[DesignerCategory("code")]
 	[WebServiceBinding(Name="CatchSoftInfoSoap", Namespace="http://tempuri.org/")]
 	public class CatchSoftInfo : SoapHttpClientProtocol

@@ -2,10 +2,7 @@
 using System.IO;
 using System.Text;
 using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Common;
-using Discuz.Forum;
 
 namespace Discuz.Web.Admin
 {

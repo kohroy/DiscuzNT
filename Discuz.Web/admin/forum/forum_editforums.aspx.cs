@@ -4,13 +4,10 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Collections;
-
-using Discuz.Cache;
 using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Config;
 using Discuz.Entity;
-using System.IO;
 using System.Web;
 
 namespace Discuz.Web.Admin

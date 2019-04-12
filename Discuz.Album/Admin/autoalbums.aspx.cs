@@ -1,15 +1,7 @@
 ﻿using System;
-using System.Data;
 using System.Xml;
-using System.Web.UI.WebControls;
-using System.Web.UI;
-
-using Discuz.Control;
-using Discuz.Forum;
 using Discuz.Config;
-using Discuz.Data;
 using Discuz.Aggregation;
-using Discuz.Entity;
 using Discuz.Common;
 using Discuz.Common.Xml;
 using Discuz.Web.Admin;

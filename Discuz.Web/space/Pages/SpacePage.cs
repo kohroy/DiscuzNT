@@ -8,16 +8,15 @@ using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Space.Entities;
 using Discuz.Space.Provider;
-using Discuz.Space.Utilities;
 using Discuz.Config;
 using Discuz.Entity;
 
 namespace Discuz.Space.Pages
 {
-	/// <summary>
-	/// 空间页面
-	/// </summary>
-	public class SpacePage : Page
+    /// <summary>
+    /// 空间页面
+    /// </summary>
+    public class SpacePage : Page
 	{
 		private bool spaceEditable = false;
 		private bool isLogged = false;

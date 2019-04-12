@@ -1,13 +1,12 @@
-using System;
 using System.Collections;
 using Discuz.Space.Utilities;
 
 namespace Discuz.Space.Provider
 {
-	/// <summary>
-	/// SkinProvider 的摘要说明。
-	/// </summary>
-	public class StaticFileProvider
+    /// <summary>
+    /// SkinProvider 的摘要说明。
+    /// </summary>
+    public class StaticFileProvider
 	{
 		private StaticFileProvider()
 		{}

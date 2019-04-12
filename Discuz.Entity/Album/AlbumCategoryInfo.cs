@@ -1,11 +1,9 @@
-using System;
-
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// AlbumCategoryInfo 的摘要说明。
-	/// </summary>
-	public class AlbumCategoryInfo
+    /// <summary>
+    /// AlbumCategoryInfo 的摘要说明。
+    /// </summary>
+    public class AlbumCategoryInfo
 	{
 		public AlbumCategoryInfo()
 		{

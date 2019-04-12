@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Text;
 using System.Xml;
-
-using Discuz.Common.Xml;
 using Discuz.Entity;
 
 namespace Discuz.Aggregation

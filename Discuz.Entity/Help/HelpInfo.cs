@@ -1,11 +1,8 @@
-using System;
-using System.Text;
-
 namespace Discuz.Entity
 {
-   
 
-   public class HelpInfo
+
+    public class HelpInfo
    {
        private int _id;
        private string _title;

@@ -1,13 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 10.00
-# Visual Studio 2008
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2CF73B65-072A-4742-B3CA-6ECA4D786792}"
-	ProjectSection(SolutionItems) = preProject
-		Discuz_vs08.vsmdi = Discuz_vs08.vsmdi
-		Discuz_vs081.vsmdi = Discuz_vs081.vsmdi
-		LocalTestRun.testrunconfig = LocalTestRun.testrunconfig
-	EndProjectSection
-EndProject
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.572
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discuz.Forum", "Discuz.Forum\Discuz.Forum.csproj", "{A44D0E57-6EF1-4DF0-A73F-A7BA86B6C495}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discuz.Common", "Discuz.Common\Discuz.Common.csproj", "{6A0EC5BD-742F-431D-A9EC-5C0342B2A76A}"
@@ -53,6 +48,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discuz.Space.Modules", "Discuz.Web\space\modules\builtin\Discuz.Space.Modules.csproj", "{777E8738-BFB3-484E-B4D0-658D02783F70}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Discuz.Space.Modules.Album", "Discuz.Web\space\modules\builtin\album\Discuz.Space.Modules.Album.csproj", "{D0F9A87F-758A-44DE-948A-FF087D9D2E48}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Plugins", "Plugins", "{1C5C360A-5B1A-4AF6-BDD7-127B09AB4A4A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{762CDFA4-8FA2-4441-916C-8391D1382E2C}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -487,5 +489,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{995785E4-E415-4378-A6BC-887A1E619F23} = {1C5C360A-5B1A-4AF6-BDD7-127B09AB4A4A}
+		{0ADC6ABA-D7B7-4C6A-83C1-ED9C84BC9A06} = {1C5C360A-5B1A-4AF6-BDD7-127B09AB4A4A}
+		{E76A78B3-1642-420D-8C4F-C18DF700CF71} = {1C5C360A-5B1A-4AF6-BDD7-127B09AB4A4A}
+		{B5767D89-F853-4CE6-9BE6-7E268BD87D57} = {1C5C360A-5B1A-4AF6-BDD7-127B09AB4A4A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A6119E6F-5989-4B70-9262-1181BD6891FF}
 	EndGlobalSection
 EndGlobal

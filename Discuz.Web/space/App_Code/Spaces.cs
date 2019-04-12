@@ -1,27 +1,20 @@
 ﻿using System;
 using System.Data;
-using System.Text;
-using System.IO;
-using System.Drawing;
 
 using Discuz.Common;
-using Discuz.Forum;
 using Discuz.Space.Entities;
 using Discuz.Space.Provider;
-using Discuz.Space.Utilities;
 using Discuz.Entity;
 using Discuz.Config;
-using Discuz.Data;
 using Discuz.Common.Generic;
-using System.Collections;
 using Discuz.Space.Data;
 
 namespace Discuz.Space
 {
-	/// <summary>
-	/// Spaces 的摘要说明。
-	/// </summary>
-	public class Spaces
+    /// <summary>
+    /// Spaces 的摘要说明。
+    /// </summary>
+    public class Spaces
 	{
 		public Spaces()
 		{}

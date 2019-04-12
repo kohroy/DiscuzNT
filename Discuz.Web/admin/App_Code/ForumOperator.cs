@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Discuz.Cache;
+﻿using Discuz.Cache;
 
 namespace Discuz.Web.Admin
 {

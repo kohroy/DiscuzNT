@@ -1,11 +1,9 @@
-using System;
-
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// IndexPageForumInfo 的摘要说明。
-	/// </summary>
-	public class IndexPageForumInfo : ForumInfo
+    /// <summary>
+    /// IndexPageForumInfo 的摘要说明。
+    /// </summary>
+    public class IndexPageForumInfo : ForumInfo
 	{
         private string _havenew;
         /// <summary>

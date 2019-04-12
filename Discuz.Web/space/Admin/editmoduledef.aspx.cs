@@ -4,7 +4,6 @@ using System.Xml;
 using Discuz.Common;
 using Discuz.Config;
 using Discuz.Entity;
-using Discuz.Space;
 using Discuz.Space.Provider;
 using Discuz.Cache;
 using Discuz.Web.Admin;

@@ -2,14 +2,8 @@ using System;
 using System.Data;
 using System.Web.UI.WebControls;
 using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Common;
 using Discuz.Forum;
-using Button = Discuz.Control.Button;
-using DataGrid = Discuz.Control.DataGrid;
-using TextBox = Discuz.Control.TextBox;
-using Discuz.Config;
 
 namespace Discuz.Web.Admin
 {

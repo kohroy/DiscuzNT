@@ -1,12 +1,8 @@
 using System;
 using System.Data;
-using System.Web.UI;
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Config;
 using Discuz.Entity;
 
 namespace Discuz.Web.Admin
@@ -14,7 +10,7 @@ namespace Discuz.Web.Admin
     /// <summary>
     /// 论坛版块批量设置
     /// </summary>
-     
+
     public partial class forumbatchset : AdminPage
     {
         public ForumInfo forumInfo = new ForumInfo();

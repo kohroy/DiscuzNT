@@ -1,21 +1,16 @@
-using System;
 using System.IO;
 using System.Net;
-using System.Text;
-using System.Web;
 using System.Xml;
 using Discuz.Common;
-using Discuz.Forum;
-using Discuz.Space.Entities;
 using Discuz.Space.Provider;
 using Discuz.Entity;
 
 namespace Discuz.Space.Utilities
 {
-	/// <summary>
-	/// ModuleValidate 的摘要说明。
-	/// </summary>
-	public class ModuleValidate
+    /// <summary>
+    /// ModuleValidate 的摘要说明。
+    /// </summary>
+    public class ModuleValidate
 	{
 		public ModuleValidate()
 		{

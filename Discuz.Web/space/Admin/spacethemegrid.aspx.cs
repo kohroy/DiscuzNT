@@ -7,10 +7,7 @@ using System.Web.UI;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Button = Discuz.Control.Button;
-using DataGrid = Discuz.Control.DataGrid;
 using Discuz.Config;
-using Discuz.Data;
 using Discuz.Cache;
 using Discuz.Web.Admin;
 using Discuz.Space.Data;
@@ -18,9 +15,9 @@ using Discuz.Space.Data;
 
 namespace Discuz.Space.Admin
 {
-	/// <summary>
-	/// smilegrid 的摘要说明.
-	/// </summary>
+    /// <summary>
+    /// smilegrid 的摘要说明.
+    /// </summary>
 
 #if NET1
     public class SpaceThemeGrid : AdminPage

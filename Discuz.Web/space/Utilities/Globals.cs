@@ -4,17 +4,15 @@ using System.Net;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
-using System.Web.UI.HtmlControls;
-using System.Drawing;
 using Discuz.Forum;
 using Discuz.Config;
 
 namespace Discuz.Space.Utilities
 {
-	/// <summary>
-	/// Globals 的摘要说明。
-	/// </summary>
-	public class Globals
+    /// <summary>
+    /// Globals 的摘要说明。
+    /// </summary>
+    public class Globals
 	{
 
         private static Regex regexGB2312 = new Regex("([\u4e00-\u9fa5]+)");

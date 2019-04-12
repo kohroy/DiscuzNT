@@ -1,9 +1,5 @@
 using System;
 using System.Data;
-using System.Data.Common;
-
-using Discuz.Config;
-using Discuz.Entity;
 
 namespace Discuz.Forum
 {

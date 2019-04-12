@@ -1,8 +1,4 @@
-﻿using System;
-
-using Discuz.Common;
-
-namespace Discuz.Config
+﻿namespace Discuz.Config
 {
     /// <summary>
     /// 负载均衡配置信息类文件

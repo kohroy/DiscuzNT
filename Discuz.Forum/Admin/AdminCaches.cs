@@ -1,8 +1,5 @@
-using System;
-using System.Data;
 
 using Discuz.Common;
-using Discuz.Data;
 using Discuz.Config.Provider;
 using Discuz.Config;
 using Discuz.Entity;

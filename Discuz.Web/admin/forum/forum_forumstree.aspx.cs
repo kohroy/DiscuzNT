@@ -1,11 +1,9 @@
 using System;
 using System.Data;
-using System.Web.UI.WebControls;
 using System.Web.UI;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Config;
 using Discuz.Plugin.Mall;
 
 namespace Discuz.Web.Admin
@@ -13,7 +11,7 @@ namespace Discuz.Web.Admin
     /// <summary>
     /// 论坛版块托动
     /// </summary>
-    
+
     public partial class forumstree : AdminPage
     {
         #region 图标信息变量声明

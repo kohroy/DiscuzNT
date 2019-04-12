@@ -1,21 +1,17 @@
 ﻿using System;
 using System.IO;
 using System.Data;
-using System.Web.UI.WebControls;
 using System.Web.UI;
-using System.Collections;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Config;
-using Discuz.Entity;
 
 namespace Discuz.Web.Admin
 {
     /// <summary>
     /// 模板列表
     /// </summary>
-    
+
     public partial class templatesgrid : AdminPage
     {
         public string path = null;

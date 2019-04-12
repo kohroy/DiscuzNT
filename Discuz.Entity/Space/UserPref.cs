@@ -1,12 +1,9 @@
-using System;
-using Discuz.Common;
-
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// 用户使用偏好
-	/// </summary>
-	public class UserPref
+    /// <summary>
+    /// 用户使用偏好
+    /// </summary>
+    public class UserPref
 	{
 		public UserPref()
 		{

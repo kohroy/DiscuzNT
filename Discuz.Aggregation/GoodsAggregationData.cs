@@ -1,8 +1,4 @@
-﻿using System;
-using System.Data;
-using System.Text;
-using System.Xml;
-
+﻿
 using Discuz.Common;
 using Discuz.Entity;
 using Discuz.Plugin.Mall;

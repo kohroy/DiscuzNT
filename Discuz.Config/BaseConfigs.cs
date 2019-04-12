@@ -1,13 +1,11 @@
-﻿using System;
-
-namespace Discuz.Config
+﻿namespace Discuz.Config
 {
 
-	
-	/// <summary>
+
+    /// <summary>
     /// 基本设置类
-	/// </summary>
-	public class BaseConfigs
+    /// </summary>
+    public class BaseConfigs
 	{
 
         private static System.Timers.Timer baseConfigTimer = new System.Timers.Timer(60000);

@@ -4,16 +4,14 @@ using System.Web.UI;
 using System.Web.UI.HtmlControls;
 using System.IO;
 using System.Text;
-
-using Discuz.Forum;
 using Discuz.Config;
 
 namespace Discuz.Space.Manage
 {
-	/// <summary>
-	/// Ajax 的摘要说明。
-	/// </summary>
-	public class ajax : Page
+    /// <summary>
+    /// Ajax 的摘要说明。
+    /// </summary>
+    public class ajax : Page
 	{
 		protected internal GeneralConfigInfo config;
 		protected internal string ascxpath = ""; //用户控件路径值

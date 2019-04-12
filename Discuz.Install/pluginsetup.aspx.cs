@@ -3,18 +3,12 @@ using System.IO;
 using System.Data;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Xml;
 using System.Text;
-using System.Text.RegularExpressions;
-
 
 using Discuz.Common;
 using Discuz.Config;
 using Discuz.Data;
 using Discuz.Forum;
-using Discuz.Config.Provider;
-using Discuz.Cache;
-using Discuz.Plugin;
 
 namespace Discuz.Install
 {
@@ -26,11 +20,11 @@ namespace Discuz.Install
         /// <summary>
         /// 插件安装复选框
         /// </summary>
-        public Discuz.Control.CheckBoxList PlugIn;
+        public Control.CheckBoxList PlugIn;
 
-        public System.Web.UI.WebControls.Panel Panel1;
+        public Panel Panel1;
 
-        public System.Web.UI.WebControls.Panel Panel2;
+        public Panel Panel2;
         /// <summary>
         /// 已安装成功的插件
         /// </summary>

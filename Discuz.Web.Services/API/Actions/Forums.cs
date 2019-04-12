@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using Newtonsoft.Json;
 using Discuz.Entity;
 using Discuz.Common;
 using Discuz.Forum;
 using System.Data;
-using Discuz.Config;
 
 namespace Discuz.Web.Services.API.Actions
 {
@@ -50,7 +48,7 @@ namespace Discuz.Web.Services.API.Actions
             Forum forum;
             try
             {
-                forum = JavaScriptConvert.DeserializeObject<Forum>(GetParam("forum_info").ToString());
+                forum = JsonConvert.DeserializeObject<Forum>(GetParam("forum_info").ToString());
             }
             catch
             {
@@ -127,7 +125,7 @@ namespace Discuz.Web.Services.API.Actions
 
             if (Format == FormatType.JSON)
             {
-                return JavaScriptConvert.SerializeObject(fcr);
+                return JsonConvert.SerializeObject(fcr);
             }
             return SerializationHelper.Serialize(fcr);
         }
@@ -207,7 +205,7 @@ namespace Discuz.Web.Services.API.Actions
 
             if (Format == FormatType.JSON)
             {
-                return JavaScriptConvert.SerializeObject(fgr);
+                return JsonConvert.SerializeObject(fgr);
             }
             return SerializationHelper.Serialize(fgr);
         }
@@ -272,7 +270,7 @@ namespace Discuz.Web.Services.API.Actions
 
             if (Format == FormatType.JSON)
             {
-                return JavaScriptConvert.SerializeObject(fgilr);
+                return JsonConvert.SerializeObject(fgilr);
             }
             return SerializationHelper.Serialize(fgilr);
 

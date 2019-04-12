@@ -1,11 +1,7 @@
 using System;
-using System.Data;
 using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Forum;
 using Discuz.Common;
-using Discuz.Config;
 using Discuz.Entity;
 
 namespace Discuz.Web.Admin
@@ -13,7 +9,7 @@ namespace Discuz.Web.Admin
     /// <summary>
     /// ÂÛÌ³°æ¿éºÏ²¢
     /// </summary>
-    
+
     public partial class forumcombination : AdminPage
     {
         protected void Page_Load(object sender, EventArgs e)

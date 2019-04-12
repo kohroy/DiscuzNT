@@ -1,6 +1,3 @@
-using System;
-using System.Data;
-using System.Data.Common;
 
 using Discuz.Common;
 using Discuz.Config;
@@ -9,11 +6,11 @@ using Discuz.Cache;
 
 namespace Discuz.Forum
 {
-	/// <summary>
-	/// UserFactoryAdmin 的摘要说明。
-	/// 后台用户信息操作管理类
-	/// </summary>
-	public class AdminUsers : Users
+    /// <summary>
+    /// UserFactoryAdmin 的摘要说明。
+    /// 后台用户信息操作管理类
+    /// </summary>
+    public class AdminUsers : Users
 	{
 		/// <summary>
 		/// 更新用户全部信息

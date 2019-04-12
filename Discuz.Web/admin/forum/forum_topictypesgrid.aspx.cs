@@ -6,9 +6,7 @@ using System.Collections;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Config;
 using Discuz.Cache;
-using Discuz.Entity;
 
 namespace Discuz.Web.Admin
 {

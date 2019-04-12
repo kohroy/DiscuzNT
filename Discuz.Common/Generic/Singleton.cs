@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Discuz.Common.Generic
+﻿namespace Discuz.Common.Generic
 {
     /// <summary>
     /// Singleton泛型类

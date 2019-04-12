@@ -2,10 +2,8 @@
 using System.Web;
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Space;
-using Discuz.Space.Entities;
 using Discuz.Space.Pages;
- 
+
 using Discuz.Space.Utilities;
 using Discuz.Entity;
 using Discuz.Config;
@@ -13,10 +11,10 @@ using Discuz.Space.Provider;
 
 namespace Discuz.Space
 {
-	/// <summary>
-	/// 更多模块
-	/// </summary>
-	public class moregadgets : SpaceBasePage 
+    /// <summary>
+    /// 更多模块
+    /// </summary>
+    public class moregadgets : SpaceBasePage 
 	{
 		private SpaceConfigInfo currentUserSpaceConfig = new SpaceConfigInfo();
 		private string templatePath = Utils.GetMapPath(BaseConfigs.GetForumPath + "/space/skins/");

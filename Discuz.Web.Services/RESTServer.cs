@@ -240,7 +240,7 @@ namespace Discuz.Web.Services
             {
                 Response.ContentType = "text/html";
                 error.ArgArrary = error.Args.Args;
-                responseStr = JavaScriptConvert.SerializeObject(error);
+                responseStr = JsonConvert.SerializeObject(error);
             }
             else
             {

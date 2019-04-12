@@ -4,11 +4,9 @@ using System.Text;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Web.UI;
 using Discuz.Entity;
 using Discuz.Config;
 using Discuz.Plugin.Album;
-using System.Web;
 
 namespace Discuz.Web
 {

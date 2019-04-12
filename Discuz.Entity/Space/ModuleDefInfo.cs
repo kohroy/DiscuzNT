@@ -1,11 +1,9 @@
-using System;
-
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// ModuleDefInfo 的摘要说明。
-	/// </summary>
-	public class ModuleDefInfo
+    /// <summary>
+    /// ModuleDefInfo 的摘要说明。
+    /// </summary>
+    public class ModuleDefInfo
 	{
 		public ModuleDefInfo()
 		{

@@ -1,13 +1,6 @@
 using System;
-using System.Web.UI.WebControls;
 using System.Web.UI;
 using Discuz.Common;
-using Discuz.Forum;
-using Button = Discuz.Control.Button;
-using DataGrid = Discuz.Control.DataGrid;
-using Discuz.Config;
-using Discuz.Data;
-using System.Data;
 using Discuz.Web.Admin;
 using Discuz.Space.Data;
 

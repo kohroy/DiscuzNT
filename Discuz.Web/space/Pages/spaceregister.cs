@@ -2,8 +2,6 @@
 using System.Data;
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Space;
-using Discuz.Space.Entities;
 using Discuz.Space.Provider;
 using Discuz.Entity;
 using Discuz.Config;

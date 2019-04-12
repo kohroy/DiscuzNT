@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Discuz.Cache.Data
+﻿namespace Discuz.Cache.Data
 {
     public interface  ICacheAttachFiles
     {

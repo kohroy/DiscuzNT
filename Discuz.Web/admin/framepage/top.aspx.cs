@@ -3,13 +3,11 @@ using System.Web;
 using System.Web.UI;
 using System.Text;
 using System.Threading;
-using System.Xml;
 
 using Discuz.Forum;
 using Discuz.Common;
 using Discuz.Config;
 using Discuz.Entity;
-using Discuz.Common.Xml;
 
 namespace Discuz.Web.Admin
 {

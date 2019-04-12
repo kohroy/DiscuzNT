@@ -3,13 +3,12 @@ using System.Web.UI.WebControls;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Config;
 
 namespace Discuz.Web.Admin
 {
-	/// <summary>
-	/// Discuz!NT代码列表. 
-	/// </summary>
+    /// <summary>
+    /// Discuz!NT代码列表. 
+    /// </summary>
     public partial class bbcodegrid : AdminPage
     {
         protected void Page_Load(object sender, EventArgs e)

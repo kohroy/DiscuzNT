@@ -1,5 +1,3 @@
-using System;
-using System.Text;
 using Discuz.Forum.ScheduledEvents;
 using Discuz.Plugin.Space;
 using Discuz.Plugin.Album;

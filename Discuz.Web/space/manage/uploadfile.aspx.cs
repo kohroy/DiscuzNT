@@ -1,12 +1,11 @@
-using System;
 using Discuz.Common;
 
 namespace Discuz.Space.Manage
 {
-	/// <summary>
-	/// 上传文件页面
-	/// </summary>
-	public class UploadFile : SpaceManageBasePage
+    /// <summary>
+    /// 上传文件页面
+    /// </summary>
+    public class UploadFile : SpaceManageBasePage
 	{
 		public string postid = "0";
 

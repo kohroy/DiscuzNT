@@ -1,9 +1,5 @@
-using System;
-using System.Data;
-using System.Data.Common;
 
 using Discuz.Common;
-using Discuz.Data;
 using Discuz.Config;
 using Discuz.Entity;
 using Discuz.Common.Generic;

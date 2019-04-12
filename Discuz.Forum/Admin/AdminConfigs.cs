@@ -1,12 +1,11 @@
-using Discuz.Forum;
 using Discuz.Config;
 
 namespace Discuz.Forum
 {
-	/// <summary>
-	/// AdminConfigFactory 的摘要说明。
-	/// </summary>
-	public class AdminConfigs : GeneralConfigs
+    /// <summary>
+    /// AdminConfigFactory 的摘要说明。
+    /// </summary>
+    public class AdminConfigs : GeneralConfigs
 	{
         /// <summary>
         /// 获取原始的缺省论坛设置

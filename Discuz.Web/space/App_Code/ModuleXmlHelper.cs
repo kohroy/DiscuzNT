@@ -1,18 +1,16 @@
-using System;
 using System.Collections;
 using System.IO;
 using System.Text;
 using System.Xml;
 using Discuz.Common;
-using Discuz.Space.Entities;
 using Discuz.Entity;
 
 namespace Discuz.Space
 {
-	/// <summary>
-	/// ModuleXmlHelper 的摘要说明。
-	/// </summary>
-	public class ModuleXmlHelper
+    /// <summary>
+    /// ModuleXmlHelper 的摘要说明。
+    /// </summary>
+    public class ModuleXmlHelper
 	{
 		#region 常量
 		private const string SCRIPT_NO_SET_TITLE = "function _DS_SetTitle(title){throw new Error(\"To use this feature, you must add \"+\"<Require feature='settitle'/> to your <ModulePref> tag.\");};";

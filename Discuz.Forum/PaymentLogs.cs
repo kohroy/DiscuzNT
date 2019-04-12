@@ -3,16 +3,15 @@ using System.Data;
 
 using Discuz.Common;
 using Discuz.Data;
-using Discuz.Config;
 using Discuz.Entity;
 using Discuz.Common.Generic;
 
 namespace Discuz.Forum
 {
-	/// <summary>
-	/// 交易日志操作类
-	/// </summary>
-	public class PaymentLogs
+    /// <summary>
+    /// 交易日志操作类
+    /// </summary>
+    public class PaymentLogs
 	{
 		/// <summary>
 		/// 购买主题

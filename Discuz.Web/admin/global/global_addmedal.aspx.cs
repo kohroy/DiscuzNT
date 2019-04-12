@@ -1,18 +1,15 @@
 using System;
 using System.Data;
 using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Config;
 
 namespace Discuz.Web.Admin
 {
     /// <summary>
     /// Ìí¼ÓÑ«ÕÂÐÅÏ¢
     /// </summary>
-    
+
     public partial class addmedal : AdminPage
     {
         protected void Page_Load(object sender, EventArgs e)

@@ -1,9 +1,5 @@
 using System;
 using System.Web.UI;
-using System.Collections;
-
-using Discuz.Control;
-using Discuz.Forum;
 using Discuz.Config;
 using Discuz.Common;
 using System.Net;

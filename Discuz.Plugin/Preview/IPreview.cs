@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Discuz.Entity;
+﻿using Discuz.Entity;
 
 namespace Discuz.Plugin.Preview
 {

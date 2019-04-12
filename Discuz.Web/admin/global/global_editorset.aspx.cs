@@ -1,14 +1,8 @@
 using System;
 using System.Web.UI;
-using System.Data;
-
-using Discuz.Control;
 using Discuz.Forum;
 using Discuz.Config;
 using Discuz.Common;
-using Discuz.Plugin.Space;
-using Discuz.Plugin.Album;
-using Discuz.Plugin.Mall;
 
 namespace Discuz.Web.Admin
 {

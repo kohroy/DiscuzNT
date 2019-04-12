@@ -1,6 +1,3 @@
-using System;
-using System.Data;
-using System.Data.Common;
 
 using Discuz.Common;
 using Discuz.Forum;
@@ -10,10 +7,10 @@ using Discuz.Plugin.Album;
 
 namespace Discuz.Web.UI
 {
-	/// <summary>
-	/// RSS页面类
-	/// </summary>
-	public class RssPage : PageBase
+    /// <summary>
+    /// RSS页面类
+    /// </summary>
+    public class RssPage : PageBase
 	{
 		public RssPage()
 		{

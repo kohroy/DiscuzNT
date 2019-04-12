@@ -1,17 +1,9 @@
 ﻿using System;
 using System.Data;
-using System.Collections.Generic;
 using System.Text;
-using System.IO;
-
-using Discuz.Common.Generic;
-using Discuz.Entity;
 using Discuz.Common;
 using Discuz.Config;
-using Discuz.Forum;
-using System.Drawing;
 using Discuz.Album.Data;
-using Discuz.Cache;
 
 namespace Discuz.Album
 {

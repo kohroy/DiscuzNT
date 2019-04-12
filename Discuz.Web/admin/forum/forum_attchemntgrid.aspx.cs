@@ -6,7 +6,6 @@ using System.Web.UI;
 
 using Discuz.Forum;
 using Discuz.Common;
-using Discuz.Config;
 
 namespace Discuz.Web.Admin
 {

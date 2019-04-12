@@ -1,13 +1,10 @@
-﻿using System;
-using Discuz.Space.Entities;
+﻿using Discuz.Space.Entities;
 using Discuz.Common;
 using Discuz.Space.Provider;
 using Discuz.Config;
 using System.Text;
 using Discuz.Entity;
-using Discuz.Data;
 using Newtonsoft.Json;
-using System.IO;
 using Discuz.Common.Generic;
 using Discuz.Space.Data;
 namespace Discuz.Space.Modules
@@ -156,7 +153,7 @@ namespace Discuz.Space.Modules
         private string ParseTagItem(StringBuilder sbTagItem, SpacePostInfo post)
         {
             string xx = SpaceTags.GetSpacePostTagsCacheFile(post.Postid);
-            object o = JavaScriptConvert.DeserializeObject(xx, typeof(TagInfo[]));
+            object o = JsonConvert.DeserializeObject(xx, typeof(TagInfo[]));
 
             TagInfo[] tags = o as TagInfo[];
             StringBuilder sbResult = new StringBuilder();

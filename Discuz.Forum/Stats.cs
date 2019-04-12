@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Text;
-using System.Data;
-using System.Web;
-
-using Discuz.Data;
 using Discuz.Entity;
 using Discuz.Common;
 using Discuz.Common.Generic;

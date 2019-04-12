@@ -1,9 +1,7 @@
 using System;
-using System.Text;
 using Discuz.Common;
 using System.Web;
 using System.Web.UI;
-using System.IO;
 using System.Drawing.Imaging;
 
 namespace Discuz.Web.UI

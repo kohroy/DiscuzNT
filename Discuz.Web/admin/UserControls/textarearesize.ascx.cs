@@ -1,6 +1,5 @@
 using System;
 using System.Web.UI;
-using System.Web.UI.HtmlControls;
 
 namespace Discuz.Web.Admin
 {

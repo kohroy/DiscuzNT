@@ -1,11 +1,9 @@
-using System;
-
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// SpacePhotoInfo 的摘要说明。
-	/// </summary>
-	public class PhotoInfo
+    /// <summary>
+    /// SpacePhotoInfo 的摘要说明。
+    /// </summary>
+    public class PhotoInfo
 	{
 		public PhotoInfo()
 		{

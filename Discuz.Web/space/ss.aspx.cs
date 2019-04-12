@@ -2,9 +2,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using Discuz.Common;
-using Discuz.Forum;
-using Discuz.Space.Entities;
- 
+
 using Discuz.Space.Utilities;
 using Discuz.Entity;
 using Discuz.Space.Provider;
@@ -12,10 +10,10 @@ using Discuz.Config;
 
 namespace Discuz.Space
 {
-	/// <summary>
-	/// 空间管理功能的数据请求页面
-	/// </summary>
-	public class ss : Page
+    /// <summary>
+    /// 空间管理功能的数据请求页面
+    /// </summary>
+    public class ss : Page
 	{
 		public ss()
 		{

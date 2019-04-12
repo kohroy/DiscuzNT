@@ -3,17 +3,16 @@ using System.Web;
 using System.Text;
 
 using Discuz.Forum;
-using Discuz.Space.Manage;
 using Discuz.Entity;
 using Discuz.Config;
 using Discuz.Common.Generic;
 
 namespace Discuz.Space.Manage
 {
-	/// <summary>
-	///		页面首部控件
-	/// </summary>
-	public class fronttop : DiscuzSpaceUCBase
+    /// <summary>
+    ///		页面首部控件
+    /// </summary>
+    public class fronttop : DiscuzSpaceUCBase
 	{
 		public string spacehttplink = "";
 		/// <summary>

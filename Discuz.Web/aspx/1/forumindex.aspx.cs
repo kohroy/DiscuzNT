@@ -5,16 +5,15 @@ using Discuz.Common;
 using Discuz.Forum;
 
 using Discuz.Config;
-using Discuz.Web.UI;
 using Discuz.Entity;
 using Discuz.Common.Generic;
 
 namespace Discuz.Web
 {
-	/// <summary>
-	/// 论坛首页
-	/// </summary>
-	public class forumindex : PageBase
+    /// <summary>
+    /// 论坛首页
+    /// </summary>
+    public class forumindex : PageBase
     {
         #region 页面变量
         /// <summary>

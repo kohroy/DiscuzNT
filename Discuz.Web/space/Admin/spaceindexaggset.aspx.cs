@@ -1,14 +1,6 @@
 using System;
-using System.Web.UI;
-using System.Data;
-using System.Xml;
-
-using Discuz.Control;
-using Discuz.Forum;
-using Discuz.Common;
 using Discuz.Aggregation;
 using Discuz.Config;
-using Discuz.Common.Xml;
 using Discuz.Cache;
 using Discuz.Web.Admin;
 
@@ -18,7 +10,7 @@ namespace Discuz.Space.Admin
     /// <summary>
     /// ª∫¥Êπ‹¿Ì
     /// </summary>
-    
+
 #if NET1
     public class SpaceIndexAggset : AdminPage
 #else

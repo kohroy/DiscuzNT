@@ -1,11 +1,9 @@
-using System;
-
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// 搜索缓存信息描述类
-	/// </summary>
-	public class SearchCacheInfo
+    /// <summary>
+    /// 搜索缓存信息描述类
+    /// </summary>
+    public class SearchCacheInfo
 	{
 		
 		private int m_searchid;

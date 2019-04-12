@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace Discuz.Entity
+﻿namespace Discuz.Entity
 {
-	/// <summary>
-	/// AlbumInfo 的摘要说明。
-	/// </summary>
-	public class AlbumInfo
+    /// <summary>
+    /// AlbumInfo 的摘要说明。
+    /// </summary>
+    public class AlbumInfo
 	{
 
 		private int m_albumid;	//相册ID

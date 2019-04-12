@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Data;
-using Discuz.Common;
 //using System.Data.SqlClient;
 
 namespace Discuz.Entity

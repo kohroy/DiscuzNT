@@ -1,12 +1,11 @@
-using System;
 using System.Web;
 
 namespace Discuz.Space.Entities
 {
-	/// <summary>
-	/// 空间模块的操作接口
-	/// </summary>
-	public interface ISpaceCommand
+    /// <summary>
+    /// 空间模块的操作接口
+    /// </summary>
+    public interface ISpaceCommand
 	{
         /// <summary>
         /// 获得模块提交数据

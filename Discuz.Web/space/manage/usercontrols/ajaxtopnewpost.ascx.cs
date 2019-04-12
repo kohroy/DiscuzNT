@@ -1,16 +1,13 @@
 ﻿using Discuz.Common;
-using Discuz.Space.Entities;
-using Discuz.Space.Manage;
 using Discuz.Space.Provider;
 using Discuz.Entity;
-using Discuz.Data;
 
 namespace Discuz.Space.Manage
 {
-	/// <summary>
+    /// <summary>
     ///	最新日志列表控件
-	/// </summary>
-	public class ajaxtopnewpost : DiscuzSpaceUCBase
+    /// </summary>
+    public class ajaxtopnewpost : DiscuzSpaceUCBase
 	{
 		public SpacePostInfo[] __spacepostinfos;
 

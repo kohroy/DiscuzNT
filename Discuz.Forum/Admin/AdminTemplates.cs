@@ -1,7 +1,6 @@
 using System;
 using System.IO;
 using System.Data;
-using System.Data.Common;
 
 using Discuz.Common;
 using Discuz.Config;

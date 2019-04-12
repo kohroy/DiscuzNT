@@ -1,13 +1,11 @@
 ﻿using System;
 #if NET1
 #else
-using System.Collections.Generic;
 #endif
 
 using System.Text;
 
 using Discuz.Entity;
-using Discuz.Plugin.Preview;
 
 namespace Discuz.Plugin.Preview.Jpg
 {

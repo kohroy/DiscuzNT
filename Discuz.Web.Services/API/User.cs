@@ -1,11 +1,7 @@
-﻿using System;
-#if NET1
+﻿#if NET1
 #else
-using System.Collections.Generic;
 #endif
-using System.Text;
 using System.Xml.Serialization;
-using Discuz.Common;
 using Newtonsoft.Json;
 
 namespace Discuz.Web.Services.API

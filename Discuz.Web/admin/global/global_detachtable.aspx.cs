@@ -1,8 +1,5 @@
 using System;
 using System.Data;
-using System.Data.SqlClient;
-using System.IO;
-using System.Text;
 using System.Web.UI.WebControls;
 using System.Web.UI;
 
@@ -15,7 +12,7 @@ namespace Discuz.Web.Admin
     /// <summary>
     /// ∑÷±Ì…Ë÷√
     /// </summary>
-    
+
     public partial class detachtable : AdminPage
     {
         protected void Page_Load(object sender, EventArgs e)

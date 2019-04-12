@@ -1,10 +1,7 @@
-﻿using System;
-using System.Data;
-using System.Web;
+﻿using System.Data;
 using Discuz.Common;
 using Discuz.Config;
 using Discuz.Forum;
-using System.Data.Common;
 using Discuz.Web.UI;
 using Discuz.Entity;
 using System.Text.RegularExpressions;

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Config;
-using Discuz.Web.UI;
 
 namespace Discuz.Web
 {

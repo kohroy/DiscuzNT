@@ -1,18 +1,13 @@
-﻿using System;
-using System.Data;
-using System.Data.SqlClient;
-using Discuz.Common;
+﻿using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Web.UI;
-using Discuz.Entity;
-using Discuz.Config;
 
 namespace Discuz.Web
 {
-	/// <summary>
-	/// 发件箱页面
-	/// </summary>
-	public class usercpsentbox : UserCpPage
+    /// <summary>
+    /// 发件箱页面
+    /// </summary>
+    public class usercpsentbox : UserCpPage
     {
         protected override void ShowPage()
 		{

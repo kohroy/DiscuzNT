@@ -1,17 +1,13 @@
-﻿using System.Data;
-using System.Web.UI;
+﻿using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.ComponentModel;
 
-using Discuz.Common;
-using Discuz.Data;
-
 namespace Discuz.Control
 {
-	/// <summary>
-	/// 列表框控件
-	/// </summary>
-	[DefaultProperty("Text"),ToolboxData("<{0}:ListBox runat=server></{0}:ListBox>")]
+    /// <summary>
+    /// 列表框控件
+    /// </summary>
+    [DefaultProperty("Text"),ToolboxData("<{0}:ListBox runat=server></{0}:ListBox>")]
 	public class ListBox : System.Web.UI.WebControls.ListBox,Discuz.Control.IWebControl
 	{
         /// <summary>

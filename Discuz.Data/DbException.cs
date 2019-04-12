@@ -1,6 +1,3 @@
-using System;
-using System.Text;
-
 namespace Discuz.Data
 {
     public class DbException : Discuz.Common.DNTException

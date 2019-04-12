@@ -1,15 +1,9 @@
-using System;
-using System.Data;
-using System.Data.Common;
-
-using Discuz.Common;
-
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// 短消息信息描述类
-	/// </summary>
-	public class PrivateMessageInfo
+    /// <summary>
+    /// 短消息信息描述类
+    /// </summary>
+    public class PrivateMessageInfo
 	{
 
 		private int m_pmid;	//短消息ID

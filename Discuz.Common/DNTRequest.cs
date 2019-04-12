@@ -1,12 +1,11 @@
-using System;
 using System.Web;
 
 namespace Discuz.Common
 {
-	/// <summary>
-	/// Request操作类
-	/// </summary>
-	public class DNTRequest
+    /// <summary>
+    /// Request操作类
+    /// </summary>
+    public class DNTRequest
 	{
 		/// <summary>
 		/// 判断当前页面是否接收到了Post请求

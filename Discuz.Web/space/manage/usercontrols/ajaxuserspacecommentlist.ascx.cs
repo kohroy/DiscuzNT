@@ -1,18 +1,14 @@
 using Discuz.Common;
-using Discuz.Space.Entities;
-using Discuz.Space.Manage;
 using Discuz.Space.Provider;
 using Discuz.Entity;
-using Discuz.Space.Data;
-using Discuz.Config;
 using Discuz.Forum;
 
 namespace Discuz.Space.Manage
 {
-	/// <summary>
+    /// <summary>
     ///	日志评论列表控件
-	/// </summary>
-	public class ajaxuserspacecommentlist : DiscuzSpaceUCBase
+    /// </summary>
+    public class ajaxuserspacecommentlist : DiscuzSpaceUCBase
 	{
         public int currentpage = DNTRequest.GetInt("currentpage", 1);
 

@@ -1,15 +1,7 @@
 using System;
-using System.Data;
-using System.Web.UI.HtmlControls;
-using System.Web.UI;
-
-using Discuz.Control;
-using Discuz.Forum;
 using Discuz.Config;
 using Discuz.Common;
-using Discuz.Entity;
 using Discuz.Cache;
-using Discuz.Common.Generic;
 
 namespace Discuz.Web.Admin
 {

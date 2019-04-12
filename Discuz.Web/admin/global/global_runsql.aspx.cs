@@ -1,12 +1,7 @@
 using System;
-using System.Data.SqlClient;
-using System.Text;
 using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Forum;
 using Discuz.Config;
-using Discuz.Entity;
 
 namespace Discuz.Web.Admin
 {

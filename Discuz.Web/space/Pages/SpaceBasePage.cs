@@ -1,18 +1,16 @@
-using System.Web;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Space.Entities;
 using Discuz.Space.Provider;
 using Discuz.Config;
 using Discuz.Entity;
 
 namespace Discuz.Space.Pages
 {
-	/// <summary>
-	/// SpaceBasePage 的摘要说明。
-	/// </summary>
-	public class SpaceBasePage : System.Web.UI.Page
+    /// <summary>
+    /// SpaceBasePage 的摘要说明。
+    /// </summary>
+    public class SpaceBasePage : System.Web.UI.Page
 	{
         /// <summary>
         /// 当前用户的用户名

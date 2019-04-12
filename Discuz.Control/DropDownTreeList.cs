@@ -4,15 +4,12 @@ using System.Web;
 using System.Web.UI.WebControls;
 using System.ComponentModel;
 
-using Discuz.Common;
-using Discuz.Data;
-
 namespace Discuz.Control
 {
-	/// <summary>
+    /// <summary>
     /// 下拉树形框控件。
-	/// </summary>
-	[DefaultProperty("Text"),ToolboxData("<{0}:DropDownTreeList runat=server></{0}:DropDownTreeList>")]
+    /// </summary>
+    [DefaultProperty("Text"),ToolboxData("<{0}:DropDownTreeList runat=server></{0}:DropDownTreeList>")]
     public class DropDownTreeList : Discuz.Control.WebControl, IPostBackDataHandler, IPostBackEventHandler
 	{
         /// <summary>

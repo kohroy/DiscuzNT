@@ -3,9 +3,6 @@ using Discuz.Common;
 using Discuz.Common.Generic;
 using Discuz.Config;
 using Discuz.Entity;
-using Discuz.Plugin.Space;
-using Discuz.Plugin.Album;
-using Discuz.Plugin.Mall;
 
 namespace Discuz.Web.UI
 {

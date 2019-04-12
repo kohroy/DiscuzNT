@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Discuz.Entity
+﻿namespace Discuz.Entity
 {
     /// <summary>
     /// 图片聚合信息类

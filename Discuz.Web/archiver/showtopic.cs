@@ -1,7 +1,4 @@
-﻿using System;
-using System.Web;
-using System.Data;
-using System.Data.Common;
+﻿using System.Web;
 using System.Text.RegularExpressions;
 
 using Discuz.Common;

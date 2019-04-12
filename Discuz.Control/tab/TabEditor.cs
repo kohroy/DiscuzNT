@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Design;
 using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Windows.Forms;

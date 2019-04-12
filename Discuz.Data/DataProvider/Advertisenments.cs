@@ -1,7 +1,4 @@
-﻿using System;
-using System.Data;
-
-using Discuz.Entity;
+﻿using System.Data;
 
 namespace Discuz.Data
 {

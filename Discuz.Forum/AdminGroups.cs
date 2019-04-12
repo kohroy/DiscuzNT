@@ -1,9 +1,3 @@
-using System;
-using System.Data;
-using System.Data.Common;
-
-using Discuz.Common;
-using Discuz.Data;
 using Discuz.Entity;
 
 namespace Discuz.Forum

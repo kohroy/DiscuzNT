@@ -1,14 +1,11 @@
-﻿using Discuz.Common;
-using Discuz.Forum;
-using Discuz.Space.Utilities;
-using Discuz.Config;
+﻿using Discuz.Config;
 
 namespace Discuz.Space.Modules
 {
-	/// <summary>
-	/// StatisticModule 的摘要说明。
-	/// </summary>
-	public class StatisticModule : BlogModule
+    /// <summary>
+    /// StatisticModule 的摘要说明。
+    /// </summary>
+    public class StatisticModule : BlogModule
 	{
 		public StatisticModule()
 		{

@@ -1,18 +1,15 @@
 using System;
 using System.Data;
-using System.Data.Common;
 
 using Discuz.Common;
-using Discuz.Config;
-using Discuz.Entity;
 
 namespace Discuz.Forum
 {
-	/// <summary>
-	/// AdminRateLogFactory 的摘要说明。
-	/// 后台评分日志管理操作类
-	/// </summary>
-	public class AdminRateLogs
+    /// <summary>
+    /// AdminRateLogFactory 的摘要说明。
+    /// 后台评分日志管理操作类
+    /// </summary>
+    public class AdminRateLogs
 	{
 		/// <summary>
 		/// 添加评分记录

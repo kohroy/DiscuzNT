@@ -1,25 +1,20 @@
 ﻿using System;
-using System.Web.UI.WebControls;
 using System.Xml;
 using System.Web.UI.HtmlControls;
 using System.Data;
 using System.Web.UI;
 
 using Discuz.Forum;
-using Button = Discuz.Control.Button;
-using CheckBoxList = Discuz.Control.CheckBoxList;
-using TextBox = Discuz.Control.TextBox;
 using Discuz.Config;
 using Discuz.Data;
 using Discuz.Common.Xml;
 using Discuz.Common;
 using Discuz.Web.Admin;
-using Discuz.Space.Data;
 
 
 namespace Discuz.Space.Admin
 {
-	
+
 #if NET1
     public class SpaceApplySetting : AdminPage
 #else

@@ -1,17 +1,7 @@
 using System;
 using System.IO;
-using System.Net;
-using System.Text;
-using System.Web;
-using System.Web.UI;
-using System.Xml;
 using Discuz.Common;
-using Discuz.Forum;
-using Discuz.Space.Entities;
-using Discuz.Space.Manage;
 using Discuz.Space.Pages;
- 
-using Discuz.Space.Utilities;
 using Discuz.Entity;
 using Discuz.Config;
 #if NET1
@@ -21,10 +11,10 @@ using Discuz.Common.Generic;
 
 namespace Discuz.Space
 {
-	/// <summary>
-	/// 种子
-	/// </summary>
-	public class feeds : SpaceBasePage
+    /// <summary>
+    /// 种子
+    /// </summary>
+    public class feeds : SpaceBasePage
 	{
 		protected override void  OnInit(EventArgs e)
 		{

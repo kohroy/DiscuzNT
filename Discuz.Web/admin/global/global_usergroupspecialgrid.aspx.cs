@@ -2,16 +2,13 @@ using System;
 using System.Web.UI.WebControls;
 
 using Discuz.Forum;
-using DataGrid = Discuz.Control.DataGrid;
-using Discuz.Config;
-using Discuz.Entity;
 
 namespace Discuz.Web.Admin
 {
     /// <summary>
     /// 特殊用户组列表
     /// </summary>
-    
+
     public partial class usergroupspecialgrid : AdminPage
     {
         protected void Page_Load(object sender, EventArgs e)

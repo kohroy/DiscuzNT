@@ -1,8 +1,4 @@
-﻿using System;
-
-using Discuz.Common;
-
-namespace Discuz.Config
+﻿namespace Discuz.Config
 {
     public class RabbitMQConfigs
     {

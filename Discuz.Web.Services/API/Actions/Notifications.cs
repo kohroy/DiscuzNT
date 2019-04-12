@@ -228,7 +228,7 @@ namespace Discuz.Web.Services.API.Actions
             notification.Notification.MostRecent = Discuz.Forum.Notices.GetLatestNoticeID(Uid);
 
             if (Format == FormatType.JSON)
-                return JavaScriptConvert.SerializeObject(notification);
+                return JsonConvert.SerializeObject(notification);
 
             return SerializationHelper.Serialize(notification);
         }

@@ -1,16 +1,9 @@
 ﻿using System;
-using System.Collections;
-using System.Data;
-using System.Data.Common;
 using System.Xml;
-using System.IO;
 #if NET4
 using System.IO.MemoryMappedFiles;
 #endif
 using XmlElement = System.Xml.XmlElement;
-
-using Discuz.Entity;
-using Discuz.Common;
 using Discuz.Config;
 
 namespace Discuz.Cache

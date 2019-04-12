@@ -1,20 +1,17 @@
 using System;
-using System.IO;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Drawing.Imaging;
-using System.Drawing.Text;
 using System.Security.Cryptography;
-using Discuz.Plugin.VerifyImage;
 using Discuz.Entity;
 
 namespace Discuz.Plugin.VerifyImage.JpegImage
 {
 
-	/// <summary>
-	/// 验证码图片类
-	/// </summary>
-	public class VerifyImage : IVerifyImage
+    /// <summary>
+    /// 验证码图片类
+    /// </summary>
+    public class VerifyImage : IVerifyImage
 	{
         private static byte[] randb = new byte[4];
         private static RNGCryptoServiceProvider rand = new RNGCryptoServiceProvider();

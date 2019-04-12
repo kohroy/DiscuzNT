@@ -1,18 +1,13 @@
 ﻿using System;
 using System.Collections;
 using System.Data;
-using System.IO;
 using System.Text;
 using System.Web;
-using System.Xml;
 using Discuz.Common;
 using Discuz.Common.Generic;
 using Discuz.Config;
 using Discuz.Entity;
 using Discuz.Forum;
-using Discuz.Plugin.Album;
-using Discuz.Plugin.Mall;
-using Discuz.Plugin.Space;
 using Newtonsoft.Json;
 
 namespace Discuz.Web.UI
@@ -599,9 +594,9 @@ namespace Discuz.Web.UI
             int smileyoff = 1 - forum.Allowsmilies;
             int parseurloff = 0;
             StringBuilder builder = new StringBuilder("{\"postlist\":");
-            builder.Append(JavaScriptConvert.SerializeObject(postlist));
+            builder.Append(JsonConvert.SerializeObject(postlist));
             builder.Append(",'debateexpand':");
-            builder.Append(JavaScriptConvert.SerializeObject(debateExpand));
+            builder.Append(JsonConvert.SerializeObject(debateExpand));
             builder.Append(",'pagenumbers':'");
             if (opinion == 1)
                 builder.Append(Utils.GetAjaxPageNumbers(postpramsInfo.Pageindex, positivepagecount, "showdebatepage(\\'" + forumpath + "tools/ajax.aspx?t=getdebatepostpage&opinion=1&tid=" + topic.Tid + "&{0}\\'," + parseurloff + ", " + smileyoff + ", " + bbcodeoff + ",\\'" + isenddebate + "\\',1," + userid + "," + topicid + ")", 8));
@@ -2007,7 +2002,7 @@ namespace Discuz.Web.UI
 
         private void ResponseJSON<T>(T jsonobj)
         {
-            ResponseJSON(JavaScriptConvert.SerializeObject(jsonobj));
+            ResponseJSON(JsonConvert.SerializeObject(jsonobj));
         }
         #endregion
 

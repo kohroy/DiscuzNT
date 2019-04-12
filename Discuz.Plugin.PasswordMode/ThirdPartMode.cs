@@ -1,10 +1,5 @@
-﻿using System;
-
-using Discuz.Data;
-using Discuz.Entity;
+﻿using Discuz.Entity;
 using Discuz.Common;
-using Discuz.Plugin;
-using Discuz.Forum;
 
 namespace Discuz.Plugin.PasswordMode
 {

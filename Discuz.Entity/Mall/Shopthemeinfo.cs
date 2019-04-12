@@ -1,5 +1,3 @@
-using System;
-
 namespace Discuz.Entity
 {
     /// <summary>

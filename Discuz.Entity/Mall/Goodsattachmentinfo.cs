@@ -1,11 +1,9 @@
-using System;
-
-namespace  Discuz.Entity
+namespace Discuz.Entity
 {
-　　/// <summary>
-	/// 商品附件的摘要说明。
-	/// </summary>
-	public class Goodsattachmentinfo : AttachmentInfo
+    /// <summary>
+    /// 商品附件的摘要说明。
+    /// </summary>
+    public class Goodsattachmentinfo : AttachmentInfo
 　　{
 　　　　private int _goodsid;//商品id
 		/// <summary> 

@@ -1,18 +1,13 @@
 using System;
 using System.Data;
-using System.Data.Common;
-
-using Discuz.Common;
-using Discuz.Config;
-using Discuz.Entity;
 
 namespace Discuz.Forum
 {
-	/// <summary>
-	/// AdminVistLogFactory 的摘要说明。
-	/// 后台访问日志管理操作类
-	/// </summary>
-	public class AdminVistLogs
+    /// <summary>
+    /// AdminVistLogFactory 的摘要说明。
+    /// 后台访问日志管理操作类
+    /// </summary>
+    public class AdminVistLogs
 	{
 		/// <summary>
 		/// 插入版主管理日志记录

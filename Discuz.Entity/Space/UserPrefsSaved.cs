@@ -1,13 +1,12 @@
-using System;
 using System.Collections;
 using System.Xml;
 
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// UserPrefSaved 的摘要说明。
-	/// </summary>
-	public class UserPrefsSaved
+    /// <summary>
+    /// UserPrefSaved 的摘要说明。
+    /// </summary>
+    public class UserPrefsSaved
 	{
 		/// <summary>
 		/// 用户设置集合

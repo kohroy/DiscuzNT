@@ -2,15 +2,14 @@ using System;
 using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
-using System.Collections;
 using Discuz.Common.Generic;
 
 namespace Discuz.Common
 {
-	/// <summary>
-	/// Template为页面模板类.
-	/// </summary>
-	public abstract class PageTemplate
+    /// <summary>
+    /// Template为页面模板类.
+    /// </summary>
+    public abstract class PageTemplate
 	{
 		public static Regex[] r = new Regex[25];
 

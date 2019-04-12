@@ -1,17 +1,15 @@
 using System;
 using System.Data;
-using System.Data.Common;
 
 using Discuz.Common;
-using Discuz.Data;
 using Discuz.Entity;
 
 namespace Discuz.Forum
 {
-	/// <summary>
-	/// 论坛公告操作类
-	/// </summary>
-	public class Announcements
+    /// <summary>
+    /// 论坛公告操作类
+    /// </summary>
+    public class Announcements
 	{
 		/// <summary>
 		/// 获得全部指定时间段内的公告列表

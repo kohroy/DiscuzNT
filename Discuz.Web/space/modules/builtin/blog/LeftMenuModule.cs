@@ -1,14 +1,11 @@
-using Discuz.Common;
-using Discuz.Forum;
-using Discuz.Space.Utilities;
 using Discuz.Config;
 
 namespace Discuz.Space.Modules
 {
-	/// <summary>
-	/// LeftMenuModule 的摘要说明。
-	/// </summary>
-	public class LeftMenuModule: BlogModule
+    /// <summary>
+    /// LeftMenuModule 的摘要说明。
+    /// </summary>
+    public class LeftMenuModule: BlogModule
 	{
 		public LeftMenuModule()
 		{

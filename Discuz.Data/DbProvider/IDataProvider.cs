@@ -1,10 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Text;
-using System.Data.Common;
-using System.Collections;
-
-using Discuz.Common.Generic;
 using Discuz.Entity;
 
 namespace Discuz.Data

@@ -1,14 +1,8 @@
 using System;
 using System.Web.UI.WebControls;
 using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Common;
 using Discuz.Forum;
-using Button = Discuz.Control.Button;
-using DropDownList = Discuz.Control.DropDownList;
-using RadioButtonList = Discuz.Control.RadioButtonList;
-using TextBox = Discuz.Control.TextBox;
 using Discuz.Config;
 using Discuz.Entity;
 

@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
 using System.Web.UI.WebControls;
 using System.Web.UI;
 using System.Collections;
@@ -9,8 +6,6 @@ using System.IO;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Button = Discuz.Control.Button;
-using DataGrid = Discuz.Control.DataGrid;
 using Discuz.Config;
 
 

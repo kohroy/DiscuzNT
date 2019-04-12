@@ -1,15 +1,11 @@
 using System;
 using System.Data;
-using System.Data.Common;
-using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI;
-using System.Text.RegularExpressions;
 using System.IO;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Config;
 
 namespace Discuz.Web.Admin
 {

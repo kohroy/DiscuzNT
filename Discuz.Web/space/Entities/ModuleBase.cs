@@ -1,21 +1,17 @@
-using System;
 using System.Collections;
 using System.Collections.Specialized;
 using System.Text;
 using System.Web;
 using Discuz.Common;
-using Discuz.Forum;
-using Discuz.Space.Provider;
-using Discuz.Space.Utilities;
 using Discuz.Entity;
 using Discuz.Config;
 
 namespace Discuz.Space.Entities
 {
-	/// <summary>
-	///  模块抽象
-	/// </summary>
-	public class ModuleBase : ISpaceCommand
+    /// <summary>
+    ///  模块抽象
+    /// </summary>
+    public class ModuleBase : ISpaceCommand
 	{
 		public ModuleBase()
 		{

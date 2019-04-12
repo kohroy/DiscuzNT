@@ -1,7 +1,5 @@
 using System;
-using System.IO;
 using System.Drawing;
-using System.Drawing.Imaging;
 
 using Discuz.Forum;
 using Discuz.Common;
@@ -11,10 +9,10 @@ using Discuz.Entity;
 
 namespace Discuz.Web.UI
 {
-	/// <summary>
-	/// 验证码图片页面类
-	/// </summary>
-	public class VerifyImagePage : System.Web.UI.Page
+    /// <summary>
+    /// 验证码图片页面类
+    /// </summary>
+    public class VerifyImagePage : System.Web.UI.Page
 	{		
 		/// <summary>
 		/// 初始化

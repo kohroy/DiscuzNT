@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Data;
-using System.Data.Common;
 using System.Web.UI.WebControls;
 using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Config;

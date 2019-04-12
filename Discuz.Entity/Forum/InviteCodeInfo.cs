@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Discuz.Entity
+﻿namespace Discuz.Entity
 {
     public class InviteCodeInfo
     {

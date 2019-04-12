@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.IO;
 
 using Discuz.Plugin.Album;
 using Discuz.Album.Data;
-using Discuz.Plugin.Space;
 using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Entity;

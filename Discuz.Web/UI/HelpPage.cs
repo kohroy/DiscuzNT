@@ -1,14 +1,11 @@
-using System;
-using Discuz.Common;
-using Discuz.Forum;
 using Discuz.Config;
 
 namespace Discuz.Web.UI
 {
-	/// <summary>
-	/// 论坛帮助页面类
-	/// </summary>
-	public class HelpPage : System.Web.UI.Page
+    /// <summary>
+    /// 论坛帮助页面类
+    /// </summary>
+    public class HelpPage : System.Web.UI.Page
 	{
 		public string forumtitle;
 		public string forumurl;

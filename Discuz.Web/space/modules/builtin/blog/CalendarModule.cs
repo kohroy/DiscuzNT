@@ -1,15 +1,11 @@
-using System;
-using Discuz.Common;
-using Discuz.Forum;
-using Discuz.Space.Utilities;
 using Discuz.Config;
 
 namespace Discuz.Space.Modules
 {
-	/// <summary>
-	/// CalendarModule 的摘要说明。
-	/// </summary>
-	public class CalendarModule: BlogModule
+    /// <summary>
+    /// CalendarModule 的摘要说明。
+    /// </summary>
+    public class CalendarModule: BlogModule
 	{
 		public CalendarModule()
 		{

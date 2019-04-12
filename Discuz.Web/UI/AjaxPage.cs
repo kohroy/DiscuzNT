@@ -1,17 +1,12 @@
 ﻿using System;
-using System.Data;
-using System.Data.Common;
 using System.Text;
-using System.Collections;
 using System.Web;
-using System.Text.RegularExpressions;
 using System.Xml;
 using System.IO;
 
 using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Entity;
-using Discuz.Cache;
 using Discuz.Config;
 using Discuz.Plugin.Space;
 using Discuz.Plugin.Album;
@@ -1043,7 +1038,7 @@ namespace Discuz.Web.UI
 
         private void ResponseJSON<T>(T jsonobj)
         {
-            ResponseJSON(JavaScriptConvert.SerializeObject(jsonobj));
+            ResponseJSON(JsonConvert.SerializeObject(jsonobj));
         }
         #endregion
 

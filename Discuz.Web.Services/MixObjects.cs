@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Web.Services;
-using System.Web.Services.Protocols;
 using System.IO;
 using System.Web.Hosting;
-
-using System.Data;
 using System.Text;
 using Discuz.Config;
 using Discuz.Entity;

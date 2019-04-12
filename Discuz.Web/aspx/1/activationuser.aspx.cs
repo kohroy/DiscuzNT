@@ -1,19 +1,14 @@
-﻿using System;
-using System.Data;
-using System.Data.Common;
-
+﻿
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Config;
-using Discuz.Web.UI;
 using Discuz.Entity;
 
 namespace Discuz.Web
 {
-	/// <summary>
-	/// 激活用户页面
-	/// </summary>
-	public class activationuser : PageBase
+    /// <summary>
+    /// 激活用户页面
+    /// </summary>
+    public class activationuser : PageBase
 	{
 		protected override void ShowPage()
 		{

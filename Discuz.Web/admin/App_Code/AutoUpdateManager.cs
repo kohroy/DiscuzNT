@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Diagnostics;
-using System.Text;
 using System.Web.Services;
-using System.Web.Services.Description;
 using System.Web.Services.Protocols;
 
 namespace Discuz.Web.Admin.AutoUpdateManager

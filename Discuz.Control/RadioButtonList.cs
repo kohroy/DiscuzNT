@@ -1,17 +1,13 @@
-﻿using System.Data;
-using System.Web.UI;
+﻿using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.ComponentModel;
 
-using Discuz.Common;
-using Discuz.Data;
-
 namespace Discuz.Control
 {
-	/// <summary>
-	/// RadioButtonList控件。
-	/// </summary>
-	[DefaultProperty("Text"),ToolboxData("<{0}:RadioButtonList runat=server></{0}:RadioButtonList>")]
+    /// <summary>
+    /// RadioButtonList控件。
+    /// </summary>
+    [DefaultProperty("Text"),ToolboxData("<{0}:RadioButtonList runat=server></{0}:RadioButtonList>")]
     public class RadioButtonList : System.Web.UI.WebControls.RadioButtonList, Discuz.Control.IWebControl, IPostBackDataHandler
 	{
         /// <summary>

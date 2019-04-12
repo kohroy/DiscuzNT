@@ -3,8 +3,6 @@ using System.Web.UI.WebControls;
 using System.Collections;
 
 using Discuz.Forum;
-using DataGrid = Discuz.Control.DataGrid;
-using Discuz.Config;
 using Discuz.Entity;
 
 namespace Discuz.Web.Admin

@@ -1,14 +1,7 @@
 using System;
-using System.Collections.Generic;
-using System.Web;
 using System.Net;
-using System.Web.UI;
-using System.Web.UI.HtmlControls;
 using System.IO;
 using System.Text;
-
-using Discuz.Forum;
-using Discuz.Common;
 
 namespace Discuz.Web.Admin
 {

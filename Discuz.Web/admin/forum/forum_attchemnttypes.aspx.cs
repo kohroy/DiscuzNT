@@ -1,6 +1,5 @@
 using System;
 using System.Data;
-using System.Data.Common;
 using System.Web.UI.WebControls;
 using System.Web.UI;
 using System.Xml;
@@ -10,7 +9,6 @@ using Discuz.Forum;
 using Discuz.Config;
 using Discuz.Common.Xml;
 using Discuz.Cache;
-using Discuz.Common.Generic;
 
 namespace Discuz.Web.Admin
 {

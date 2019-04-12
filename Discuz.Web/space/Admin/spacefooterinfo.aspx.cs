@@ -3,9 +3,7 @@ using System.Web.UI;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Control;
 using Discuz.Config;
-using Discuz.Entity;
 using Discuz.Web.Admin;
 
 

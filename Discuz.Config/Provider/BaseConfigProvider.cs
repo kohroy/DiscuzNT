@@ -1,11 +1,9 @@
 using System;
-using System.IO;
-using System.Web;
 using Discuz.Common;
 
 namespace Discuz.Config.Provider
 {
-	public class BaseConfigProvider
+    public class BaseConfigProvider
 	{
 		private BaseConfigProvider()
 		{

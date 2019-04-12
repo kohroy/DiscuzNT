@@ -1,12 +1,9 @@
-﻿using System;
-using System.Web;
-using System.Data;
+﻿using System.Web;
 using System.IO;
 
 using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Config;
-using Discuz.Web.UI;
 using Discuz.Entity;
 using Discuz.Plugin.Mall;
 

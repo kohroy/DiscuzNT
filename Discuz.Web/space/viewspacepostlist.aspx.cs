@@ -1,16 +1,15 @@
 ﻿using Discuz.Common;
 using Discuz.Space.Pages;
-using Discuz.Data;
 using Discuz.Config;
 using System.Web;
 using System;
 
 namespace Discuz.Space
 {
-	/// <summary>
-	/// 显示文件列表页面
-	/// </summary>
-	public class viewpostlist : SpaceBasePage
+    /// <summary>
+    /// 显示文件列表页面
+    /// </summary>
+    public class viewpostlist : SpaceBasePage
 	{
 		public int postid = 0;
 

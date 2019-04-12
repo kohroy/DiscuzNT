@@ -1,6 +1,4 @@
-﻿using Discuz.Common;
-using Discuz.Data;
-using Discuz.Entity;
+﻿using Discuz.Entity;
 
 namespace Discuz.Forum
 {
@@ -26,7 +24,7 @@ namespace Discuz.Forum
         /// <returns>附件交易日志</returns>
         public static string GetAttachPaymentLogJsonByAid(int aid)
         {
-            return aid > 0 ? Newtonsoft.Json.JavaScriptConvert.SerializeObject(Data.AttachPaymentLogs.GetAttachPaymentLogList(aid).ToArray()) : "";
+            return aid > 0 ? Newtonsoft.Json.JsonConvert.SerializeObject(Data.AttachPaymentLogs.GetAttachPaymentLogList(aid).ToArray()) : "";
         }
 
         /// <summary>

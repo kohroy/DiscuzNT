@@ -1,9 +1,7 @@
-﻿using System;
-using System.Data;
-using Discuz.Common;
+﻿using System.Data;
 #if NET1
 #else
-using Discuz.Common.Generic; 
+using Discuz.Common.Generic;
 #endif
 using Discuz.Forum;
 using Discuz.Config;

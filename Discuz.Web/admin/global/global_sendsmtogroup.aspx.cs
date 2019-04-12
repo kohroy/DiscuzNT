@@ -1,16 +1,7 @@
 using System;
 using System.Data;
-using System.Threading;
-using System.Web.UI.WebControls;
-using System.Web.UI;
 
 using Discuz.Forum;
-using Button = Discuz.Control.Button;
-using CheckBoxList = Discuz.Control.CheckBoxList;
-using DropDownList = Discuz.Control.DropDownList;
-using TextBox = Discuz.Control.TextBox;
-using Discuz.Config;
-using Discuz.Entity;
 
 namespace Discuz.Web.Admin
 {

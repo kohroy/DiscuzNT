@@ -1,14 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Web;
+﻿using System.Web;
 
 using Discuz.Common;
-using Discuz.Common.Generic;
 using Discuz.Forum;
-using Discuz.Config;
 using Discuz.Entity;
-using Discuz.Plugin.Payment;
-using Discuz.Plugin.Payment.Alipay;
 
 namespace Discuz.Web.UI
 {

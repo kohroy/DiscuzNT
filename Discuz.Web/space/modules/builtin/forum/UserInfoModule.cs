@@ -1,10 +1,6 @@
-using System;
-using System.Text;
 using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Space.Entities;
- 
-using Discuz.Space.Utilities;
 using Discuz.Config;
 using Discuz.Entity;
 using Discuz.Space.Provider;
@@ -12,10 +8,10 @@ using System.Text.RegularExpressions;
 
 namespace Discuz.Space.Modules.Forum
 {
-	/// <summary>
-	/// UserInfoModule 的摘要说明。
-	/// </summary>
-	public class UserInfoModule : ModuleBase
+    /// <summary>
+    /// UserInfoModule 的摘要说明。
+    /// </summary>
+    public class UserInfoModule : ModuleBase
 	{
 		private string contentTemplate = Utils.GetMapPath(BaseConfigs.GetForumPath + "/space/Modules/builtin/forum/userinfomodule.config");
 

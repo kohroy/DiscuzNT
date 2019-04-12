@@ -2,15 +2,14 @@
 using System.IO;
 
 using Discuz.Common;
-using Discuz.Data;
 using Discuz.Config;
 
 namespace Discuz.Forum
 {
-	/// <summary>
-	/// 判断IP归属地类
-	/// </summary>
-	public class IpSearch
+    /// <summary>
+    /// 判断IP归属地类
+    /// </summary>
+    public class IpSearch
 	{
         private static object lockHelper = new object();
 

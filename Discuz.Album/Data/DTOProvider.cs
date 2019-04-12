@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Data;
-using System.Text;
 
 using Discuz.Cache;
 using Discuz.Common;

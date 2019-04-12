@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Discuz.Entity
+﻿namespace Discuz.Entity
 {
     /// <summary>
     /// showbonus页面所使用的postinfo实体类

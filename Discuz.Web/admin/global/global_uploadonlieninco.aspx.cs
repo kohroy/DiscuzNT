@@ -3,16 +3,12 @@ using System.Data;
 using System.IO;
 using System.Web.UI;
 
-using Discuz.Control;
-using Discuz.Common;
-using Discuz.Forum;
-
 namespace Discuz.Web.Admin
 {
     /// <summary>
     /// 上传在线图例. 
     /// </summary>
-    
+
     public partial class uploadonlieninco : AdminPage
     {
         protected void Page_Load(object sender, EventArgs e)

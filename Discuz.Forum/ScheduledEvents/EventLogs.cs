@@ -2,9 +2,6 @@
 using System.Text;
 using System.IO;
 
-using Discuz.Common;
-using Discuz.Config;
-
 namespace Discuz.Forum.ScheduledEvents
 {
     public sealed class EventLogs

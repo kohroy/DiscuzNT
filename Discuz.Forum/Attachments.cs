@@ -9,7 +9,6 @@ using Discuz.Config;
 using Discuz.Entity;
 using Discuz.Common.Generic;
 using Discuz.Plugin.Preview;
-using Discuz.Data;
 
 namespace Discuz.Forum
 {

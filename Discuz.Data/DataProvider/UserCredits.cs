@@ -1,8 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Data;
-
-using Discuz.Cache.Data;
+﻿using System.Data;
 using Discuz.Entity;
 
 namespace Discuz.Data

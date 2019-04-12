@@ -1,16 +1,13 @@
 using System;
 using System.Data;
-using System.Data.Common;
-using Discuz.Config;
-using Discuz.Entity;
 
 namespace Discuz.Forum
 {
-	/// <summary>
-	/// AdminModeratorManageLogFactory 的摘要说明。
-	/// 勋章日志操作管理类
-	/// </summary>
-	public class AdminMedalLogs
+    /// <summary>
+    /// AdminModeratorManageLogFactory 的摘要说明。
+    /// 勋章日志操作管理类
+    /// </summary>
+    public class AdminMedalLogs
 	{
 		
 		/// <summary>

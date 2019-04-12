@@ -1,11 +1,9 @@
-using System;
-
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// ModuleRequire 的摘要说明。
-	/// </summary>
-	public class ModuleRequire
+    /// <summary>
+    /// ModuleRequire 的摘要说明。
+    /// </summary>
+    public class ModuleRequire
 	{
 		public ModuleRequire()
 		{

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text;
-
-namespace Discuz.Entity
+﻿namespace Discuz.Entity
 {
     /// <summary>
     /// 通知类型

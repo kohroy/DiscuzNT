@@ -1,15 +1,10 @@
 using System;
-using System.Data;
-using System.Web.UI.WebControls;
 using System.Web.UI;
 
 using Discuz.Common;
 using Discuz.Common.Generic;
 using Discuz.Entity;
 using Discuz.Forum;
-using Button = Discuz.Control.Button;
-using DataGrid = Discuz.Control.DataGrid;
-using Discuz.Config;
 
 namespace Discuz.Web.Admin
 {

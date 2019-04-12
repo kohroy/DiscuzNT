@@ -1,15 +1,11 @@
-﻿using System;
-using System.Data;
-using System.Data.Common;
-using System.Text.RegularExpressions;
-
+﻿
 using Discuz.Common;
 
 namespace Discuz.Config
 {
-	/// <summary>
-	/// 论坛基本设置类
-	/// </summary>
+    /// <summary>
+    /// 论坛基本设置类
+    /// </summary>
     public class MyAttachmentsTypeConfigs
 	{
 		private static object lockHelper = new object();

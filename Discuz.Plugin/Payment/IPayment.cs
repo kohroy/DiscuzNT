@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Discuz.Plugin.Payment
+﻿namespace Discuz.Plugin.Payment
 {
     public interface IPayment
     {

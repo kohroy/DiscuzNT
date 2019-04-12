@@ -1,15 +1,9 @@
-using System;
-using System.Web.Caching;
-
-using Discuz.Common;
-using Discuz.Data;
-
 namespace Discuz.Forum
 {
-	/// <summary>
-	/// ForumCacheStrategy 缓存
-	/// 定制的论坛缓存策略类, 以实现到期时间设置和其它设置
-	/// </summary>
+    /// <summary>
+    /// ForumCacheStrategy 缓存
+    /// 定制的论坛缓存策略类, 以实现到期时间设置和其它设置
+    /// </summary>
     //public class ForumCacheStrategy : Discuz.Cache.ICacheStrategy
     //{
     //    protected static volatile System.Web.Caching.Cache webCacheforfocus = null;
@@ -23,7 +17,7 @@ namespace Discuz.Forum
     //    {
     //        webCacheforfocus = Discuz.Cache.DefaultCacheStrategy.GetWebCacheObj;
     //    }		
-		
+
     //    /// <summary>
     //    /// 设置到期相对时间[单位:秒]
     //    /// </summary>
@@ -32,7 +26,7 @@ namespace Discuz.Forum
     //        set { _timeOut = (value < 1200) ? value : 1200; }
     //        get { return (_timeOut < 1200) ? _timeOut : 1200; }
     //    }
-		
+
     //    /// <summary>
     //    /// 加入当前对象到缓存中
     //    /// </summary>
@@ -87,11 +81,11 @@ namespace Discuz.Forum
     //    {
     //        if (objId == null || objId.Length == 0 || o == null)
     //            return;
-		
+
     //        CacheDependency dep = new CacheDependency(files, DateTime.Now);
     //        webCacheforfocus.Insert(objId, o, dep, System.DateTime.Now.AddSeconds(TimeOut), System.Web.Caching.Cache.NoSlidingExpiration);
     //    }
-	
+
 
 
     //    /// <summary>
@@ -108,7 +102,7 @@ namespace Discuz.Forum
     //        CacheDependency dep = new CacheDependency(null, dependKey, DateTime.Now);
     //        webCacheforfocus.Insert(objId, o, dep, System.DateTime.Now.AddSeconds(TimeOut), System.Web.Caching.Cache.NoSlidingExpiration);
     //    }
-	
+
     //    /// <summary>
     //    /// 删除缓存对象
     //    /// </summary>
@@ -160,7 +154,7 @@ namespace Discuz.Forum
     //        get { return (_timeOut > 0 && _timeOut < 9999) ? _timeOut : 600; }
     //    }
     //}
-    
+
     ///// <summary>
     ///// SitemapCacheStrategy 缓存
     ///// Sitemap缓存策略类, 以实现到期时间设置设置

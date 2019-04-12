@@ -1,22 +1,11 @@
 ﻿using System;
 using System.Data;
-using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Common;
-using Discuz.Forum;
 using Discuz.Space.Entities;
-using Button = Discuz.Control.Button;
-using CheckBoxList = Discuz.Control.CheckBoxList;
-using DataGrid = Discuz.Control.DataGrid;
-using DropDownList = Discuz.Control.DropDownList;
-using TextBox = Discuz.Control.TextBox;
-using Calendar = Discuz.Control.Calendar;
 using Discuz.Entity;
 using Discuz.Data;
-using Discuz.Space;
 using Discuz.Web.Admin;
 using Discuz.Space.Data;
 
@@ -26,7 +15,7 @@ namespace Discuz.Space.Admin
     /// <summary>
     /// usergrid 的摘要说明.
     /// </summary>
-     
+
 #if NET1
     public class SpaceManage : AdminPage
 #else

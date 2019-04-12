@@ -1,11 +1,9 @@
-using System;
-
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// SpaceLinkInfo 的摘要说明。
-	/// </summary>
-	public class SpaceLinkInfo
+    /// <summary>
+    /// SpaceLinkInfo 的摘要说明。
+    /// </summary>
+    public class SpaceLinkInfo
 	{
 		public SpaceLinkInfo()
 		{

@@ -1,8 +1,5 @@
 using System;
 using System.Web.UI;
-using System.Data;
-
-using Discuz.Control;
 using Discuz.Forum;
 using Discuz.Config;
 using Discuz.Common;

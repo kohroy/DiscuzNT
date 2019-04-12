@@ -1,12 +1,9 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using System.Data;
 
 using Discuz.Common;
-using Discuz.Config;
 using Discuz.Common.Generic;
 using Discuz.Entity;
-using Discuz.Cache.Data;
 
 namespace Discuz.Data
 {

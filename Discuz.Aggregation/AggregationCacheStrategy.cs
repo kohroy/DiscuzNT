@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text;
-
-namespace Discuz.Aggregation
+﻿namespace Discuz.Aggregation
 {
     /// <summary>
     /// 聚合缓存策略类

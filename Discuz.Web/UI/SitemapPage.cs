@@ -1,19 +1,14 @@
 using System;
-using System.Data;
-using System.Data.Common;
-
-using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Entity;
 using System.Web.UI;
 using Discuz.Config;
 
 namespace Discuz.Web.UI
 {
-	/// <summary>
-	/// RSS页面类
-	/// </summary>
-	public class SitemapPage : Page
+    /// <summary>
+    /// RSS页面类
+    /// </summary>
+    public class SitemapPage : Page
 	{
         public SitemapPage()
 		{

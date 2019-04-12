@@ -1,11 +1,5 @@
-using System;
 using System.Text;
 using System.Text.RegularExpressions;
-
-using Discuz.Common;
-using Discuz.Data;
-using Discuz.Forum;
-using Discuz.Config;
 using Discuz.Entity;
 
 namespace Discuz.Forum

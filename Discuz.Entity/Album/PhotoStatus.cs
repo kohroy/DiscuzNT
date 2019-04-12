@@ -1,6 +1,3 @@
-using System;
-using System.Text;
-
 namespace Discuz.Entity
 {
     public enum PhotoStatus

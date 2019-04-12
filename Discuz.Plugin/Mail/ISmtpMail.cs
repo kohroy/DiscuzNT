@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text;
-
-namespace Discuz.Plugin.Mail
+﻿namespace Discuz.Plugin.Mail
 {
 
     #region 邮件收发代码接口

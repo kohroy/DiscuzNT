@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Discuz.Entity
+﻿namespace Discuz.Entity
 {
     /// <summary>
     /// 用户资料变更日志信息

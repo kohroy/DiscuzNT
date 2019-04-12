@@ -1,8 +1,6 @@
-using System;
-
 namespace Discuz.Entity
 {
-	public enum UserPrefDataType
+    public enum UserPrefDataType
 	{
 		StringType,
 		EnumType,

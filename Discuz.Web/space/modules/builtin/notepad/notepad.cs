@@ -1,4 +1,3 @@
-using System;
 using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Entity;
@@ -8,10 +7,10 @@ using Discuz.Space.Provider;
 
 namespace Discuz.Space.Modules
 {
-	/// <summary>
-	/// notepad 的摘要说明。
-	/// </summary>
-	public class Notepad : ModuleBase
+    /// <summary>
+    /// notepad 的摘要说明。
+    /// </summary>
+    public class Notepad : ModuleBase
 	{
 		private string filename = Utils.GetMapPath(BaseConfigs.GetForumPath+"/space/Modules/builtin/notepad/notepad.config");
 		private GeneralConfigInfo config = GeneralConfigs.GetConfig();

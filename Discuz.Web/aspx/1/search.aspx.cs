@@ -1,9 +1,6 @@
-﻿using System;
-using System.Data;
-using System.Data.SqlClient;
+﻿using System.Data;
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Web.UI;
 using Discuz.Entity;
 
 namespace Discuz.Web

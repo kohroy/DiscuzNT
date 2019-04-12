@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections;
-using Discuz.Common.Generic;
-using System.Text;
+﻿using Discuz.Common.Generic;
 using Discuz.Entity;
-using System.IO;
 using System.Data;
 
 namespace Discuz.Plugin.Album

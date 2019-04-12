@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-
 namespace Discuz.Entity
 {
 #if NET1
@@ -238,7 +235,7 @@ namespace Discuz.Entity
 
 
 #else
-public class UserPrefCollection<T> : Discuz.Common.Generic.List<T> where T : UserPref, new()
+    public class UserPrefCollection<T> : Discuz.Common.Generic.List<T> where T : UserPref, new()
 {
     public UserPrefCollection() : base() { }
 

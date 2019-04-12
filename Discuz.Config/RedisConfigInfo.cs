@@ -1,6 +1,4 @@
-﻿using Discuz.Common;
-
-namespace Discuz.Config
+﻿namespace Discuz.Config
 {
     /// <summary>
     /// Redis配置信息类文件

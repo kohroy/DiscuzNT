@@ -1,5 +1,4 @@
 ﻿using Discuz.Common;
-using Discuz.Data;
 using Discuz.Entity;
 using Discuz.Common.Generic;
 

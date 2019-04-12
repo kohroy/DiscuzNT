@@ -1,17 +1,13 @@
 using System;
-using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Config;
 
 namespace Discuz.Web.Admin
 {
     /// <summary>
     /// °æ¿éÒÆ¶¯
     /// </summary>
-   public partial class forumsmove : AdminPage
+    public partial class forumsmove : AdminPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

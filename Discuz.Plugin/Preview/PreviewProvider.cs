@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Text;
 using System.Collections;
-
-using Discuz.Config;
-using Discuz.Common;
-using System.IO;
-using Discuz.Entity;
 
 namespace Discuz.Plugin.Preview
 {

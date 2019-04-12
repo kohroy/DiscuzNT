@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using System.Collections.ObjectModel;
-using System.Runtime.Serialization;
 
 namespace Discuz.Common.Generic
 {

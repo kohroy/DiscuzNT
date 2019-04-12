@@ -1,13 +1,9 @@
 using System;
 using System.Data;
-using System.Web.UI.WebControls;
 using System.Web.UI;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Button = Discuz.Control.Button;
-using TextBox = Discuz.Control.TextBox;
-using Discuz.Config;
 using Discuz.Entity;
 
 
@@ -16,7 +12,7 @@ namespace Discuz.Web.Admin
     /// <summary>
     /// ¸øÓèÑ«ÕÂ
     /// </summary>
-    
+
     public partial class givemedals : AdminPage
     {
         protected void Page_Load(object sender, EventArgs e)

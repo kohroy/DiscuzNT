@@ -1,7 +1,5 @@
 using System;
-using System.Text;
 using System.Data;
-using System.Data.SqlClient;
 using System.Data.Common;
 using System.IO;
 

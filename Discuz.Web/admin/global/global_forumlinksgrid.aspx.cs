@@ -1,14 +1,11 @@
 ﻿using System;
 using System.Data;
-using System.Data.Common;
 using System.Text.RegularExpressions;
 using System.Web.UI.WebControls;
 using System.Web.UI;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Button = Discuz.Control.Button;
-using DataGrid = Discuz.Control.DataGrid;
 using Discuz.Config;
 
 

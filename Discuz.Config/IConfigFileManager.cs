@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text;
-
-namespace Discuz.Config
+﻿namespace Discuz.Config
 {
     /// <summary>
     /// Discuz!NT 配置管理类接口

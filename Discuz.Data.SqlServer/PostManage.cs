@@ -3,8 +3,6 @@ using System.Text;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
-
-using Discuz.Data;
 using Discuz.Config;
 using Discuz.Common;
 using Discuz.Entity;

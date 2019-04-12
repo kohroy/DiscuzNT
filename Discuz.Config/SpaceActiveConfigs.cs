@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text;
-
-namespace Discuz.Config
+﻿namespace Discuz.Config
 {
     /// <summary>
     /// 空间开通配置类

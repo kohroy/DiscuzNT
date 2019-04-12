@@ -1,13 +1,9 @@
-using System;
-using Newtonsoft.Json;
-using System.Xml.Serialization;
-
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// ShowtopicPageAttachmentInfo 的摘要说明。
-	/// </summary>
-	public class ShowtopicPageAttachmentInfo : AttachmentInfo
+    /// <summary>
+    /// ShowtopicPageAttachmentInfo 的摘要说明。
+    /// </summary>
+    public class ShowtopicPageAttachmentInfo : AttachmentInfo
 	{
 		private int m_getattachperm; //下载附件权限
 		private int m_attachimgpost; //附件是否为图片

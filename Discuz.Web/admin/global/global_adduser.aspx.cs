@@ -1,9 +1,6 @@
 using System;
-using System.Web.UI.HtmlControls;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
-using Discuz.Control;
 using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Config;
@@ -15,7 +12,7 @@ namespace Discuz.Web.Admin
     /// <summary>
     /// ÃÌº””√ªß
     /// </summary>
-    
+
     public partial class adduser : AdminPage
     {
         protected void Page_Load(object sender, EventArgs e)

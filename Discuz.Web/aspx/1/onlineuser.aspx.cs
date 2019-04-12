@@ -2,15 +2,14 @@
 using System.Data;
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Web.UI;
 using Discuz.Entity;
 
 namespace Discuz.Web
 {
-	/// <summary>
-	/// 在线用户列表页
-	/// </summary>
-	public class onlineuser : PageBase
+    /// <summary>
+    /// 在线用户列表页
+    /// </summary>
+    public class onlineuser : PageBase
     {
         #region 页面变量
         /// <summary>

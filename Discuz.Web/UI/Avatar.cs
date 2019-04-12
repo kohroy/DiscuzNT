@@ -1,18 +1,14 @@
-using System;
-using System.Data;
-using System.Data.Common;
 using System.Web;
 
 using Discuz.Forum;
 using Discuz.Common;
-using System.IO;
 
 namespace Discuz.Web.UI
 {
-	/// <summary>
-	/// 头像页面类
-	/// </summary>
-	public class Avatar : PageBase
+    /// <summary>
+    /// 头像页面类
+    /// </summary>
+    public class Avatar : PageBase
 	{
         public Avatar()
 		{

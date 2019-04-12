@@ -1,20 +1,10 @@
 using System;
-using System.Web.UI;
 using System.Data;
-using System.Xml;
 using System.Web.UI.WebControls;
-using System.Net;
-using System.IO;
-using Discuz.Cache;
-using Discuz.Control;
 using Discuz.Entity;
 using Discuz.Forum;
-using Discuz.Config;
 using Discuz.Common;
-using Discuz.Common.Xml;
 using TextBox = System.Web.UI.WebControls.TextBox;
-
-using System.Text;
 
 namespace Discuz.Web.Admin
 {

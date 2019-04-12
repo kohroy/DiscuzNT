@@ -1,13 +1,9 @@
 using System;
 using System.Data;
 using System.Text.RegularExpressions;
-using System.Web.UI;
 using System.Collections;
-
-using Discuz.Control;
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Config;
 
 namespace Discuz.Web.Admin
 {

@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Web;
-using Discuz.Web.UI;
 using Discuz.Common.Generic;
 using Discuz.Entity;
 using Discuz.Forum;

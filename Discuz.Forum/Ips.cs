@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Text;
-
-using Discuz.Data;
 using Discuz.Entity;
-using System.Data;
 using Discuz.Common;
 using Discuz.Common.Generic;
 

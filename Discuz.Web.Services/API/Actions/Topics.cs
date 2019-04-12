@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Text;
 using Discuz.Common;
 using Newtonsoft.Json;
 using Discuz.Entity;
 using Discuz.Forum;
-using Discuz.Config;
 using Discuz.Common.Generic;
 
 namespace Discuz.Web.Services.API.Actions
@@ -48,7 +46,7 @@ namespace Discuz.Web.Services.API.Actions
             Topic topic;
             try
             {
-                topic = JavaScriptConvert.DeserializeObject<Topic>(GetParam("topic_info").ToString());
+                topic = JsonConvert.DeserializeObject<Topic>(GetParam("topic_info").ToString());
             }
             catch
             {
@@ -397,7 +395,7 @@ namespace Discuz.Web.Services.API.Actions
 
             if (Format == FormatType.JSON)
             {
-                return JavaScriptConvert.SerializeObject(tcr);
+                return JsonConvert.SerializeObject(tcr);
             }
             return SerializationHelper.Serialize(tcr);
 
@@ -440,7 +438,7 @@ namespace Discuz.Web.Services.API.Actions
             Reply reply;
             try
             {
-                reply = JavaScriptConvert.DeserializeObject<Reply>(GetParam("reply_info").ToString());
+                reply = JsonConvert.DeserializeObject<Reply>(GetParam("reply_info").ToString());
             }
             catch
             {
@@ -616,7 +614,7 @@ namespace Discuz.Web.Services.API.Actions
 
             if (Format == FormatType.JSON)
             {
-                return JavaScriptConvert.SerializeObject(trr);
+                return JsonConvert.SerializeObject(trr);
             }
             return SerializationHelper.Serialize(trr);
         }
@@ -710,7 +708,7 @@ namespace Discuz.Web.Services.API.Actions
 
             if (Format == FormatType.JSON)
             {
-                return JavaScriptConvert.SerializeObject(tgrrr);
+                return JsonConvert.SerializeObject(tgrrr);
             }
             return Util.AddMessageCDATA(SerializationHelper.Serialize(tgrrr));
         }
@@ -790,7 +788,7 @@ namespace Discuz.Web.Services.API.Actions
 
             if (Format == FormatType.JSON)
             {
-                return JavaScriptConvert.SerializeObject(tglr);
+                return JsonConvert.SerializeObject(tglr);
             }
             return SerializationHelper.Serialize(tglr);
         }
@@ -863,7 +861,7 @@ namespace Discuz.Web.Services.API.Actions
 
             if (Format == FormatType.JSON)
             {
-                return JavaScriptConvert.SerializeObject(tglr);
+                return JsonConvert.SerializeObject(tglr);
             }
             return SerializationHelper.Serialize(tglr);
         }
@@ -1001,7 +999,7 @@ namespace Discuz.Web.Services.API.Actions
             Topic topic;
             try
             {
-                topic = JavaScriptConvert.DeserializeObject<Topic>(GetParam("topic_info").ToString());
+                topic = JsonConvert.DeserializeObject<Topic>(GetParam("topic_info").ToString());
             }
             catch
             {
@@ -1295,7 +1293,7 @@ namespace Discuz.Web.Services.API.Actions
 
             if (Format == FormatType.JSON)
             {
-                return JavaScriptConvert.SerializeObject(tgr);
+                return JsonConvert.SerializeObject(tgr);
             }
             return Util.AddTitleCDATA(Util.AddMessageCDATA(SerializationHelper.Serialize(tgr)));
         }

@@ -3,15 +3,12 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.ComponentModel;
 
-using Discuz.Common;
-using Discuz.Data;
-
 namespace Discuz.Control
 {
-	/// <summary>
-	/// 下拉列表控件。
-	/// </summary>
-	[DefaultProperty("Text"), ToolboxData("<{0}:DropDownList runat=server></{0}:DropDownList>")]
+    /// <summary>
+    /// 下拉列表控件。
+    /// </summary>
+    [DefaultProperty("Text"), ToolboxData("<{0}:DropDownList runat=server></{0}:DropDownList>")]
     public class DropDownList : System.Web.UI.WebControls.DropDownList, Discuz.Control.IWebControl, IPostBackDataHandler
 	{
 

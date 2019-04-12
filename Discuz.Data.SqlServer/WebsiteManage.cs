@@ -129,7 +129,7 @@ namespace Discuz.Data.SqlServer
             DbParameter[] parms = {
                                         DbHelper.MakeInParam("@fid",(DbType)SqlDbType.Int,4,fid),
                                         DbHelper.MakeInParam("@timebetween",(DbType)SqlDbType.Int,4,timeBetween)
-							       };
+                                   };
 
             return TypeConverter.ObjectToInt(DbHelper.ExecuteScalar(CommandType.StoredProcedure, string.Format("{0}gethottopicscount", BaseConfigs.GetTablePrefix), parms));
         }
@@ -142,7 +142,7 @@ namespace Discuz.Data.SqlServer
                                         DbHelper.MakeInParam("@fid",(DbType)SqlDbType.Int,4,fid),
                                         DbHelper.MakeInParam("@showtype",(DbType)SqlDbType.VarChar,100,showType),
                                         DbHelper.MakeInParam("@timebetween",(DbType)SqlDbType.Int,4,timeBetween)
-							       };
+                                   };
 
             //string commandText = "";
             //int pageTop = (pageIndex - 1) * pageSize;
@@ -206,7 +206,7 @@ namespace Discuz.Data.SqlServer
                                         DbHelper.MakeInParam("@count",(DbType)SqlDbType.Int,4,count),
                                         DbHelper.MakeInParam("@orderby",(DbType)SqlDbType.VarChar,50,orderby),
                                         DbHelper.MakeInParam("@continuous",(DbType)SqlDbType.Int,4,continuous)
-							       };
+                                   };
             return DbHelper.ExecuteDataset(CommandType.StoredProcedure, string.Format("{0}gethotimages", BaseConfigs.GetTablePrefix), parms).Tables[0];
         }
     }

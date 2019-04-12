@@ -1,19 +1,16 @@
 using System;
 using System.Data;
-using System.Data.Common;
-using System.Text.RegularExpressions;
 
 using Discuz.Common;
-using Discuz.Config;
 using Discuz.Entity;
 
 namespace Discuz.Forum
 {
-	/// <summary>
-	/// AdminUserGroupFactory 的摘要说明。
-	/// 后台用户组管理操作类
-	/// </summary>
-	public class AdminUserGroups : UserGroups
+    /// <summary>
+    /// AdminUserGroupFactory 的摘要说明。
+    /// 后台用户组管理操作类
+    /// </summary>
+    public class AdminUserGroups : UserGroups
 	{
 		public static string opresult = ""; //存储操作结果或返回给用户的信息
 

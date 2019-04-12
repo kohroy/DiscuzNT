@@ -1,12 +1,10 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using System.Text.RegularExpressions;
 
 using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Config;
 using Discuz.Entity;
-using Discuz.Web.UI;
 using Discuz.Plugin.PasswordMode;
 
 namespace Discuz.Web

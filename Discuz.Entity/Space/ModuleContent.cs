@@ -1,11 +1,9 @@
-using System;
-
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// Content 的摘要说明。
-	/// </summary>
-	public class ModuleContent
+    /// <summary>
+    /// Content 的摘要说明。
+    /// </summary>
+    public class ModuleContent
 	{
 		public ModuleContent()
 		{

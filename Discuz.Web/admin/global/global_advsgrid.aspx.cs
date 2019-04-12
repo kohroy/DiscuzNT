@@ -5,9 +5,6 @@ using System.Web.UI;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Button = Discuz.Control.Button;
-using DataGrid = Discuz.Control.DataGrid;
-using Discuz.Config;
 using Discuz.Entity;
 using Discuz.Cache;
 

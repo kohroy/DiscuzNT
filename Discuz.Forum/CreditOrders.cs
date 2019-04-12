@@ -1,11 +1,5 @@
-﻿using System;
-using System.Data;
-
-using Discuz.Common;
-using Discuz.Config;
+﻿using Discuz.Config;
 using Discuz.Entity;
-using Discuz.Plugin.Payment;
-using Discuz.Plugin.Payment.Alipay;
 
 namespace Discuz.Forum
 {

@@ -1,14 +1,11 @@
 ﻿using System;
 #if NET1
 #else
-using System.Collections.Generic;
 #endif
 using System.Text;
 using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Entity;
-using System.Xml.Serialization;
-using System.IO;
 using System.Security.Cryptography;
 using Discuz.Plugin.PasswordMode;
 using Discuz.Config;

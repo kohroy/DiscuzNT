@@ -1,5 +1,4 @@
-﻿using System.Text;
-using System.Data;
+﻿using System.Data;
 
 namespace Discuz.Forum
 {

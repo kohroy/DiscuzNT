@@ -2,8 +2,6 @@ using System;
 using System.Data;
 using System.Collections;
 using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Config;

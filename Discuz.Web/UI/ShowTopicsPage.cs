@@ -5,7 +5,6 @@ using Discuz.Entity;
 using System.Text;
 
 using Discuz.Aggregation;
-using Discuz.Common.Generic;
 using Discuz.Plugin.Space;
 using Discuz.Plugin.Album;
 

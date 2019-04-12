@@ -2,17 +2,16 @@
 
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Space.Entities;
 using Discuz.Space.Provider;
 using Discuz.Entity;
 
 namespace Discuz.Space.Manage
 {
-	
-	/// <summary>
-	///	评论提交控件
-	/// </summary>
-	public class ajaxsubmitcomment : DiscuzSpaceUCBase
+
+    /// <summary>
+    ///	评论提交控件
+    /// </summary>
+    public class ajaxsubmitcomment : DiscuzSpaceUCBase
 	{
 
 		public string completeinfo = "";

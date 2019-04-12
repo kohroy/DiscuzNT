@@ -3,7 +3,6 @@
     using System;
     using System.ComponentModel;
     using System.Web.UI;
-    using System.Web.UI.WebControls;
 
     /// <summary>
     /// 属性页类

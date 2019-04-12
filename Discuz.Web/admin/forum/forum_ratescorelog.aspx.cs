@@ -2,18 +2,15 @@ using System;
 using System.Data;
 using System.Web.UI.WebControls;
 using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Config;
 
 namespace Discuz.Web.Admin
 {
     /// <summary>
     /// 评分日志列表
     /// </summary>
-    
+
     public partial class ratescorelog : AdminPage
     {
         protected void Page_Load(object sender, EventArgs e)

@@ -1,17 +1,13 @@
 using System;
 using System.Data;
-using System.Data.Common;
-
-using Discuz.Config;
-using Discuz.Entity;
 
 namespace Discuz.Forum
 {
-	/// <summary>
-	/// AdminPaymentLogFactory 的摘要说明。
-	/// 积分交易日志管理操作类
-	/// </summary>
-	public class AdminPaymentLogs
+    /// <summary>
+    /// AdminPaymentLogFactory 的摘要说明。
+    /// 积分交易日志管理操作类
+    /// </summary>
+    public class AdminPaymentLogs
 	{
 		/// <summary>
 		/// 删除日志

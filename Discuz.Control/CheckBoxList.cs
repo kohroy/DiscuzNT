@@ -2,16 +2,14 @@
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.ComponentModel;
-
-using Discuz.Common;
 using Discuz.Data;
 
 namespace Discuz.Control
 {
-	/// <summary>
-	/// CheckBoxList 控件。
-	/// </summary>
-	[DefaultProperty("Text"), ToolboxData("<{0}:CheckBoxList runat=server></{0}:CheckBoxList>")]
+    /// <summary>
+    /// CheckBoxList 控件。
+    /// </summary>
+    [DefaultProperty("Text"), ToolboxData("<{0}:CheckBoxList runat=server></{0}:CheckBoxList>")]
     public class CheckBoxList : System.Web.UI.WebControls.CheckBoxList, Discuz.Control.IWebControl, IPostBackDataHandler
 	{
         /// <summary>

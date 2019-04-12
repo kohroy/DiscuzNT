@@ -2,10 +2,7 @@ using System;
 using System.Data;
 using System.Web.UI;
 using System.Web.UI.HtmlControls;
-
-using Discuz.Cache;
 using Discuz.Forum;
-using Discuz.Config;
 using Discuz.Entity;
 
 namespace Discuz.Web.Admin

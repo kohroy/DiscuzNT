@@ -1,10 +1,7 @@
 using System;
-using System.Text;
 using System.Data;
 using System.Data.Common;
 using System.Data.SqlClient;
-
-using Discuz.Data;
 using Discuz.Config;
 using Discuz.Common;
 using Discuz.Entity;
@@ -75,12 +72,12 @@ namespace Discuz.Data.SqlServer
         public void AddMedal(string name, int available, string image)
         {
             DbParameter[] parms = 
-			{
-				DbHelper.MakeInParam("@medalid", (DbType)SqlDbType.SmallInt,2, GetMaxMedalId()),
-				DbHelper.MakeInParam("@name", (DbType)SqlDbType.NVarChar,50, name),
+            {
+                DbHelper.MakeInParam("@medalid", (DbType)SqlDbType.SmallInt,2, GetMaxMedalId()),
+                DbHelper.MakeInParam("@name", (DbType)SqlDbType.NVarChar,50, name),
                 DbHelper.MakeInParam("@available", (DbType)SqlDbType.Int, 4, available),
-				DbHelper.MakeInParam("@image",(DbType)SqlDbType.VarChar,30,image)
-			};
+                DbHelper.MakeInParam("@image",(DbType)SqlDbType.VarChar,30,image)
+            };
             string commandText = string.Format("INSERT INTO [{0}medals] (medalid,name,available,image) Values (@medalid,@name,@available,@image)",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -89,11 +86,11 @@ namespace Discuz.Data.SqlServer
         public void UpdateMedal(int medalId, string name, string image)
         {
             DbParameter[] parms = 
-			{
-				DbHelper.MakeInParam("@medalid", (DbType)SqlDbType.SmallInt,2, medalId),
-				DbHelper.MakeInParam("@name", (DbType)SqlDbType.NVarChar,50, name),
-				DbHelper.MakeInParam("@image",(DbType)SqlDbType.VarChar,30,image)
-			};
+            {
+                DbHelper.MakeInParam("@medalid", (DbType)SqlDbType.SmallInt,2, medalId),
+                DbHelper.MakeInParam("@name", (DbType)SqlDbType.NVarChar,50, name),
+                DbHelper.MakeInParam("@image",(DbType)SqlDbType.VarChar,30,image)
+            };
             string commandText = string.Format("UPDATE [{0}medals] SET [name]=@name,[image]=@image  Where [medalid]=@medalid",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -102,8 +99,8 @@ namespace Discuz.Data.SqlServer
         public void SetAvailableForMedal(int available, string medalIdList)
         {
             DbParameter[] parms = {
-				                       DbHelper.MakeInParam("@available", (DbType)SqlDbType.Int, 4, available)
-			                      };
+                                       DbHelper.MakeInParam("@available", (DbType)SqlDbType.Int, 4, available)
+                                  };
             string commandText = string.Format("UPDATE [{0}medals] SET [available]=@available WHERE [medalid] IN({1})",
                                                 BaseConfigs.GetTablePrefix,
                                                 medalIdList);
@@ -136,25 +133,25 @@ namespace Discuz.Data.SqlServer
         public int SetAdminGroupInfo(AdminGroupInfo adminGroupsInfo)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@admingid",(DbType)SqlDbType.SmallInt,2,adminGroupsInfo.Admingid),
-									   DbHelper.MakeInParam("@alloweditpost",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Alloweditpost),
-									   DbHelper.MakeInParam("@alloweditpoll",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Alloweditpoll),
-									   DbHelper.MakeInParam("@allowstickthread",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowstickthread),
-									   DbHelper.MakeInParam("@allowmodpost",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowmodpost),
-									   DbHelper.MakeInParam("@allowdelpost",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowdelpost),
-									   DbHelper.MakeInParam("@allowmassprune",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowmassprune),
-									   DbHelper.MakeInParam("@allowrefund",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowrefund),
-									   DbHelper.MakeInParam("@allowcensorword",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowcensorword),
-									   DbHelper.MakeInParam("@allowviewip",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowviewip),
-									   DbHelper.MakeInParam("@allowbanip",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowbanip),
-									   DbHelper.MakeInParam("@allowedituser",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowedituser),
-									   DbHelper.MakeInParam("@allowmoduser",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowmoduser),
-									   DbHelper.MakeInParam("@allowbanuser",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowbanuser),
-									   DbHelper.MakeInParam("@allowpostannounce",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowpostannounce),
-									   DbHelper.MakeInParam("@allowviewlog",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowviewlog),
-									   DbHelper.MakeInParam("@disablepostctrl",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Disablepostctrl),
+                                       DbHelper.MakeInParam("@admingid",(DbType)SqlDbType.SmallInt,2,adminGroupsInfo.Admingid),
+                                       DbHelper.MakeInParam("@alloweditpost",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Alloweditpost),
+                                       DbHelper.MakeInParam("@alloweditpoll",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Alloweditpoll),
+                                       DbHelper.MakeInParam("@allowstickthread",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowstickthread),
+                                       DbHelper.MakeInParam("@allowmodpost",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowmodpost),
+                                       DbHelper.MakeInParam("@allowdelpost",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowdelpost),
+                                       DbHelper.MakeInParam("@allowmassprune",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowmassprune),
+                                       DbHelper.MakeInParam("@allowrefund",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowrefund),
+                                       DbHelper.MakeInParam("@allowcensorword",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowcensorword),
+                                       DbHelper.MakeInParam("@allowviewip",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowviewip),
+                                       DbHelper.MakeInParam("@allowbanip",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowbanip),
+                                       DbHelper.MakeInParam("@allowedituser",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowedituser),
+                                       DbHelper.MakeInParam("@allowmoduser",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowmoduser),
+                                       DbHelper.MakeInParam("@allowbanuser",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowbanuser),
+                                       DbHelper.MakeInParam("@allowpostannounce",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowpostannounce),
+                                       DbHelper.MakeInParam("@allowviewlog",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowviewlog),
+                                       DbHelper.MakeInParam("@disablepostctrl",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Disablepostctrl),
                                        DbHelper.MakeInParam("@allowviewrealname",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowviewrealname)
-								   };
+                                   };
             return DbHelper.ExecuteNonQuery(CommandType.StoredProcedure, string.Format("{0}updateadmingroup", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -166,25 +163,25 @@ namespace Discuz.Data.SqlServer
         public int CreateAdminGroupInfo(AdminGroupInfo adminGroupsInfo)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@admingid",(DbType)SqlDbType.SmallInt,2,adminGroupsInfo.Admingid),
-									   DbHelper.MakeInParam("@alloweditpost",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Alloweditpost),
-									   DbHelper.MakeInParam("@alloweditpoll",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Alloweditpoll),
-									   DbHelper.MakeInParam("@allowstickthread",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowstickthread),
-									   DbHelper.MakeInParam("@allowmodpost",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowmodpost),
-									   DbHelper.MakeInParam("@allowdelpost",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowdelpost),
-									   DbHelper.MakeInParam("@allowmassprune",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowmassprune),
-									   DbHelper.MakeInParam("@allowrefund",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowrefund),
-									   DbHelper.MakeInParam("@allowcensorword",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowcensorword),
-									   DbHelper.MakeInParam("@allowviewip",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowviewip),
-									   DbHelper.MakeInParam("@allowbanip",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowbanip),
-									   DbHelper.MakeInParam("@allowedituser",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowedituser),
-									   DbHelper.MakeInParam("@allowmoduser",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowmoduser),
-									   DbHelper.MakeInParam("@allowbanuser",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowbanuser),
-									   DbHelper.MakeInParam("@allowpostannounce",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowpostannounce),
-									   DbHelper.MakeInParam("@allowviewlog",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowviewlog),
-									   DbHelper.MakeInParam("@disablepostctrl",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Disablepostctrl),
+                                       DbHelper.MakeInParam("@admingid",(DbType)SqlDbType.SmallInt,2,adminGroupsInfo.Admingid),
+                                       DbHelper.MakeInParam("@alloweditpost",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Alloweditpost),
+                                       DbHelper.MakeInParam("@alloweditpoll",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Alloweditpoll),
+                                       DbHelper.MakeInParam("@allowstickthread",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowstickthread),
+                                       DbHelper.MakeInParam("@allowmodpost",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowmodpost),
+                                       DbHelper.MakeInParam("@allowdelpost",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowdelpost),
+                                       DbHelper.MakeInParam("@allowmassprune",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowmassprune),
+                                       DbHelper.MakeInParam("@allowrefund",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowrefund),
+                                       DbHelper.MakeInParam("@allowcensorword",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowcensorword),
+                                       DbHelper.MakeInParam("@allowviewip",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowviewip),
+                                       DbHelper.MakeInParam("@allowbanip",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowbanip),
+                                       DbHelper.MakeInParam("@allowedituser",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowedituser),
+                                       DbHelper.MakeInParam("@allowmoduser",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowmoduser),
+                                       DbHelper.MakeInParam("@allowbanuser",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowbanuser),
+                                       DbHelper.MakeInParam("@allowpostannounce",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowpostannounce),
+                                       DbHelper.MakeInParam("@allowviewlog",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowviewlog),
+                                       DbHelper.MakeInParam("@disablepostctrl",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Disablepostctrl),
                                        DbHelper.MakeInParam("@allowviewrealname",(DbType)SqlDbType.TinyInt,1,adminGroupsInfo.Allowviewrealname)
-								   };
+                                   };
             return DbHelper.ExecuteNonQuery(CommandType.StoredProcedure, string.Format("{0}createadmingroup", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -196,8 +193,8 @@ namespace Discuz.Data.SqlServer
         public int DeleteAdminGroupInfo(short adminGid)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@admingid",(DbType)SqlDbType.SmallInt,2,adminGid),
-								   };
+                                       DbHelper.MakeInParam("@admingid",(DbType)SqlDbType.SmallInt,2,adminGid),
+                                   };
             string commandText = string.Format("DELETE FROM [{0}admingroups] WHERE [admingid] = @admingid",
                                                 BaseConfigs.GetTablePrefix);
             return DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -207,10 +204,10 @@ namespace Discuz.Data.SqlServer
         public void UpdateRaterangeByGroupid(string rateRange, int groupId)
         {
             DbParameter[] parms = 
-			{
+            {
                 DbHelper.MakeInParam("@raterange",(DbType)SqlDbType.NChar, 500,rateRange),
-				DbHelper.MakeInParam("@groupid",(DbType)SqlDbType.Int, 4,groupId)
-			};
+                DbHelper.MakeInParam("@groupid",(DbType)SqlDbType.Int, 4,groupId)
+            };
             string commandText = string.Format("UPDATE [{0}usergroups] SET [raterange]=@raterange WHERE [groupid]=@groupid",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -285,10 +282,10 @@ namespace Discuz.Data.SqlServer
         public void ChangeUsergroup(int sourceUserGroupId, int targetUserGroupId)
         {
             DbParameter[] parms = 
-			{
-				DbHelper.MakeInParam("@soureceusergroupid",(DbType)SqlDbType.Int, 4,sourceUserGroupId),
+            {
+                DbHelper.MakeInParam("@soureceusergroupid",(DbType)SqlDbType.Int, 4,sourceUserGroupId),
                 DbHelper.MakeInParam("@targetusergroupid",(DbType)SqlDbType.Int, 4,targetUserGroupId)
-			};
+            };
             string commandText = string.Format("UPDATE [{0}users] SET [groupid]=@targetusergroupid WHERE [groupid]=@soureceusergroupid",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -297,10 +294,10 @@ namespace Discuz.Data.SqlServer
         public void UpdateUserAdminIdByGroupId(int adminId, int groupId)
         {
             DbParameter[] parms = 
-			{
-				DbHelper.MakeInParam("@adminid",(DbType)SqlDbType.Int, 4,adminId),
+            {
+                DbHelper.MakeInParam("@adminid",(DbType)SqlDbType.Int, 4,adminId),
                 DbHelper.MakeInParam("@groupid",(DbType)SqlDbType.Int, 4,groupId)
-			};
+            };
             string commandText = string.Format("UPDATE [{0}users] SET [adminid]=@adminid WHERE [groupid]=@groupid",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -309,10 +306,10 @@ namespace Discuz.Data.SqlServer
         public bool IsExistMedalAwardRecord(int medalId, int userId)
         {
             DbParameter[] parms = 
-			{
-				DbHelper.MakeInParam("@medalid", (DbType)SqlDbType.Int,4, medalId),
-				DbHelper.MakeInParam("@userid",(DbType)SqlDbType.Int,4,userId)
-			};
+            {
+                DbHelper.MakeInParam("@medalid", (DbType)SqlDbType.Int,4, medalId),
+                DbHelper.MakeInParam("@userid",(DbType)SqlDbType.Int,4,userId)
+            };
             string commandText = string.Format("SELECT TOP 1 ID FROM [{0}medalslog] WHERE [medals]=@medalid AND [uid]=@userid",
                                                 BaseConfigs.GetTablePrefix);
             return DbHelper.ExecuteDataset(CommandType.Text, commandText, parms).Tables[0].Rows.Count != 0;
@@ -321,16 +318,16 @@ namespace Discuz.Data.SqlServer
         public void AddMedalslog(int adminId, string adminName, string ip, string userName, int uid, string actions, int medals, string reason)
         {
             DbParameter[] parms = 
-			{
-				DbHelper.MakeInParam("@adminid", (DbType)SqlDbType.Int,4, adminId),
-				DbHelper.MakeInParam("@adminname",(DbType)SqlDbType.NVarChar,50,adminName),
+            {
+                DbHelper.MakeInParam("@adminid", (DbType)SqlDbType.Int,4, adminId),
+                DbHelper.MakeInParam("@adminname",(DbType)SqlDbType.NVarChar,50,adminName),
                 DbHelper.MakeInParam("@ip", (DbType)SqlDbType.NVarChar,15, ip),
-				DbHelper.MakeInParam("@username",(DbType)SqlDbType.NVarChar,50,userName),
+                DbHelper.MakeInParam("@username",(DbType)SqlDbType.NVarChar,50,userName),
                 DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int,4, uid),
-				DbHelper.MakeInParam("@actions",(DbType)SqlDbType.NVarChar,100,actions),
+                DbHelper.MakeInParam("@actions",(DbType)SqlDbType.NVarChar,100,actions),
                 DbHelper.MakeInParam("@medals", (DbType)SqlDbType.Int,4, medals),
-				DbHelper.MakeInParam("@reason",(DbType)SqlDbType.NVarChar,100,reason)
-			};
+                DbHelper.MakeInParam("@reason",(DbType)SqlDbType.NVarChar,100,reason)
+            };
             string commandText = string.Format("INSERT INTO [{0}medalslog] (adminid,adminname,ip,username,uid,actions,medals,reason) VALUES (@adminid,@adminname,@ip,@username,@uid,@actions,@medals,@reason)",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -339,14 +336,14 @@ namespace Discuz.Data.SqlServer
         public void UpdateMedalslog(string newActions, DateTime postDateTime, string reason, string oldActions, int medals, int uid)
         {
             DbParameter[] parms = 
-			{
-				DbHelper.MakeInParam("@newactions",(DbType)SqlDbType.NVarChar,100,newActions),
+            {
+                DbHelper.MakeInParam("@newactions",(DbType)SqlDbType.NVarChar,100,newActions),
                 DbHelper.MakeInParam("@postdatetime",(DbType)SqlDbType.DateTime,8,postDateTime),
-				DbHelper.MakeInParam("@reason",(DbType)SqlDbType.NVarChar,100,reason),
+                DbHelper.MakeInParam("@reason",(DbType)SqlDbType.NVarChar,100,reason),
                 DbHelper.MakeInParam("@oldactions",(DbType)SqlDbType.NVarChar,100,oldActions),
                 DbHelper.MakeInParam("@medals", (DbType)SqlDbType.Int,4, medals),
                 DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int,4, uid)
-			};
+            };
             string commandText = string.Format("UPDATE [{0}medalslog] SET [actions]=@newactions ,[postdatetime]=@postdatetime, reason=@reason  WHERE [actions]=@oldactions AND [medals]=@medals  AND [uid]=@uid",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -355,12 +352,12 @@ namespace Discuz.Data.SqlServer
         public void UpdateMedalslog(string actions, DateTime postDateTime, string reason, int uid)
         {
             DbParameter[] parms = 
-			{
-				DbHelper.MakeInParam("@actions",(DbType)SqlDbType.NVarChar,100,actions),
+            {
+                DbHelper.MakeInParam("@actions",(DbType)SqlDbType.NVarChar,100,actions),
                 DbHelper.MakeInParam("@postdatetime",(DbType)SqlDbType.DateTime,8,postDateTime),
-				DbHelper.MakeInParam("@reason",(DbType)SqlDbType.NVarChar,100,reason),
+                DbHelper.MakeInParam("@reason",(DbType)SqlDbType.NVarChar,100,reason),
                 DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int,4, uid)
-			};
+            };
             string commandText = string.Format("Update [{0}medalslog] SET [actions]=@actions ,[postdatetime]=@postdatetime,[reason]=@reason  WHERE [uid]=@uid",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -438,11 +435,11 @@ namespace Discuz.Data.SqlServer
         public void UpdateEmailValidateInfo(string authStr, DateTime authTime, int uid)
         {
             DbParameter[] parms = 
-			{
-				DbHelper.MakeInParam("@authstr",(DbType)SqlDbType.VarChar,20,authStr),
+            {
+                DbHelper.MakeInParam("@authstr",(DbType)SqlDbType.VarChar,20,authStr),
                 DbHelper.MakeInParam("@authtime",(DbType)SqlDbType.DateTime,8,authTime),
                 DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int,4, uid)
-			};
+            };
             string commandText = string.Format("UPDATE [{0}userfields] SET [Authstr]=@authstr,[Authtime]=@authtime ,[Authflag]=1  WHERE [uid]=@uid",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -476,10 +473,10 @@ namespace Discuz.Data.SqlServer
         public int CreateFavorites(int uid, int tid, byte type)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,uid),
-									   DbHelper.MakeInParam("@tid",(DbType)SqlDbType.Int,4,tid),
+                                       DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,uid),
+                                       DbHelper.MakeInParam("@tid",(DbType)SqlDbType.Int,4,tid),
                                        DbHelper.MakeInParam("@type", (DbType)SqlDbType.TinyInt, 4, type)
-								   };
+                                   };
             return DbHelper.ExecuteNonQuery(CommandType.StoredProcedure, string.Format("{0}createfavorite", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -494,9 +491,9 @@ namespace Discuz.Data.SqlServer
         public int DeleteFavorites(int uid, string fidList, byte type)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int,4, uid),
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int,4, uid),
                                        DbHelper.MakeInParam("@typeid", (DbType)SqlDbType.TinyInt, 1, type)
-			                        };
+                                    };
             string commandText = string.Format("DELETE FROM [{0}favorites] WHERE [tid] IN ({1}) AND [uid] = @uid AND [typeid]=@typeid",
                                                 BaseConfigs.GetTablePrefix,
                                                 fidList);
@@ -515,10 +512,10 @@ namespace Discuz.Data.SqlServer
         public DataTable GetFavoritesList(int uid, int pageSize, int pageIndex, int typeId)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,uid),
-									   DbHelper.MakeInParam("@pagesize", (DbType)SqlDbType.Int,4,pageSize),
-									   DbHelper.MakeInParam("@pageindex",(DbType)SqlDbType.Int,4,pageIndex)								   
-								   };
+                                       DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,uid),
+                                       DbHelper.MakeInParam("@pagesize", (DbType)SqlDbType.Int,4,pageSize),
+                                       DbHelper.MakeInParam("@pageindex",(DbType)SqlDbType.Int,4,pageIndex)								   
+                                   };
             switch (typeId)
             {
                 case 1:
@@ -555,9 +552,9 @@ namespace Discuz.Data.SqlServer
         public int GetFavoritesCount(int uid, int typeId)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int, 4, uid),
+                                       DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int, 4, uid),
                                        DbHelper.MakeInParam("@typeid",(DbType)SqlDbType.SmallInt, 2, typeId)
-								   };
+                                   };
             return TypeConverter.ObjectToInt(
                          DbHelper.ExecuteScalar(CommandType.StoredProcedure,
                                                 string.Format("{0}getfavoritescount", BaseConfigs.GetTablePrefix),
@@ -573,10 +570,10 @@ namespace Discuz.Data.SqlServer
         public int CheckFavoritesIsIN(int uid, int tid, byte type)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,uid),
-									   DbHelper.MakeInParam("@tid",(DbType)SqlDbType.Int,4,tid),
+                                       DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,uid),
+                                       DbHelper.MakeInParam("@tid",(DbType)SqlDbType.Int,4,tid),
                                         DbHelper.MakeInParam("@type", (DbType)SqlDbType.TinyInt, 1, type)
-			};
+            };
             string commandText = string.Format("SELECT COUNT([tid]) AS [tidcount] FROM [{0}favorites] WHERE [tid]=@tid AND [uid]=@uid AND [typeid]=@type",
                                                 BaseConfigs.GetTablePrefix);
             return TypeConverter.ObjectToInt(DbHelper.ExecuteScalar(CommandType.Text, commandText, parms));
@@ -591,9 +588,9 @@ namespace Discuz.Data.SqlServer
         public int UpdateUserFavoriteViewTime(int uid, int tid)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,uid),
-									   DbHelper.MakeInParam("@tid",(DbType)SqlDbType.Int,4,tid)
-			};
+                                       DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,uid),
+                                       DbHelper.MakeInParam("@tid",(DbType)SqlDbType.Int,4,tid)
+            };
 
             return DbHelper.ExecuteNonQuery(CommandType.StoredProcedure, string.Format("{0}updateuserfavoriteviewtime", BaseConfigs.GetTablePrefix), parms);
         }
@@ -646,10 +643,10 @@ namespace Discuz.Data.SqlServer
         public void CombinationUser(string postTableName, UserInfo targetUserInfo, UserInfo srcUserInfo)
         {
             DbParameter[] parms = {
-					                DbHelper.MakeInParam("@target_uid", (DbType)SqlDbType.Int, 4, targetUserInfo.Uid),
-					                DbHelper.MakeInParam("@target_username", (DbType)SqlDbType.NChar, 20, targetUserInfo.Username.Trim()),
-					                DbHelper.MakeInParam("@src_uid", (DbType)SqlDbType.Int, 4, srcUserInfo.Uid)
-				                  };
+                                    DbHelper.MakeInParam("@target_uid", (DbType)SqlDbType.Int, 4, targetUserInfo.Uid),
+                                    DbHelper.MakeInParam("@target_username", (DbType)SqlDbType.NChar, 20, targetUserInfo.Username.Trim()),
+                                    DbHelper.MakeInParam("@src_uid", (DbType)SqlDbType.Int, 4, srcUserInfo.Uid)
+                                  };
             string commandText = string.Format("UPDATE  [{0}topics] SET [posterid]=@target_uid,[poster]=@target_username  WHERE [posterid]=@src_uid",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -678,8 +675,8 @@ namespace Discuz.Data.SqlServer
         {
             DbParameter[] parms = 
             {
-				DbHelper.MakeInParam("@username", (DbType)SqlDbType.NChar, 20, userName)
-			};
+                DbHelper.MakeInParam("@username", (DbType)SqlDbType.NChar, 20, userName)
+            };
 
             string commandText = string.Format("SELECT TOP 1 [uid] FROM [{0}users] WHERE [username]=@username", BaseConfigs.GetTablePrefix);
             DataTable dt = DbHelper.ExecuteDataset(CommandType.Text, commandText, parms).Tables[0];
@@ -703,8 +700,8 @@ namespace Discuz.Data.SqlServer
                 {
                     DbParameter[] parms = {
                                             DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,uid),
-						                    DbHelper.MakeInParam("@delPosts",(DbType)SqlDbType.Bit,1, delPosts ? 1 : 0),
-						                    DbHelper.MakeInParam("@delPms",(DbType)SqlDbType.Bit,1,delPms ? 1 : 0)
+                                            DbHelper.MakeInParam("@delPosts",(DbType)SqlDbType.Bit,1, delPosts ? 1 : 0),
+                                            DbHelper.MakeInParam("@delPms",(DbType)SqlDbType.Bit,1,delPms ? 1 : 0)
                                           };
                     DbHelper.ExecuteNonQuery(trans, CommandType.StoredProcedure, string.Format("{0}deluserallinf", BaseConfigs.GetTablePrefix), parms);
                     trans.Commit();
@@ -732,63 +729,63 @@ namespace Discuz.Data.SqlServer
         public void AddUserGroup(UserGroupInfo userGroupInfo)
         {
             DbParameter[] parms = 
-					{
-						DbHelper.MakeInParam("@Radminid",(DbType)SqlDbType.Int,4,userGroupInfo.Radminid),
-						DbHelper.MakeInParam("@Grouptitle",(DbType)SqlDbType.NVarChar,50, Utils.RemoveFontTag(userGroupInfo.Grouptitle)),
-						DbHelper.MakeInParam("@Creditshigher",(DbType)SqlDbType.Int,4,userGroupInfo.Creditshigher),
-						DbHelper.MakeInParam("@Creditslower",(DbType)SqlDbType.Int,4,userGroupInfo.Creditslower),
-						DbHelper.MakeInParam("@Stars",(DbType)SqlDbType.Int,4,userGroupInfo.Stars),
-						DbHelper.MakeInParam("@Color",(DbType)SqlDbType.Char,7,userGroupInfo.Color),
-						DbHelper.MakeInParam("@Groupavatar",(DbType)SqlDbType.NVarChar,60,userGroupInfo.Groupavatar),
-						DbHelper.MakeInParam("@Readaccess",(DbType)SqlDbType.Int,4,userGroupInfo.Readaccess),
-						DbHelper.MakeInParam("@Allowvisit",(DbType)SqlDbType.Int,4,userGroupInfo.Allowvisit),
-						DbHelper.MakeInParam("@Allowpost",(DbType)SqlDbType.Int,4,userGroupInfo.Allowpost),
-						DbHelper.MakeInParam("@Allowreply",(DbType)SqlDbType.Int,4,userGroupInfo.Allowreply),
-						DbHelper.MakeInParam("@Allowpostpoll",(DbType)SqlDbType.Int,4,userGroupInfo.Allowpostpoll),
-						DbHelper.MakeInParam("@Allowdirectpost",(DbType)SqlDbType.Int,4,userGroupInfo.Allowdirectpost),
-						DbHelper.MakeInParam("@Allowgetattach",(DbType)SqlDbType.Int,4,userGroupInfo.Allowgetattach),
-						DbHelper.MakeInParam("@Allowpostattach",(DbType)SqlDbType.Int,4,userGroupInfo.Allowpostattach),
-						DbHelper.MakeInParam("@Allowvote",(DbType)SqlDbType.Int,4,userGroupInfo.Allowvote),
-						DbHelper.MakeInParam("@Allowmultigroups",(DbType)SqlDbType.Int,4,userGroupInfo.Allowmultigroups),
-						DbHelper.MakeInParam("@Allowsearch",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsearch),
-						DbHelper.MakeInParam("@Allowavatar",(DbType)SqlDbType.Int,4,userGroupInfo.Allowavatar),
-						DbHelper.MakeInParam("@Allowcstatus",(DbType)SqlDbType.Int,4,userGroupInfo.Allowcstatus),
-						DbHelper.MakeInParam("@Allowuseblog",(DbType)SqlDbType.Int,4,userGroupInfo.Allowuseblog),
-						DbHelper.MakeInParam("@Allowinvisible",(DbType)SqlDbType.Int,4,userGroupInfo.Allowinvisible),
-						DbHelper.MakeInParam("@Allowtransfer",(DbType)SqlDbType.Int,4,userGroupInfo.Allowtransfer),
-						DbHelper.MakeInParam("@Allowsetreadperm",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsetreadperm),
-						DbHelper.MakeInParam("@Allowsetattachperm",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsetattachperm),
-						DbHelper.MakeInParam("@Allowhidecode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowhidecode),
-						DbHelper.MakeInParam("@Allowhtml",(DbType)SqlDbType.Int,4,userGroupInfo.Allowhtml),
+                    {
+                        DbHelper.MakeInParam("@Radminid",(DbType)SqlDbType.Int,4,userGroupInfo.Radminid),
+                        DbHelper.MakeInParam("@Grouptitle",(DbType)SqlDbType.NVarChar,50, Utils.RemoveFontTag(userGroupInfo.Grouptitle)),
+                        DbHelper.MakeInParam("@Creditshigher",(DbType)SqlDbType.Int,4,userGroupInfo.Creditshigher),
+                        DbHelper.MakeInParam("@Creditslower",(DbType)SqlDbType.Int,4,userGroupInfo.Creditslower),
+                        DbHelper.MakeInParam("@Stars",(DbType)SqlDbType.Int,4,userGroupInfo.Stars),
+                        DbHelper.MakeInParam("@Color",(DbType)SqlDbType.Char,7,userGroupInfo.Color),
+                        DbHelper.MakeInParam("@Groupavatar",(DbType)SqlDbType.NVarChar,60,userGroupInfo.Groupavatar),
+                        DbHelper.MakeInParam("@Readaccess",(DbType)SqlDbType.Int,4,userGroupInfo.Readaccess),
+                        DbHelper.MakeInParam("@Allowvisit",(DbType)SqlDbType.Int,4,userGroupInfo.Allowvisit),
+                        DbHelper.MakeInParam("@Allowpost",(DbType)SqlDbType.Int,4,userGroupInfo.Allowpost),
+                        DbHelper.MakeInParam("@Allowreply",(DbType)SqlDbType.Int,4,userGroupInfo.Allowreply),
+                        DbHelper.MakeInParam("@Allowpostpoll",(DbType)SqlDbType.Int,4,userGroupInfo.Allowpostpoll),
+                        DbHelper.MakeInParam("@Allowdirectpost",(DbType)SqlDbType.Int,4,userGroupInfo.Allowdirectpost),
+                        DbHelper.MakeInParam("@Allowgetattach",(DbType)SqlDbType.Int,4,userGroupInfo.Allowgetattach),
+                        DbHelper.MakeInParam("@Allowpostattach",(DbType)SqlDbType.Int,4,userGroupInfo.Allowpostattach),
+                        DbHelper.MakeInParam("@Allowvote",(DbType)SqlDbType.Int,4,userGroupInfo.Allowvote),
+                        DbHelper.MakeInParam("@Allowmultigroups",(DbType)SqlDbType.Int,4,userGroupInfo.Allowmultigroups),
+                        DbHelper.MakeInParam("@Allowsearch",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsearch),
+                        DbHelper.MakeInParam("@Allowavatar",(DbType)SqlDbType.Int,4,userGroupInfo.Allowavatar),
+                        DbHelper.MakeInParam("@Allowcstatus",(DbType)SqlDbType.Int,4,userGroupInfo.Allowcstatus),
+                        DbHelper.MakeInParam("@Allowuseblog",(DbType)SqlDbType.Int,4,userGroupInfo.Allowuseblog),
+                        DbHelper.MakeInParam("@Allowinvisible",(DbType)SqlDbType.Int,4,userGroupInfo.Allowinvisible),
+                        DbHelper.MakeInParam("@Allowtransfer",(DbType)SqlDbType.Int,4,userGroupInfo.Allowtransfer),
+                        DbHelper.MakeInParam("@Allowsetreadperm",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsetreadperm),
+                        DbHelper.MakeInParam("@Allowsetattachperm",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsetattachperm),
+                        DbHelper.MakeInParam("@Allowhidecode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowhidecode),
+                        DbHelper.MakeInParam("@Allowhtml",(DbType)SqlDbType.Int,4,userGroupInfo.Allowhtml),
                         DbHelper.MakeInParam("@Allowhtmltitle",(DbType)SqlDbType.Int,4,userGroupInfo.Allowhtmltitle),
-						DbHelper.MakeInParam("@Allowcusbbcode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowcusbbcode),
-						DbHelper.MakeInParam("@Allownickname",(DbType)SqlDbType.Int,4,userGroupInfo.Allownickname),
-						DbHelper.MakeInParam("@Allowsigbbcode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsigbbcode),
-						DbHelper.MakeInParam("@Allowsigimgcode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsigimgcode),
-						DbHelper.MakeInParam("@Allowviewpro",(DbType)SqlDbType.Int,4,userGroupInfo.Allowviewpro),
-						DbHelper.MakeInParam("@Allowviewstats",(DbType)SqlDbType.Int,4,userGroupInfo.Allowviewstats),
+                        DbHelper.MakeInParam("@Allowcusbbcode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowcusbbcode),
+                        DbHelper.MakeInParam("@Allownickname",(DbType)SqlDbType.Int,4,userGroupInfo.Allownickname),
+                        DbHelper.MakeInParam("@Allowsigbbcode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsigbbcode),
+                        DbHelper.MakeInParam("@Allowsigimgcode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsigimgcode),
+                        DbHelper.MakeInParam("@Allowviewpro",(DbType)SqlDbType.Int,4,userGroupInfo.Allowviewpro),
+                        DbHelper.MakeInParam("@Allowviewstats",(DbType)SqlDbType.Int,4,userGroupInfo.Allowviewstats),
                         DbHelper.MakeInParam("@Allowtrade",(DbType)SqlDbType.Int,4,userGroupInfo.Allowtrade),
                         DbHelper.MakeInParam("@Allowdiggs",(DbType)SqlDbType.Int,4,userGroupInfo.Allowdiggs),
                         DbHelper.MakeInParam("@Allowdebate",(DbType)SqlDbType.Int,4,userGroupInfo.Allowdebate),
                         DbHelper.MakeInParam("@Allowbonus",(DbType)SqlDbType.Int,4,userGroupInfo.Allowbonus),
                         DbHelper.MakeInParam("@Minbonusprice",(DbType)SqlDbType.Int,4,userGroupInfo.Minbonusprice),
                         DbHelper.MakeInParam("@Maxbonusprice",(DbType)SqlDbType.Int,4,userGroupInfo.Maxbonusprice),
-						DbHelper.MakeInParam("@Disableperiodctrl",(DbType)SqlDbType.Int,4,userGroupInfo.Disableperiodctrl),
-						DbHelper.MakeInParam("@Reasonpm",(DbType)SqlDbType.Int,4,userGroupInfo.Reasonpm),
-						DbHelper.MakeInParam("@Maxprice",(DbType)SqlDbType.SmallInt,2,userGroupInfo.Maxprice),
-						DbHelper.MakeInParam("@Maxpmnum",(DbType)SqlDbType.SmallInt,2,userGroupInfo.Maxpmnum),
-						DbHelper.MakeInParam("@Maxsigsize",(DbType)SqlDbType.SmallInt,2,userGroupInfo.Maxsigsize),
-						DbHelper.MakeInParam("@Maxattachsize",(DbType)SqlDbType.Int,4,userGroupInfo.Maxattachsize),
-						DbHelper.MakeInParam("@Maxsizeperday",(DbType)SqlDbType.Int,4,userGroupInfo.Maxsizeperday),
-						DbHelper.MakeInParam("@Attachextensions",(DbType)SqlDbType.Char,100,userGroupInfo.Attachextensions),
+                        DbHelper.MakeInParam("@Disableperiodctrl",(DbType)SqlDbType.Int,4,userGroupInfo.Disableperiodctrl),
+                        DbHelper.MakeInParam("@Reasonpm",(DbType)SqlDbType.Int,4,userGroupInfo.Reasonpm),
+                        DbHelper.MakeInParam("@Maxprice",(DbType)SqlDbType.SmallInt,2,userGroupInfo.Maxprice),
+                        DbHelper.MakeInParam("@Maxpmnum",(DbType)SqlDbType.SmallInt,2,userGroupInfo.Maxpmnum),
+                        DbHelper.MakeInParam("@Maxsigsize",(DbType)SqlDbType.SmallInt,2,userGroupInfo.Maxsigsize),
+                        DbHelper.MakeInParam("@Maxattachsize",(DbType)SqlDbType.Int,4,userGroupInfo.Maxattachsize),
+                        DbHelper.MakeInParam("@Maxsizeperday",(DbType)SqlDbType.Int,4,userGroupInfo.Maxsizeperday),
+                        DbHelper.MakeInParam("@Attachextensions",(DbType)SqlDbType.Char,100,userGroupInfo.Attachextensions),
                         DbHelper.MakeInParam("@Maxspaceattachsize",(DbType)SqlDbType.Int,4,userGroupInfo.Maxspaceattachsize),
                         DbHelper.MakeInParam("@Maxspacephotosize",(DbType)SqlDbType.Int,4,userGroupInfo.Maxspacephotosize),
-						DbHelper.MakeInParam("@Raterange",(DbType)SqlDbType.Char,100,userGroupInfo.Raterange),
+                        DbHelper.MakeInParam("@Raterange",(DbType)SqlDbType.Char,100,userGroupInfo.Raterange),
                         //DbHelper.MakeInParam("@Maxfriendscount",(DbType)SqlDbType.Int,4,userGroupInfo.MaxFriendsCount),
                         DbHelper.MakeInParam("@ModNewTopics",(DbType)SqlDbType.SmallInt,2,userGroupInfo.ModNewTopics),
                         DbHelper.MakeInParam("@ModNewPosts",(DbType)SqlDbType.SmallInt,2,userGroupInfo.ModNewPosts),
                         DbHelper.MakeInParam("@Ignoreseccode",(DbType)SqlDbType.Int,4,userGroupInfo.Ignoreseccode)
-					};
+                    };
 
             DbHelper.ExecuteNonQuery(CommandType.StoredProcedure, string.Format("{0}addusergroup", BaseConfigs.GetTablePrefix), parms);
         }
@@ -891,63 +888,63 @@ namespace Discuz.Data.SqlServer
         public void UpdateUserGroup(UserGroupInfo userGroupInfo)
         {
             DbParameter[] parms = 
-					{
-						DbHelper.MakeInParam("@Radminid",(DbType)SqlDbType.Int,4,(userGroupInfo.Groupid == 1) ? 1 : userGroupInfo.Radminid),
-						DbHelper.MakeInParam("@Grouptitle",(DbType)SqlDbType.NVarChar,50, Utils.RemoveFontTag(userGroupInfo.Grouptitle)),
-						DbHelper.MakeInParam("@Creditshigher",(DbType)SqlDbType.Int,4,userGroupInfo.Creditshigher),
-						DbHelper.MakeInParam("@Creditslower",(DbType)SqlDbType.Int,4, userGroupInfo.Creditslower),
-						DbHelper.MakeInParam("@Stars",(DbType)SqlDbType.Int,4,userGroupInfo.Stars),
-						DbHelper.MakeInParam("@Color",(DbType)SqlDbType.Char,7,userGroupInfo.Color),
-						DbHelper.MakeInParam("@Groupavatar",(DbType)SqlDbType.NVarChar,60,userGroupInfo.Groupavatar),
-						DbHelper.MakeInParam("@Readaccess",(DbType)SqlDbType.Int,4,userGroupInfo.Readaccess),
-						DbHelper.MakeInParam("@Allowvisit",(DbType)SqlDbType.Int,4,userGroupInfo.Allowvisit),
-						DbHelper.MakeInParam("@Allowpost",(DbType)SqlDbType.Int,4,userGroupInfo.Allowpost),
-						DbHelper.MakeInParam("@Allowreply",(DbType)SqlDbType.Int,4,userGroupInfo.Allowreply),
-						DbHelper.MakeInParam("@Allowpostpoll",(DbType)SqlDbType.Int,4,userGroupInfo.Allowpostpoll),
-						DbHelper.MakeInParam("@Allowdirectpost",(DbType)SqlDbType.Int,4,userGroupInfo.Allowdirectpost),
-						DbHelper.MakeInParam("@Allowgetattach",(DbType)SqlDbType.Int,4,userGroupInfo.Allowgetattach),
-						DbHelper.MakeInParam("@Allowpostattach",(DbType)SqlDbType.Int,4,userGroupInfo.Allowpostattach),
-						DbHelper.MakeInParam("@Allowvote",(DbType)SqlDbType.Int,4,userGroupInfo.Allowvote),
-						DbHelper.MakeInParam("@Allowmultigroups",(DbType)SqlDbType.Int,4,userGroupInfo.Allowmultigroups),
-						DbHelper.MakeInParam("@Allowsearch",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsearch),
-						DbHelper.MakeInParam("@Allowavatar",(DbType)SqlDbType.Int,4,userGroupInfo.Allowavatar),
-						DbHelper.MakeInParam("@Allowcstatus",(DbType)SqlDbType.Int,4,userGroupInfo.Allowcstatus),
-						DbHelper.MakeInParam("@Allowuseblog",(DbType)SqlDbType.Int,4,userGroupInfo.Allowuseblog),
-						DbHelper.MakeInParam("@Allowinvisible",(DbType)SqlDbType.Int,4,userGroupInfo.Allowinvisible),
-						DbHelper.MakeInParam("@Allowtransfer",(DbType)SqlDbType.Int,4,userGroupInfo.Allowtransfer),
-						DbHelper.MakeInParam("@Allowsetreadperm",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsetreadperm),
-						DbHelper.MakeInParam("@Allowsetattachperm",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsetattachperm),
-						DbHelper.MakeInParam("@Allowhidecode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowhidecode),
-						DbHelper.MakeInParam("@Allowhtml",(DbType)SqlDbType.Int,4,userGroupInfo.Allowhtml),
+                    {
+                        DbHelper.MakeInParam("@Radminid",(DbType)SqlDbType.Int,4,(userGroupInfo.Groupid == 1) ? 1 : userGroupInfo.Radminid),
+                        DbHelper.MakeInParam("@Grouptitle",(DbType)SqlDbType.NVarChar,50, Utils.RemoveFontTag(userGroupInfo.Grouptitle)),
+                        DbHelper.MakeInParam("@Creditshigher",(DbType)SqlDbType.Int,4,userGroupInfo.Creditshigher),
+                        DbHelper.MakeInParam("@Creditslower",(DbType)SqlDbType.Int,4, userGroupInfo.Creditslower),
+                        DbHelper.MakeInParam("@Stars",(DbType)SqlDbType.Int,4,userGroupInfo.Stars),
+                        DbHelper.MakeInParam("@Color",(DbType)SqlDbType.Char,7,userGroupInfo.Color),
+                        DbHelper.MakeInParam("@Groupavatar",(DbType)SqlDbType.NVarChar,60,userGroupInfo.Groupavatar),
+                        DbHelper.MakeInParam("@Readaccess",(DbType)SqlDbType.Int,4,userGroupInfo.Readaccess),
+                        DbHelper.MakeInParam("@Allowvisit",(DbType)SqlDbType.Int,4,userGroupInfo.Allowvisit),
+                        DbHelper.MakeInParam("@Allowpost",(DbType)SqlDbType.Int,4,userGroupInfo.Allowpost),
+                        DbHelper.MakeInParam("@Allowreply",(DbType)SqlDbType.Int,4,userGroupInfo.Allowreply),
+                        DbHelper.MakeInParam("@Allowpostpoll",(DbType)SqlDbType.Int,4,userGroupInfo.Allowpostpoll),
+                        DbHelper.MakeInParam("@Allowdirectpost",(DbType)SqlDbType.Int,4,userGroupInfo.Allowdirectpost),
+                        DbHelper.MakeInParam("@Allowgetattach",(DbType)SqlDbType.Int,4,userGroupInfo.Allowgetattach),
+                        DbHelper.MakeInParam("@Allowpostattach",(DbType)SqlDbType.Int,4,userGroupInfo.Allowpostattach),
+                        DbHelper.MakeInParam("@Allowvote",(DbType)SqlDbType.Int,4,userGroupInfo.Allowvote),
+                        DbHelper.MakeInParam("@Allowmultigroups",(DbType)SqlDbType.Int,4,userGroupInfo.Allowmultigroups),
+                        DbHelper.MakeInParam("@Allowsearch",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsearch),
+                        DbHelper.MakeInParam("@Allowavatar",(DbType)SqlDbType.Int,4,userGroupInfo.Allowavatar),
+                        DbHelper.MakeInParam("@Allowcstatus",(DbType)SqlDbType.Int,4,userGroupInfo.Allowcstatus),
+                        DbHelper.MakeInParam("@Allowuseblog",(DbType)SqlDbType.Int,4,userGroupInfo.Allowuseblog),
+                        DbHelper.MakeInParam("@Allowinvisible",(DbType)SqlDbType.Int,4,userGroupInfo.Allowinvisible),
+                        DbHelper.MakeInParam("@Allowtransfer",(DbType)SqlDbType.Int,4,userGroupInfo.Allowtransfer),
+                        DbHelper.MakeInParam("@Allowsetreadperm",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsetreadperm),
+                        DbHelper.MakeInParam("@Allowsetattachperm",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsetattachperm),
+                        DbHelper.MakeInParam("@Allowhidecode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowhidecode),
+                        DbHelper.MakeInParam("@Allowhtml",(DbType)SqlDbType.Int,4,userGroupInfo.Allowhtml),
                         DbHelper.MakeInParam("@Allowhtmltitle",(DbType)SqlDbType.Int,4,userGroupInfo.Allowhtmltitle),
-						DbHelper.MakeInParam("@Allowcusbbcode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowcusbbcode),
-						DbHelper.MakeInParam("@Allownickname",(DbType)SqlDbType.Int,4,userGroupInfo.Allownickname),
-						DbHelper.MakeInParam("@Allowsigbbcode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsigbbcode),
-						DbHelper.MakeInParam("@Allowsigimgcode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsigimgcode),
-						DbHelper.MakeInParam("@Allowviewpro",(DbType)SqlDbType.Int,4,userGroupInfo.Allowviewpro),
-						DbHelper.MakeInParam("@Allowviewstats",(DbType)SqlDbType.Int,4,userGroupInfo.Allowviewstats),
+                        DbHelper.MakeInParam("@Allowcusbbcode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowcusbbcode),
+                        DbHelper.MakeInParam("@Allownickname",(DbType)SqlDbType.Int,4,userGroupInfo.Allownickname),
+                        DbHelper.MakeInParam("@Allowsigbbcode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsigbbcode),
+                        DbHelper.MakeInParam("@Allowsigimgcode",(DbType)SqlDbType.Int,4,userGroupInfo.Allowsigimgcode),
+                        DbHelper.MakeInParam("@Allowviewpro",(DbType)SqlDbType.Int,4,userGroupInfo.Allowviewpro),
+                        DbHelper.MakeInParam("@Allowviewstats",(DbType)SqlDbType.Int,4,userGroupInfo.Allowviewstats),
                         DbHelper.MakeInParam("@Allowtrade",(DbType)SqlDbType.Int,4,userGroupInfo.Allowtrade),
                         DbHelper.MakeInParam("@Allowdiggs",(DbType)SqlDbType.Int,4,userGroupInfo.Allowdiggs),
-						DbHelper.MakeInParam("@Disableperiodctrl",(DbType)SqlDbType.Int,4,userGroupInfo.Disableperiodctrl),
+                        DbHelper.MakeInParam("@Disableperiodctrl",(DbType)SqlDbType.Int,4,userGroupInfo.Disableperiodctrl),
                         DbHelper.MakeInParam("@Allowdebate",(DbType)SqlDbType.Int,4,userGroupInfo.Allowdebate),
                         DbHelper.MakeInParam("@Allowbonus",(DbType)SqlDbType.Int,4,userGroupInfo.Allowbonus),
                         DbHelper.MakeInParam("@Minbonusprice",(DbType)SqlDbType.Int,4,userGroupInfo.Minbonusprice),
                         DbHelper.MakeInParam("@Maxbonusprice",(DbType)SqlDbType.Int,4,userGroupInfo.Maxbonusprice),
-						DbHelper.MakeInParam("@Reasonpm",(DbType)SqlDbType.Int,4,userGroupInfo.Reasonpm),
-						DbHelper.MakeInParam("@Maxprice",(DbType)SqlDbType.SmallInt,2,userGroupInfo.Maxprice),
-						DbHelper.MakeInParam("@Maxpmnum",(DbType)SqlDbType.SmallInt,2,userGroupInfo.Maxpmnum),
-						DbHelper.MakeInParam("@Maxsigsize",(DbType)SqlDbType.SmallInt,2,userGroupInfo.Maxsigsize),
-						DbHelper.MakeInParam("@Maxattachsize",(DbType)SqlDbType.Int,4,userGroupInfo.Maxattachsize),
-						DbHelper.MakeInParam("@Maxsizeperday",(DbType)SqlDbType.Int,4,userGroupInfo.Maxsizeperday),
-						DbHelper.MakeInParam("@Attachextensions",(DbType)SqlDbType.Char,100,userGroupInfo.Attachextensions),
+                        DbHelper.MakeInParam("@Reasonpm",(DbType)SqlDbType.Int,4,userGroupInfo.Reasonpm),
+                        DbHelper.MakeInParam("@Maxprice",(DbType)SqlDbType.SmallInt,2,userGroupInfo.Maxprice),
+                        DbHelper.MakeInParam("@Maxpmnum",(DbType)SqlDbType.SmallInt,2,userGroupInfo.Maxpmnum),
+                        DbHelper.MakeInParam("@Maxsigsize",(DbType)SqlDbType.SmallInt,2,userGroupInfo.Maxsigsize),
+                        DbHelper.MakeInParam("@Maxattachsize",(DbType)SqlDbType.Int,4,userGroupInfo.Maxattachsize),
+                        DbHelper.MakeInParam("@Maxsizeperday",(DbType)SqlDbType.Int,4,userGroupInfo.Maxsizeperday),
+                        DbHelper.MakeInParam("@Attachextensions",(DbType)SqlDbType.Char,100,userGroupInfo.Attachextensions),
                         DbHelper.MakeInParam("@Maxspaceattachsize",(DbType)SqlDbType.Int,4,userGroupInfo.Maxspaceattachsize),
                         DbHelper.MakeInParam("@Maxspacephotosize",(DbType)SqlDbType.Int,4,userGroupInfo.Maxspacephotosize),
-						DbHelper.MakeInParam("@Groupid",(DbType)SqlDbType.Int,4,userGroupInfo.Groupid),
+                        DbHelper.MakeInParam("@Groupid",(DbType)SqlDbType.Int,4,userGroupInfo.Groupid),
                         //DbHelper.MakeInParam("@Maxfriendscount",(DbType)SqlDbType.Int,4,userGroupInfo.MaxFriendsCount),
                         DbHelper.MakeInParam("@ModNewTopics",(DbType)SqlDbType.SmallInt,2,userGroupInfo.ModNewTopics),
                         DbHelper.MakeInParam("@ModNewPosts",(DbType)SqlDbType.SmallInt,2,userGroupInfo.ModNewPosts),
                         DbHelper.MakeInParam("@Ignoreseccode",(DbType)SqlDbType.Int,4,userGroupInfo.Ignoreseccode)
-			};
+            };
             DbHelper.ExecuteNonQuery(CommandType.StoredProcedure, string.Format("{0}updateusergroup", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -1118,7 +1115,7 @@ namespace Discuz.Data.SqlServer
                 DbHelper.MakeInParam("@fid", (DbType)SqlDbType.SmallInt, 2, fid),
                 DbHelper.MakeInParam("@displayorder", (DbType)SqlDbType.SmallInt, 2, displayOrder),
                 DbHelper.MakeInParam("@inherited", (DbType)SqlDbType.SmallInt, 2, inherited)
-		    };
+            };
             string commandText = string.Format("INSERT INTO [{0}moderators] (uid,fid,displayorder,inherited) VALUES(@uid,@fid,@displayorder,@inherited)",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -1127,8 +1124,8 @@ namespace Discuz.Data.SqlServer
         public DataTable GetModeratorInfo(string moderator)
         {
             DbParameter[] parms = {
-				                      DbHelper.MakeInParam("@username", (DbType)SqlDbType.VarChar, 20, moderator.Trim())
-			                      };
+                                      DbHelper.MakeInParam("@username", (DbType)SqlDbType.VarChar, 20, moderator.Trim())
+                                  };
             string commandText = string.Format("SELECT TOP 1 [uid],[groupid]  FROM [{0}users] Where [groupid]<>7 AND [groupid]<>8 AND [username]=@username",
                                                 BaseConfigs.GetTablePrefix);
             return DbHelper.ExecuteDataset(CommandType.Text, commandText, parms).Tables[0];
@@ -1138,8 +1135,8 @@ namespace Discuz.Data.SqlServer
         {
             DbParameter[] parms = 
             {
-				DbHelper.MakeInParam("@username", (DbType)SqlDbType.VarChar, 20, moderator.Trim())
-			};
+                DbHelper.MakeInParam("@username", (DbType)SqlDbType.VarChar, 20, moderator.Trim())
+            };
             string commandText = string.Format("UPDATE [{0}users] SET [adminid]=3,[groupid]=3 WHERE [username]=@username",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -1153,9 +1150,9 @@ namespace Discuz.Data.SqlServer
         public DataTable GetUidAdminIdByUsername(string userName)
         {
             DbParameter[] parms =
-			{
-				DbHelper.MakeInParam("@username", (DbType)SqlDbType.VarChar, 20, userName)
-			};
+            {
+                DbHelper.MakeInParam("@username", (DbType)SqlDbType.VarChar, 20, userName)
+            };
             string commandText = string.Format("SELECT TOP 1 [uid],[adminid] FROM [{0}users] WHERE [username] = @username",
                                                 BaseConfigs.GetTablePrefix);
             return DbHelper.ExecuteDataset(CommandType.Text, commandText, parms).Tables[0];
@@ -1164,10 +1161,10 @@ namespace Discuz.Data.SqlServer
         public DataTable GetUidInModeratorsByUid(int currentFid, int uid)
         {
             DbParameter[] parms =
-			{
-				DbHelper.MakeInParam("@currentfid", (DbType)SqlDbType.Int, 4, currentFid),
+            {
+                DbHelper.MakeInParam("@currentfid", (DbType)SqlDbType.Int, 4, currentFid),
                 DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid)
-			};
+            };
             string commandText = string.Format("SELECT TOP 1 [uid]  FROM [{0}moderators] WHERE [fid]<>@currentfid AND [uid]=@uid",
                                                 BaseConfigs.GetTablePrefix);
             return DbHelper.ExecuteDataset(CommandType.Text, commandText, parms).Tables[0];
@@ -1176,10 +1173,10 @@ namespace Discuz.Data.SqlServer
         public void UpdateUserOnlineInfo(int groupId, int userId)
         {
             DbParameter[] parms =
-			{
-				DbHelper.MakeInParam("@groupid", (DbType)SqlDbType.Int, 4, groupId),
+            {
+                DbHelper.MakeInParam("@groupid", (DbType)SqlDbType.Int, 4, groupId),
                 DbHelper.MakeInParam("@userid", (DbType)SqlDbType.Int, 4, userId)
-			};
+            };
             string commandText = string.Format("UPDATE [{0}online] SET [groupid]=@groupid WHERE [userid]=@userid", BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
         }
@@ -1187,10 +1184,10 @@ namespace Discuz.Data.SqlServer
         public void UpdateUserOtherInfo(int groupId, int userId)
         {
             DbParameter[] parms =
-			{
-				DbHelper.MakeInParam("@groupid", (DbType)SqlDbType.Int, 4, groupId),
+            {
+                DbHelper.MakeInParam("@groupid", (DbType)SqlDbType.Int, 4, groupId),
                 DbHelper.MakeInParam("@userid", (DbType)SqlDbType.Int, 4, userId)
-			};
+            };
             string commandText = string.Format("UPDATE [{0}users] SET [groupid]=@groupid ,[adminid]=0 WHERE [uid]=@userid",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -1222,10 +1219,10 @@ namespace Discuz.Data.SqlServer
         public IDataReader GetTopUsers(int statCount, int lastUid)
         {
             DbParameter[] parms =
-			{
-				DbHelper.MakeInParam("@statcont", (DbType)SqlDbType.Int, 4, statCount),
+            {
+                DbHelper.MakeInParam("@statcont", (DbType)SqlDbType.Int, 4, statCount),
                 DbHelper.MakeInParam("@lastuid", (DbType)SqlDbType.Int, 4, lastUid)
-			};
+            };
             return DbHelper.ExecuteReader(CommandType.StoredProcedure, string.Format("{0}gettopusers", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -1240,9 +1237,9 @@ namespace Discuz.Data.SqlServer
         public IDataReader GetUsers(int startUid, int endUid)
         {
             DbParameter[] parms = {
-				DbHelper.MakeInParam("@start_uid", (DbType)SqlDbType.Int, 4, startUid),
-				DbHelper.MakeInParam("@end_uid", (DbType)SqlDbType.Int, 4, endUid)
-			};
+                DbHelper.MakeInParam("@start_uid", (DbType)SqlDbType.Int, 4, startUid),
+                DbHelper.MakeInParam("@end_uid", (DbType)SqlDbType.Int, 4, endUid)
+            };
             return DbHelper.ExecuteReader(CommandType.StoredProcedure, string.Format("{0}getusers", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -1466,8 +1463,8 @@ namespace Discuz.Data.SqlServer
         public int DeleteRowsByIP(string ip)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@ip",(DbType)SqlDbType.VarChar,15,ip)
-								   };
+                                       DbHelper.MakeInParam("@ip",(DbType)SqlDbType.VarChar,15,ip)
+                                   };
 
             //当在线表被布署到别的数据库时
             if (EntLibConfigs.GetConfig() != null)
@@ -1515,14 +1512,14 @@ namespace Discuz.Data.SqlServer
         public void UpdateAction(int olId, int action, int inid)
         {
             DbParameter[] parms = {
-										   DbHelper.MakeInParam("@action",(DbType)SqlDbType.SmallInt,2,action),
+                                           DbHelper.MakeInParam("@action",(DbType)SqlDbType.SmallInt,2,action),
                                            DbHelper.MakeInParam("@lastupdatetime", (DbType)SqlDbType.DateTime, 8, DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"))),
-										   DbHelper.MakeInParam("@forumid",(DbType)SqlDbType.Int,4,inid),
-										   DbHelper.MakeInParam("@forumname",(DbType)SqlDbType.NVarChar,100,""),
-										   DbHelper.MakeInParam("@titleid",(DbType)SqlDbType.Int,4,inid),
-										   DbHelper.MakeInParam("@title",(DbType)SqlDbType.NVarChar,160,""),
-										   DbHelper.MakeInParam("@olid",(DbType)SqlDbType.Int,4,olId)
-								  };
+                                           DbHelper.MakeInParam("@forumid",(DbType)SqlDbType.Int,4,inid),
+                                           DbHelper.MakeInParam("@forumname",(DbType)SqlDbType.NVarChar,100,""),
+                                           DbHelper.MakeInParam("@titleid",(DbType)SqlDbType.Int,4,inid),
+                                           DbHelper.MakeInParam("@title",(DbType)SqlDbType.NVarChar,160,""),
+                                           DbHelper.MakeInParam("@olid",(DbType)SqlDbType.Int,4,olId)
+                                  };
             DbHelper.ExecuteNonQuery(CommandType.StoredProcedure, string.Format("{0}updateonlineaction", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -1538,14 +1535,14 @@ namespace Discuz.Data.SqlServer
         public void UpdateAction(int olId, int action, int fid, string forumName, int tid, string topicTitle)
         {
             DbParameter[] parms = {
-										   DbHelper.MakeInParam("@action",(DbType)SqlDbType.SmallInt,2,action),
+                                           DbHelper.MakeInParam("@action",(DbType)SqlDbType.SmallInt,2,action),
                                            DbHelper.MakeInParam("@lastupdatetime", (DbType)SqlDbType.DateTime, 8, DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"))),
-										   DbHelper.MakeInParam("@forumid",(DbType)SqlDbType.Int,4,fid),
-										   DbHelper.MakeInParam("@forumname",(DbType)SqlDbType.NVarChar,100,forumName),
-										   DbHelper.MakeInParam("@titleid",(DbType)SqlDbType.Int,4,tid),
-										   DbHelper.MakeInParam("@title",(DbType)SqlDbType.NVarChar,160,topicTitle),
-										   DbHelper.MakeInParam("@olid",(DbType)SqlDbType.Int,4,olId)
-								  };
+                                           DbHelper.MakeInParam("@forumid",(DbType)SqlDbType.Int,4,fid),
+                                           DbHelper.MakeInParam("@forumname",(DbType)SqlDbType.NVarChar,100,forumName),
+                                           DbHelper.MakeInParam("@titleid",(DbType)SqlDbType.Int,4,tid),
+                                           DbHelper.MakeInParam("@title",(DbType)SqlDbType.NVarChar,160,topicTitle),
+                                           DbHelper.MakeInParam("@olid",(DbType)SqlDbType.Int,4,olId)
+                                  };
             DbHelper.ExecuteNonQuery(CommandType.StoredProcedure, string.Format("{0}updateonlineaction", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -1557,8 +1554,8 @@ namespace Discuz.Data.SqlServer
         {
             DbParameter[] parms = {
                                            DbHelper.MakeInParam("@lastupdatetime", (DbType)SqlDbType.DateTime, 8, DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"))),
-										   DbHelper.MakeInParam("@olid",(DbType)SqlDbType.Int,4,olId)
-									   };
+                                           DbHelper.MakeInParam("@olid",(DbType)SqlDbType.Int,4,olId)
+                                       };
             string commandText = string.Format("UPDATE [{0}online] SET [lastupdatetime]=@lastupdatetime WHERE [olid]=@olid", BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
         }
@@ -1609,9 +1606,9 @@ namespace Discuz.Data.SqlServer
         public void UpdatePassword(int olId, string passWord)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@password",(DbType)SqlDbType.Char,32,passWord),
-									   DbHelper.MakeInParam("@olid",(DbType)SqlDbType.Int,4,olId)
-								   };
+                                       DbHelper.MakeInParam("@password",(DbType)SqlDbType.Char,32,passWord),
+                                       DbHelper.MakeInParam("@olid",(DbType)SqlDbType.Int,4,olId)
+                                   };
             string commandText = string.Format("UPDATE [{0}online] SET [password]=@password WHERE [olid]=@olid",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -1625,9 +1622,9 @@ namespace Discuz.Data.SqlServer
         public void UpdateIP(int olId, string ip)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@ip",(DbType)SqlDbType.VarChar,15,ip),
-									   DbHelper.MakeInParam("@olid",(DbType)SqlDbType.Int,4,olId)
-								   };
+                                       DbHelper.MakeInParam("@ip",(DbType)SqlDbType.VarChar,15,ip),
+                                       DbHelper.MakeInParam("@olid",(DbType)SqlDbType.Int,4,olId)
+                                   };
             string commandText = string.Format("UPDATE [{0}online] SET [ip]=@ip WHERE [olid]=@olid", BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
         }
@@ -1667,8 +1664,8 @@ namespace Discuz.Data.SqlServer
         public IDataReader GetPrivateMessageInfo(int pmId)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@pmid", (DbType)SqlDbType.Int,4, pmId),
-			                        };
+                                       DbHelper.MakeInParam("@pmid", (DbType)SqlDbType.Int,4, pmId),
+                                    };
             string commandText = string.Format("SELECT TOP 1 {0} FROM [{1}pms] WHERE [pmid]=@pmid",
                                                 DbFields.PMS,
                                                 BaseConfigs.GetTablePrefix);
@@ -1687,12 +1684,12 @@ namespace Discuz.Data.SqlServer
         public IDataReader GetPrivateMessageList(int userId, int folder, int pageSize, int pageIndex, int intType)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@userid",(DbType)SqlDbType.Int,4,userId),
-									   DbHelper.MakeInParam("@folder",(DbType)SqlDbType.Int,4,folder),
-									   DbHelper.MakeInParam("@pagesize", (DbType)SqlDbType.Int,4,pageSize),
-									   DbHelper.MakeInParam("@pageindex",(DbType)SqlDbType.Int,4,pageIndex),
-								       DbHelper.MakeInParam("@inttype",(DbType)SqlDbType.VarChar,500,intType)
-								   };
+                                       DbHelper.MakeInParam("@userid",(DbType)SqlDbType.Int,4,userId),
+                                       DbHelper.MakeInParam("@folder",(DbType)SqlDbType.Int,4,folder),
+                                       DbHelper.MakeInParam("@pagesize", (DbType)SqlDbType.Int,4,pageSize),
+                                       DbHelper.MakeInParam("@pageindex",(DbType)SqlDbType.Int,4,pageIndex),
+                                       DbHelper.MakeInParam("@inttype",(DbType)SqlDbType.VarChar,500,intType)
+                                   };
             return DbHelper.ExecuteReader(CommandType.StoredProcedure, string.Format("{0}getpmlist", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -1706,10 +1703,10 @@ namespace Discuz.Data.SqlServer
         public int GetPrivateMessageCount(int userId, int folder, int state)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@userid",(DbType)SqlDbType.Int,4,userId),
-									   DbHelper.MakeInParam("@folder",(DbType)SqlDbType.Int,4,folder),								   
-									   DbHelper.MakeInParam("@state",(DbType)SqlDbType.Int,4,state)
-								   };
+                                       DbHelper.MakeInParam("@userid",(DbType)SqlDbType.Int,4,userId),
+                                       DbHelper.MakeInParam("@folder",(DbType)SqlDbType.Int,4,folder),								   
+                                       DbHelper.MakeInParam("@state",(DbType)SqlDbType.Int,4,state)
+                                   };
             return TypeConverter.ObjectToInt(
                                  DbHelper.ExecuteScalar(CommandType.StoredProcedure,
                                                         string.Format("{0}getpmcount", BaseConfigs.GetTablePrefix),
@@ -1759,18 +1756,18 @@ namespace Discuz.Data.SqlServer
         public int CreatePrivateMessage(PrivateMessageInfo privateMessageInfo, int saveToSentBox)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@pmid",(DbType)SqlDbType.Int,4,privateMessageInfo.Pmid),
-									   DbHelper.MakeInParam("@msgfrom",(DbType)SqlDbType.NVarChar,20,privateMessageInfo.Msgfrom),
-									   DbHelper.MakeInParam("@msgfromid",(DbType)SqlDbType.Int,4,privateMessageInfo.Msgfromid),
-									   DbHelper.MakeInParam("@msgto",(DbType)SqlDbType.NVarChar,20,privateMessageInfo.Msgto),
-									   DbHelper.MakeInParam("@msgtoid",(DbType)SqlDbType.Int,4,privateMessageInfo.Msgtoid),
-									   DbHelper.MakeInParam("@folder",(DbType)SqlDbType.SmallInt,2,privateMessageInfo.Folder),
-									   DbHelper.MakeInParam("@new",(DbType)SqlDbType.Int,4,privateMessageInfo.New),
-									   DbHelper.MakeInParam("@subject",(DbType)SqlDbType.NVarChar,80,privateMessageInfo.Subject),
-									   DbHelper.MakeInParam("@postdatetime",(DbType)SqlDbType.DateTime,8,DateTime.Parse(privateMessageInfo.Postdatetime)),
-									   DbHelper.MakeInParam("@message",(DbType)SqlDbType.NText,0,privateMessageInfo.Message),
-									   DbHelper.MakeInParam("@savetosentbox",(DbType)SqlDbType.Int,4,saveToSentBox)
-								   };
+                                       DbHelper.MakeInParam("@pmid",(DbType)SqlDbType.Int,4,privateMessageInfo.Pmid),
+                                       DbHelper.MakeInParam("@msgfrom",(DbType)SqlDbType.NVarChar,20,privateMessageInfo.Msgfrom),
+                                       DbHelper.MakeInParam("@msgfromid",(DbType)SqlDbType.Int,4,privateMessageInfo.Msgfromid),
+                                       DbHelper.MakeInParam("@msgto",(DbType)SqlDbType.NVarChar,20,privateMessageInfo.Msgto),
+                                       DbHelper.MakeInParam("@msgtoid",(DbType)SqlDbType.Int,4,privateMessageInfo.Msgtoid),
+                                       DbHelper.MakeInParam("@folder",(DbType)SqlDbType.SmallInt,2,privateMessageInfo.Folder),
+                                       DbHelper.MakeInParam("@new",(DbType)SqlDbType.Int,4,privateMessageInfo.New),
+                                       DbHelper.MakeInParam("@subject",(DbType)SqlDbType.NVarChar,80,privateMessageInfo.Subject),
+                                       DbHelper.MakeInParam("@postdatetime",(DbType)SqlDbType.DateTime,8,DateTime.Parse(privateMessageInfo.Postdatetime)),
+                                       DbHelper.MakeInParam("@message",(DbType)SqlDbType.NText,0,privateMessageInfo.Message),
+                                       DbHelper.MakeInParam("@savetosentbox",(DbType)SqlDbType.Int,4,saveToSentBox)
+                                   };
             return TypeConverter.ObjectToInt(
                                  DbHelper.ExecuteScalar(CommandType.StoredProcedure,
                                                         string.Format("{0}createpm", BaseConfigs.GetTablePrefix), parms), -1);
@@ -1785,8 +1782,8 @@ namespace Discuz.Data.SqlServer
         public int DeletePrivateMessages(int userId, string pmIdList)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@userid", (DbType)SqlDbType.Int,4, userId)
-			                      };
+                                       DbHelper.MakeInParam("@userid", (DbType)SqlDbType.Int,4, userId)
+                                  };
             string commandText = string.Format("DELETE FROM [{0}pms] WHERE [pmid] IN ({1}) AND ([msgtoid] = @userid OR [msgfromid] = @userid)",
                                                 BaseConfigs.GetTablePrefix,
                                                 pmIdList);
@@ -1814,9 +1811,9 @@ namespace Discuz.Data.SqlServer
         public int DeletePrivateMessage(int userId, int pmId)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@userid", (DbType)SqlDbType.Int,4, userId),
-									   DbHelper.MakeInParam("@pmid", (DbType)SqlDbType.Int,4, pmId)
-			                      };
+                                       DbHelper.MakeInParam("@userid", (DbType)SqlDbType.Int,4, userId),
+                                       DbHelper.MakeInParam("@pmid", (DbType)SqlDbType.Int,4, pmId)
+                                  };
             string commandText = string.Format("DELETE FROM [{0}pms] WHERE [pmid]=@pmid AND ([msgtoid] = @userid OR [msgfromid] = @userid)",
                                                 BaseConfigs.GetTablePrefix);
             return DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -1831,9 +1828,9 @@ namespace Discuz.Data.SqlServer
         public int SetPrivateMessageState(int pmId, byte state)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@pmid", (DbType)SqlDbType.Int,1,pmId),
-									   DbHelper.MakeInParam("@state",(DbType)SqlDbType.TinyInt,1,state)
-								   };
+                                       DbHelper.MakeInParam("@pmid", (DbType)SqlDbType.Int,1,pmId),
+                                       DbHelper.MakeInParam("@state",(DbType)SqlDbType.TinyInt,1,state)
+                                   };
             string commandText = string.Format("UPDATE [{0}pms] SET [new]=@state WHERE [pmid]=@pmid", BaseConfigs.GetTablePrefix);
             return DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
         }
@@ -1887,16 +1884,16 @@ namespace Discuz.Data.SqlServer
         public bool CheckUserCreditsIsEnough(int uid, float[] values)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
-									   DbHelper.MakeInParam("@extcredits1", (DbType)SqlDbType.Float, 8, values[0]),
-									   DbHelper.MakeInParam("@extcredits2", (DbType)SqlDbType.Float, 8, values[1]),
-									   DbHelper.MakeInParam("@extcredits3", (DbType)SqlDbType.Float, 8, values[2]),
-									   DbHelper.MakeInParam("@extcredits4", (DbType)SqlDbType.Float, 8, values[3]),
-									   DbHelper.MakeInParam("@extcredits5", (DbType)SqlDbType.Float, 8, values[4]),
-									   DbHelper.MakeInParam("@extcredits6", (DbType)SqlDbType.Float, 8, values[5]),
-									   DbHelper.MakeInParam("@extcredits7", (DbType)SqlDbType.Float, 8, values[6]),
-									   DbHelper.MakeInParam("@extcredits8", (DbType)SqlDbType.Float, 8, values[7])
-								   };
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
+                                       DbHelper.MakeInParam("@extcredits1", (DbType)SqlDbType.Float, 8, values[0]),
+                                       DbHelper.MakeInParam("@extcredits2", (DbType)SqlDbType.Float, 8, values[1]),
+                                       DbHelper.MakeInParam("@extcredits3", (DbType)SqlDbType.Float, 8, values[2]),
+                                       DbHelper.MakeInParam("@extcredits4", (DbType)SqlDbType.Float, 8, values[3]),
+                                       DbHelper.MakeInParam("@extcredits5", (DbType)SqlDbType.Float, 8, values[4]),
+                                       DbHelper.MakeInParam("@extcredits6", (DbType)SqlDbType.Float, 8, values[5]),
+                                       DbHelper.MakeInParam("@extcredits7", (DbType)SqlDbType.Float, 8, values[6]),
+                                       DbHelper.MakeInParam("@extcredits8", (DbType)SqlDbType.Float, 8, values[7])
+                                   };
             string commandText = string.Format("SELECT COUNT(1) FROM [{0}users] WHERE [uid]=@uid AND"
                                                 + "	[extcredits1]>= (case when @extcredits1<0 then abs(@extcredits1) else [extcredits1] end) AND "
                                                 + "	[extcredits2]>= (case when @extcredits2<0 then abs(@extcredits2) else [extcredits2] end) AND "
@@ -1914,16 +1911,16 @@ namespace Discuz.Data.SqlServer
         public void UpdateUserCredits(int uid, float[] values)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
-									   DbHelper.MakeInParam("@extcredits1", (DbType)SqlDbType.Float, 8, values[0]),
-									   DbHelper.MakeInParam("@extcredits2", (DbType)SqlDbType.Float, 8, values[1]),
-									   DbHelper.MakeInParam("@extcredits3", (DbType)SqlDbType.Float, 8, values[2]),
-									   DbHelper.MakeInParam("@extcredits4", (DbType)SqlDbType.Float, 8, values[3]),
-									   DbHelper.MakeInParam("@extcredits5", (DbType)SqlDbType.Float, 8, values[4]),
-									   DbHelper.MakeInParam("@extcredits6", (DbType)SqlDbType.Float, 8, values[5]),
-									   DbHelper.MakeInParam("@extcredits7", (DbType)SqlDbType.Float, 8, values[6]),
-									   DbHelper.MakeInParam("@extcredits8", (DbType)SqlDbType.Float, 8, values[7])
-								   };
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
+                                       DbHelper.MakeInParam("@extcredits1", (DbType)SqlDbType.Float, 8, values[0]),
+                                       DbHelper.MakeInParam("@extcredits2", (DbType)SqlDbType.Float, 8, values[1]),
+                                       DbHelper.MakeInParam("@extcredits3", (DbType)SqlDbType.Float, 8, values[2]),
+                                       DbHelper.MakeInParam("@extcredits4", (DbType)SqlDbType.Float, 8, values[3]),
+                                       DbHelper.MakeInParam("@extcredits5", (DbType)SqlDbType.Float, 8, values[4]),
+                                       DbHelper.MakeInParam("@extcredits6", (DbType)SqlDbType.Float, 8, values[5]),
+                                       DbHelper.MakeInParam("@extcredits7", (DbType)SqlDbType.Float, 8, values[6]),
+                                       DbHelper.MakeInParam("@extcredits8", (DbType)SqlDbType.Float, 8, values[7])
+                                   };
 
             string commandText = string.Format("UPDATE [{0}users] SET "
                                                 + "		[extcredits1]=[extcredits1] + @extcredits1, "
@@ -1945,16 +1942,16 @@ namespace Discuz.Data.SqlServer
             if (pos < 0)
             {
                 DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
-									   DbHelper.MakeInParam("@extcredits1", (DbType)SqlDbType.Float, 8, values[0] * mount),
-									   DbHelper.MakeInParam("@extcredits2", (DbType)SqlDbType.Float, 8, values[1] * mount),
-									   DbHelper.MakeInParam("@extcredits3", (DbType)SqlDbType.Float, 8, values[2] * mount),
-									   DbHelper.MakeInParam("@extcredits4", (DbType)SqlDbType.Float, 8, values[3] * mount),
-									   DbHelper.MakeInParam("@extcredits5", (DbType)SqlDbType.Float, 8, values[4] * mount),
-									   DbHelper.MakeInParam("@extcredits6", (DbType)SqlDbType.Float, 8, values[5] * mount),
-									   DbHelper.MakeInParam("@extcredits7", (DbType)SqlDbType.Float, 8, values[6] * mount),
-									   DbHelper.MakeInParam("@extcredits8", (DbType)SqlDbType.Float, 8, values[7] * mount)
-								   };
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
+                                       DbHelper.MakeInParam("@extcredits1", (DbType)SqlDbType.Float, 8, values[0] * mount),
+                                       DbHelper.MakeInParam("@extcredits2", (DbType)SqlDbType.Float, 8, values[1] * mount),
+                                       DbHelper.MakeInParam("@extcredits3", (DbType)SqlDbType.Float, 8, values[2] * mount),
+                                       DbHelper.MakeInParam("@extcredits4", (DbType)SqlDbType.Float, 8, values[3] * mount),
+                                       DbHelper.MakeInParam("@extcredits5", (DbType)SqlDbType.Float, 8, values[4] * mount),
+                                       DbHelper.MakeInParam("@extcredits6", (DbType)SqlDbType.Float, 8, values[5] * mount),
+                                       DbHelper.MakeInParam("@extcredits7", (DbType)SqlDbType.Float, 8, values[6] * mount),
+                                       DbHelper.MakeInParam("@extcredits8", (DbType)SqlDbType.Float, 8, values[7] * mount)
+                                   };
                 string commandText = string.Format("SELECT COUNT(1) FROM [{0}users] WHERE [uid]=@uid AND"
                                                     + "	[extcredits1]>= (case when @extcredits1 < 0 then abs(@extcredits1) else 0 end) AND "
                                                     + "	[extcredits2]>= (case when @extcredits2 < 0 then abs(@extcredits2) else 0 end) AND "
@@ -1973,15 +1970,15 @@ namespace Discuz.Data.SqlServer
         public void UpdateUserCredits(int uid, float[] values, int pos, int mount)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
-									   DbHelper.MakeInParam("@extcredits1", (DbType)SqlDbType.Float, 8, values[0] * pos * mount),
-									   DbHelper.MakeInParam("@extcredits2", (DbType)SqlDbType.Float, 8, values[1] * pos * mount),
-									   DbHelper.MakeInParam("@extcredits3", (DbType)SqlDbType.Float, 8, values[2] * pos * mount),
-									   DbHelper.MakeInParam("@extcredits4", (DbType)SqlDbType.Float, 8, values[3] * pos * mount),
-									   DbHelper.MakeInParam("@extcredits5", (DbType)SqlDbType.Float, 8, values[4] * pos * mount),
-									   DbHelper.MakeInParam("@extcredits6", (DbType)SqlDbType.Float, 8, values[5] * pos * mount),
-									   DbHelper.MakeInParam("@extcredits7", (DbType)SqlDbType.Float, 8, values[6] * pos * mount),
-									   DbHelper.MakeInParam("@extcredits8", (DbType)SqlDbType.Float, 8, values[7] * pos * mount)								   };
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
+                                       DbHelper.MakeInParam("@extcredits1", (DbType)SqlDbType.Float, 8, values[0] * pos * mount),
+                                       DbHelper.MakeInParam("@extcredits2", (DbType)SqlDbType.Float, 8, values[1] * pos * mount),
+                                       DbHelper.MakeInParam("@extcredits3", (DbType)SqlDbType.Float, 8, values[2] * pos * mount),
+                                       DbHelper.MakeInParam("@extcredits4", (DbType)SqlDbType.Float, 8, values[3] * pos * mount),
+                                       DbHelper.MakeInParam("@extcredits5", (DbType)SqlDbType.Float, 8, values[4] * pos * mount),
+                                       DbHelper.MakeInParam("@extcredits6", (DbType)SqlDbType.Float, 8, values[5] * pos * mount),
+                                       DbHelper.MakeInParam("@extcredits7", (DbType)SqlDbType.Float, 8, values[6] * pos * mount),
+                                       DbHelper.MakeInParam("@extcredits8", (DbType)SqlDbType.Float, 8, values[7] * pos * mount)								   };
             if (pos < 0 && mount < 0)
             {
                 for (int i = 1; i < parms.Length; i++)
@@ -2046,8 +2043,8 @@ namespace Discuz.Data.SqlServer
         public IDataReader GetUserInfoToReader(int uid)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int,4, uid)
-			                      };
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int,4, uid)
+                                  };
             return DbHelper.ExecuteReader(CommandType.StoredProcedure, string.Format("{0}getuserinfo", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -2059,8 +2056,8 @@ namespace Discuz.Data.SqlServer
         public IDataReader GetUserInfoByIP(string ip)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@regip", (DbType)SqlDbType.Char,15, ip),
-			                      };
+                                       DbHelper.MakeInParam("@regip", (DbType)SqlDbType.Char,15, ip),
+                                  };
             return DbHelper.ExecuteReader(CommandType.StoredProcedure, string.Format("{0}getuserinfobyip", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -2072,8 +2069,8 @@ namespace Discuz.Data.SqlServer
         public IDataReader GetUserInfoToReader(string userName)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@username", (DbType)SqlDbType.NChar,20, userName)
-			                      };
+                                       DbHelper.MakeInParam("@username", (DbType)SqlDbType.NChar,20, userName)
+                                  };
             string commandText = string.Format("SELECT TOP 1 {1} FROM [{0}users] AS [u] LEFT JOIN [{0}userfields] AS [uf] ON [u].[uid]=[uf].[uid] WHERE [u].[username]=@username",
                                                 BaseConfigs.GetTablePrefix,
                                                 DbFields.USERS_JOIN_FIELDS);
@@ -2088,8 +2085,8 @@ namespace Discuz.Data.SqlServer
         {
             DbParameter[] parms = {
                                        DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4, uid),
-									   DbHelper.MakeInParam("@username", (DbType)SqlDbType.NChar,20, userName)
-			                      };
+                                       DbHelper.MakeInParam("@username", (DbType)SqlDbType.NChar,20, userName)
+                                  };
             string commandText = string.Format("SELECT TOP 1 {1} FROM [{0}users] AS [u] LEFT JOIN [{0}userfields] AS [uf] ON [u].[uid]=[uf].[uid] WHERE [u].[uid]=@uid AND [u].[username]=@username",
                                                 BaseConfigs.GetTablePrefix,
                                                 DbFields.USERS_JOIN_FIELDS);
@@ -2104,8 +2101,8 @@ namespace Discuz.Data.SqlServer
         public IDataReader GetShortUserInfoToReader(int uid)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int,4, uid),
-			                      };
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int,4, uid),
+                                  };
             return DbHelper.ExecuteReader(CommandType.StoredProcedure, string.Format("{0}getshortuserinfo", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -2129,8 +2126,8 @@ namespace Discuz.Data.SqlServer
         public IDataReader GetShortUserInfoByName(string userName)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@username",(DbType)SqlDbType.VarChar,20,userName),
-			                      };
+                                       DbHelper.MakeInParam("@username",(DbType)SqlDbType.VarChar,20,userName),
+                                  };
             string commandText = string.Format("SELECT TOP 1 {0} FROM [{1}users] WHERE [{1}users].[username]=@username",
                                                 DbFields.USERS,
                                                 BaseConfigs.GetTablePrefix);
@@ -2167,11 +2164,11 @@ namespace Discuz.Data.SqlServer
             column = (i > 6 || i < 0) ? "uid" : arrayorderby[i];
 
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@pagesize", (DbType)SqlDbType.Int,4,pageSize),
-									   DbHelper.MakeInParam("@pageindex",(DbType)SqlDbType.Int,4,pageIndex),
-									   DbHelper.MakeInParam("@column",(DbType)SqlDbType.VarChar,1000,column),
+                                       DbHelper.MakeInParam("@pagesize", (DbType)SqlDbType.Int,4,pageSize),
+                                       DbHelper.MakeInParam("@pageindex",(DbType)SqlDbType.Int,4,pageIndex),
+                                       DbHelper.MakeInParam("@column",(DbType)SqlDbType.VarChar,1000,column),
                                        DbHelper.MakeInParam("@ordertype",(DbType)SqlDbType.VarChar,5,orderType)
-								   };
+                                   };
             return DbHelper.ExecuteDataset(CommandType.StoredProcedure, string.Format("{0}getuserlist", BaseConfigs.GetTablePrefix), parms).Tables[0];
         }
 
@@ -2186,10 +2183,10 @@ namespace Discuz.Data.SqlServer
         public IDataReader CheckEmailAndSecques(string userName, string email, string secques)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@username",(DbType)SqlDbType.Char,20,userName),
-									   DbHelper.MakeInParam("@email",(DbType)SqlDbType.Char,50, email),
-									   DbHelper.MakeInParam("@secques",(DbType)SqlDbType.Char,8, secques)
-								   };
+                                       DbHelper.MakeInParam("@username",(DbType)SqlDbType.Char,20,userName),
+                                       DbHelper.MakeInParam("@email",(DbType)SqlDbType.Char,50, email),
+                                       DbHelper.MakeInParam("@secques",(DbType)SqlDbType.Char,8, secques)
+                                   };
             return DbHelper.ExecuteReader(CommandType.StoredProcedure, string.Format("{0}checkemailandsecques", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -2205,10 +2202,10 @@ namespace Discuz.Data.SqlServer
         public IDataReader CheckPasswordAndSecques(string userName, string passWord, bool originalPassWord, string secques)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@username",(DbType)SqlDbType.Char,20,userName),
-									   DbHelper.MakeInParam("@password",(DbType)SqlDbType.Char,32, originalPassWord ? Utils.MD5(passWord) : passWord),
-									   DbHelper.MakeInParam("@secques",(DbType)SqlDbType.Char,8, secques)
-								   };
+                                       DbHelper.MakeInParam("@username",(DbType)SqlDbType.Char,20,userName),
+                                       DbHelper.MakeInParam("@password",(DbType)SqlDbType.Char,32, originalPassWord ? Utils.MD5(passWord) : passWord),
+                                       DbHelper.MakeInParam("@secques",(DbType)SqlDbType.Char,8, secques)
+                                   };
             return DbHelper.ExecuteReader(CommandType.StoredProcedure, string.Format("{0}checkpasswordandsecques", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -2222,9 +2219,9 @@ namespace Discuz.Data.SqlServer
         public IDataReader CheckPassword(string userName, string passWord, bool originalPassWord)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@username",(DbType)SqlDbType.Char,20, userName),
-									   DbHelper.MakeInParam("@password",(DbType)SqlDbType.Char,32, originalPassWord ? Utils.MD5(passWord) : passWord)
-								   };
+                                       DbHelper.MakeInParam("@username",(DbType)SqlDbType.Char,20, userName),
+                                       DbHelper.MakeInParam("@password",(DbType)SqlDbType.Char,32, originalPassWord ? Utils.MD5(passWord) : passWord)
+                                   };
             return DbHelper.ExecuteReader(CommandType.StoredProcedure, string.Format("{0}checkpasswordbyusername", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -2240,9 +2237,9 @@ namespace Discuz.Data.SqlServer
         public IDataReader CheckPassword(int uid, string passWord, bool originalPassWord)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,uid),
-									   DbHelper.MakeInParam("@password",(DbType)SqlDbType.Char,32, originalPassWord ? Utils.MD5(passWord) : passWord)
-								   };
+                                       DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,uid),
+                                       DbHelper.MakeInParam("@password",(DbType)SqlDbType.Char,32, originalPassWord ? Utils.MD5(passWord) : passWord)
+                                   };
             return DbHelper.ExecuteReader(CommandType.StoredProcedure, string.Format("{0}checkpasswordbyuid", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -2254,8 +2251,8 @@ namespace Discuz.Data.SqlServer
         public IDataReader FindUserEmail(string email)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@email",(DbType)SqlDbType.Char,50, email),
-								   };
+                                       DbHelper.MakeInParam("@email",(DbType)SqlDbType.Char,50, email),
+                                   };
             return DbHelper.ExecuteReader(CommandType.StoredProcedure, string.Format("{0}getuseridbyemail", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -2287,71 +2284,71 @@ namespace Discuz.Data.SqlServer
         public int CreateUser(UserInfo userInfo)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@username",(DbType)SqlDbType.Char,20,userInfo.Username),
-									   DbHelper.MakeInParam("@nickname",(DbType)SqlDbType.Char,20,userInfo.Nickname),
-									   DbHelper.MakeInParam("@password",(DbType)SqlDbType.Char,32,userInfo.Password),
-									   DbHelper.MakeInParam("@secques",(DbType)SqlDbType.Char,8,userInfo.Secques),
-									   DbHelper.MakeInParam("@gender",(DbType)SqlDbType.Int,4,userInfo.Gender),
-									   DbHelper.MakeInParam("@adminid",(DbType)SqlDbType.Int,4,userInfo.Adminid),
-									   DbHelper.MakeInParam("@groupid",(DbType)SqlDbType.SmallInt,2,userInfo.Groupid),
-									   DbHelper.MakeInParam("@groupexpiry",(DbType)SqlDbType.Int,4,userInfo.Groupexpiry),
-									   DbHelper.MakeInParam("@extgroupids",(DbType)SqlDbType.Char,60,userInfo.Extgroupids),
-									   DbHelper.MakeInParam("@regip",(DbType)SqlDbType.VarChar,0,userInfo.Regip),
-									   DbHelper.MakeInParam("@joindate",(DbType)SqlDbType.VarChar,0,userInfo.Joindate),
-									   DbHelper.MakeInParam("@lastip",(DbType)SqlDbType.Char,15,userInfo.Lastip),
-									   DbHelper.MakeInParam("@lastvisit",(DbType)SqlDbType.VarChar,0,userInfo.Lastvisit),
-									   DbHelper.MakeInParam("@lastactivity",(DbType)SqlDbType.VarChar,0,userInfo.Lastactivity),
-									   DbHelper.MakeInParam("@lastpost",(DbType)SqlDbType.VarChar,0,userInfo.Lastpost),
-									   DbHelper.MakeInParam("@lastpostid",(DbType)SqlDbType.Int,4,userInfo.Lastpostid),
-									   DbHelper.MakeInParam("@lastposttitle",(DbType)SqlDbType.VarChar,0,userInfo.Lastposttitle),
-									   DbHelper.MakeInParam("@posts",(DbType)SqlDbType.Int,4,userInfo.Posts),
-									   DbHelper.MakeInParam("@digestposts",(DbType)SqlDbType.SmallInt,2,userInfo.Digestposts),
-									   DbHelper.MakeInParam("@oltime",(DbType)SqlDbType.Int,2,userInfo.Oltime),
-									   DbHelper.MakeInParam("@pageviews",(DbType)SqlDbType.Int,4,userInfo.Pageviews),
-									   DbHelper.MakeInParam("@credits",(DbType)SqlDbType.Int,4,userInfo.Credits),
-									   DbHelper.MakeInParam("@extcredits1",(DbType)SqlDbType.Float,8,userInfo.Extcredits1),
-									   DbHelper.MakeInParam("@extcredits2",(DbType)SqlDbType.Float,8,userInfo.Extcredits2),
-									   DbHelper.MakeInParam("@extcredits3",(DbType)SqlDbType.Float,8,userInfo.Extcredits3),
-									   DbHelper.MakeInParam("@extcredits4",(DbType)SqlDbType.Float,8,userInfo.Extcredits4),
-									   DbHelper.MakeInParam("@extcredits5",(DbType)SqlDbType.Float,8,userInfo.Extcredits5),
-									   DbHelper.MakeInParam("@extcredits6",(DbType)SqlDbType.Float,8,userInfo.Extcredits6),
-									   DbHelper.MakeInParam("@extcredits7",(DbType)SqlDbType.Float,8,userInfo.Extcredits7),
-									   DbHelper.MakeInParam("@extcredits8",(DbType)SqlDbType.Float,8,userInfo.Extcredits8),
-									   DbHelper.MakeInParam("@avatarshowid",(DbType)SqlDbType.Int,4,0),
-									   DbHelper.MakeInParam("@email",(DbType)SqlDbType.Char,50,userInfo.Email),
-									   DbHelper.MakeInParam("@bday",(DbType)SqlDbType.VarChar,0,userInfo.Bday),
-									   DbHelper.MakeInParam("@sigstatus",(DbType)SqlDbType.Int,4,userInfo.Sigstatus),
-									   DbHelper.MakeInParam("@tpp",(DbType)SqlDbType.Int,4,userInfo.Tpp),
-									   DbHelper.MakeInParam("@ppp",(DbType)SqlDbType.Int,4,userInfo.Ppp),
-									   DbHelper.MakeInParam("@templateid",(DbType)SqlDbType.SmallInt,2,userInfo.Templateid),
-									   DbHelper.MakeInParam("@pmsound",(DbType)SqlDbType.Int,4,userInfo.Pmsound),
-									   DbHelper.MakeInParam("@showemail",(DbType)SqlDbType.Int,4,userInfo.Showemail),
-									   DbHelper.MakeInParam("@newsletter",(DbType)SqlDbType.Int,4,userInfo.Newsletter),
-									   DbHelper.MakeInParam("@invisible",(DbType)SqlDbType.Int,4,userInfo.Invisible),
-									   DbHelper.MakeInParam("@newpm",(DbType)SqlDbType.Int,4,userInfo.Newpm),
-									   DbHelper.MakeInParam("@accessmasks",(DbType)SqlDbType.Int,4,userInfo.Accessmasks),
+                                       DbHelper.MakeInParam("@username",(DbType)SqlDbType.Char,20,userInfo.Username),
+                                       DbHelper.MakeInParam("@nickname",(DbType)SqlDbType.Char,20,userInfo.Nickname),
+                                       DbHelper.MakeInParam("@password",(DbType)SqlDbType.Char,32,userInfo.Password),
+                                       DbHelper.MakeInParam("@secques",(DbType)SqlDbType.Char,8,userInfo.Secques),
+                                       DbHelper.MakeInParam("@gender",(DbType)SqlDbType.Int,4,userInfo.Gender),
+                                       DbHelper.MakeInParam("@adminid",(DbType)SqlDbType.Int,4,userInfo.Adminid),
+                                       DbHelper.MakeInParam("@groupid",(DbType)SqlDbType.SmallInt,2,userInfo.Groupid),
+                                       DbHelper.MakeInParam("@groupexpiry",(DbType)SqlDbType.Int,4,userInfo.Groupexpiry),
+                                       DbHelper.MakeInParam("@extgroupids",(DbType)SqlDbType.Char,60,userInfo.Extgroupids),
+                                       DbHelper.MakeInParam("@regip",(DbType)SqlDbType.VarChar,0,userInfo.Regip),
+                                       DbHelper.MakeInParam("@joindate",(DbType)SqlDbType.VarChar,0,userInfo.Joindate),
+                                       DbHelper.MakeInParam("@lastip",(DbType)SqlDbType.Char,15,userInfo.Lastip),
+                                       DbHelper.MakeInParam("@lastvisit",(DbType)SqlDbType.VarChar,0,userInfo.Lastvisit),
+                                       DbHelper.MakeInParam("@lastactivity",(DbType)SqlDbType.VarChar,0,userInfo.Lastactivity),
+                                       DbHelper.MakeInParam("@lastpost",(DbType)SqlDbType.VarChar,0,userInfo.Lastpost),
+                                       DbHelper.MakeInParam("@lastpostid",(DbType)SqlDbType.Int,4,userInfo.Lastpostid),
+                                       DbHelper.MakeInParam("@lastposttitle",(DbType)SqlDbType.VarChar,0,userInfo.Lastposttitle),
+                                       DbHelper.MakeInParam("@posts",(DbType)SqlDbType.Int,4,userInfo.Posts),
+                                       DbHelper.MakeInParam("@digestposts",(DbType)SqlDbType.SmallInt,2,userInfo.Digestposts),
+                                       DbHelper.MakeInParam("@oltime",(DbType)SqlDbType.Int,2,userInfo.Oltime),
+                                       DbHelper.MakeInParam("@pageviews",(DbType)SqlDbType.Int,4,userInfo.Pageviews),
+                                       DbHelper.MakeInParam("@credits",(DbType)SqlDbType.Int,4,userInfo.Credits),
+                                       DbHelper.MakeInParam("@extcredits1",(DbType)SqlDbType.Float,8,userInfo.Extcredits1),
+                                       DbHelper.MakeInParam("@extcredits2",(DbType)SqlDbType.Float,8,userInfo.Extcredits2),
+                                       DbHelper.MakeInParam("@extcredits3",(DbType)SqlDbType.Float,8,userInfo.Extcredits3),
+                                       DbHelper.MakeInParam("@extcredits4",(DbType)SqlDbType.Float,8,userInfo.Extcredits4),
+                                       DbHelper.MakeInParam("@extcredits5",(DbType)SqlDbType.Float,8,userInfo.Extcredits5),
+                                       DbHelper.MakeInParam("@extcredits6",(DbType)SqlDbType.Float,8,userInfo.Extcredits6),
+                                       DbHelper.MakeInParam("@extcredits7",(DbType)SqlDbType.Float,8,userInfo.Extcredits7),
+                                       DbHelper.MakeInParam("@extcredits8",(DbType)SqlDbType.Float,8,userInfo.Extcredits8),
+                                       DbHelper.MakeInParam("@avatarshowid",(DbType)SqlDbType.Int,4,0),
+                                       DbHelper.MakeInParam("@email",(DbType)SqlDbType.Char,50,userInfo.Email),
+                                       DbHelper.MakeInParam("@bday",(DbType)SqlDbType.VarChar,0,userInfo.Bday),
+                                       DbHelper.MakeInParam("@sigstatus",(DbType)SqlDbType.Int,4,userInfo.Sigstatus),
+                                       DbHelper.MakeInParam("@tpp",(DbType)SqlDbType.Int,4,userInfo.Tpp),
+                                       DbHelper.MakeInParam("@ppp",(DbType)SqlDbType.Int,4,userInfo.Ppp),
+                                       DbHelper.MakeInParam("@templateid",(DbType)SqlDbType.SmallInt,2,userInfo.Templateid),
+                                       DbHelper.MakeInParam("@pmsound",(DbType)SqlDbType.Int,4,userInfo.Pmsound),
+                                       DbHelper.MakeInParam("@showemail",(DbType)SqlDbType.Int,4,userInfo.Showemail),
+                                       DbHelper.MakeInParam("@newsletter",(DbType)SqlDbType.Int,4,userInfo.Newsletter),
+                                       DbHelper.MakeInParam("@invisible",(DbType)SqlDbType.Int,4,userInfo.Invisible),
+                                       DbHelper.MakeInParam("@newpm",(DbType)SqlDbType.Int,4,userInfo.Newpm),
+                                       DbHelper.MakeInParam("@accessmasks",(DbType)SqlDbType.Int,4,userInfo.Accessmasks),
                                        DbHelper.MakeInParam("@salt",(DbType)SqlDbType.NChar,6,userInfo.Salt),
-									   DbHelper.MakeInParam("@website",(DbType)SqlDbType.VarChar,80,userInfo.Website),
-									   DbHelper.MakeInParam("@icq",(DbType)SqlDbType.VarChar,12,userInfo.Icq),
-									   DbHelper.MakeInParam("@qq",(DbType)SqlDbType.VarChar,12,userInfo.Qq),
-									   DbHelper.MakeInParam("@yahoo",(DbType)SqlDbType.VarChar,40,userInfo.Yahoo),
-									   DbHelper.MakeInParam("@msn",(DbType)SqlDbType.VarChar,40,userInfo.Msn),
-									   DbHelper.MakeInParam("@skype",(DbType)SqlDbType.VarChar,40,userInfo.Skype),
-									   DbHelper.MakeInParam("@location",(DbType)SqlDbType.VarChar,30,userInfo.Location),
-									   DbHelper.MakeInParam("@customstatus",(DbType)SqlDbType.VarChar,30,userInfo.Customstatus),
-									   DbHelper.MakeInParam("@avatar",(DbType)SqlDbType.VarChar,255,""),
-									   DbHelper.MakeInParam("@avatarwidth",(DbType)SqlDbType.Int,4,0),
-									   DbHelper.MakeInParam("@avatarheight",(DbType)SqlDbType.Int,4,0),
-									   DbHelper.MakeInParam("@medals",(DbType)SqlDbType.VarChar,40, userInfo.Medals),
-									   DbHelper.MakeInParam("@bio",(DbType)SqlDbType.NVarChar,500,userInfo.Bio),
-									   DbHelper.MakeInParam("@signature",(DbType)SqlDbType.NVarChar,500,userInfo.Signature),
-									   DbHelper.MakeInParam("@sightml",(DbType)SqlDbType.NVarChar,1000,userInfo.Sightml),
-									   DbHelper.MakeInParam("@authstr",(DbType)SqlDbType.VarChar,20,userInfo.Authstr),
+                                       DbHelper.MakeInParam("@website",(DbType)SqlDbType.VarChar,80,userInfo.Website),
+                                       DbHelper.MakeInParam("@icq",(DbType)SqlDbType.VarChar,12,userInfo.Icq),
+                                       DbHelper.MakeInParam("@qq",(DbType)SqlDbType.VarChar,12,userInfo.Qq),
+                                       DbHelper.MakeInParam("@yahoo",(DbType)SqlDbType.VarChar,40,userInfo.Yahoo),
+                                       DbHelper.MakeInParam("@msn",(DbType)SqlDbType.VarChar,40,userInfo.Msn),
+                                       DbHelper.MakeInParam("@skype",(DbType)SqlDbType.VarChar,40,userInfo.Skype),
+                                       DbHelper.MakeInParam("@location",(DbType)SqlDbType.VarChar,30,userInfo.Location),
+                                       DbHelper.MakeInParam("@customstatus",(DbType)SqlDbType.VarChar,30,userInfo.Customstatus),
+                                       DbHelper.MakeInParam("@avatar",(DbType)SqlDbType.VarChar,255,""),
+                                       DbHelper.MakeInParam("@avatarwidth",(DbType)SqlDbType.Int,4,0),
+                                       DbHelper.MakeInParam("@avatarheight",(DbType)SqlDbType.Int,4,0),
+                                       DbHelper.MakeInParam("@medals",(DbType)SqlDbType.VarChar,40, userInfo.Medals),
+                                       DbHelper.MakeInParam("@bio",(DbType)SqlDbType.NVarChar,500,userInfo.Bio),
+                                       DbHelper.MakeInParam("@signature",(DbType)SqlDbType.NVarChar,500,userInfo.Signature),
+                                       DbHelper.MakeInParam("@sightml",(DbType)SqlDbType.NVarChar,1000,userInfo.Sightml),
+                                       DbHelper.MakeInParam("@authstr",(DbType)SqlDbType.VarChar,20,userInfo.Authstr),
                                        DbHelper.MakeInParam("@realname",(DbType)SqlDbType.NVarChar,10,userInfo.Realname),
                                        DbHelper.MakeInParam("@idcard",(DbType)SqlDbType.VarChar,20,userInfo.Idcard),
                                        DbHelper.MakeInParam("@mobile",(DbType)SqlDbType.VarChar,20,userInfo.Mobile),
                                        DbHelper.MakeInParam("@phone",(DbType)SqlDbType.VarChar,20,userInfo.Phone)
-								   };
+                                   };
 
             int uid = TypeConverter.ObjectToInt(DbHelper.ExecuteScalar(CommandType.StoredProcedure,
                                                                     string.Format("{0}createuser", BaseConfigs.GetTablePrefix),
@@ -2369,77 +2366,77 @@ namespace Discuz.Data.SqlServer
         public bool UpdateUser(UserInfo userInfo)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@username",(DbType)SqlDbType.NChar,20,userInfo.Username),
-									   DbHelper.MakeInParam("@nickname",(DbType)SqlDbType.NChar,20,userInfo.Nickname),
-									   DbHelper.MakeInParam("@password",(DbType)SqlDbType.Char,32,userInfo.Password),
-									   DbHelper.MakeInParam("@secques",(DbType)SqlDbType.Char,8,userInfo.Secques),
-									   DbHelper.MakeInParam("@spaceid",(DbType)SqlDbType.Int,4,userInfo.Spaceid),
-									   DbHelper.MakeInParam("@gender",(DbType)SqlDbType.Int,4,userInfo.Gender),
-									   DbHelper.MakeInParam("@adminid",(DbType)SqlDbType.Int,4,userInfo.Adminid),
-									   DbHelper.MakeInParam("@groupid",(DbType)SqlDbType.SmallInt,2,userInfo.Groupid),
-									   DbHelper.MakeInParam("@groupexpiry",(DbType)SqlDbType.NVarChar,50,userInfo.Groupexpiry),
-									   DbHelper.MakeInParam("@extgroupids",(DbType)SqlDbType.Char,60,userInfo.Extgroupids),
-									   DbHelper.MakeInParam("@regip",(DbType)SqlDbType.Char,15,userInfo.Regip),
-									   DbHelper.MakeInParam("@joindate",(DbType)SqlDbType.Char,19,userInfo.Joindate),
-									   DbHelper.MakeInParam("@lastip",(DbType)SqlDbType.Char,15,userInfo.Lastip),
-									   DbHelper.MakeInParam("@lastvisit",(DbType)SqlDbType.Char,19,userInfo.Lastvisit),
-									   DbHelper.MakeInParam("@lastactivity",(DbType)SqlDbType.Char,19,userInfo.Lastactivity),
-									   DbHelper.MakeInParam("@lastpost",(DbType)SqlDbType.Char,19,userInfo.Lastpost),
-									   DbHelper.MakeInParam("@lastpostid",(DbType)SqlDbType.Int,4,userInfo.Lastpostid),
-									   DbHelper.MakeInParam("@lastposttitle",(DbType)SqlDbType.NChar,60,userInfo.Lastposttitle),
-									   DbHelper.MakeInParam("@posts",(DbType)SqlDbType.Int,4,userInfo.Posts),
-									   DbHelper.MakeInParam("@digestposts",(DbType)SqlDbType.SmallInt,2,userInfo.Digestposts),
-									   DbHelper.MakeInParam("@oltime",(DbType)SqlDbType.Int,2,userInfo.Oltime),
-									   DbHelper.MakeInParam("@pageviews",(DbType)SqlDbType.Int,4,userInfo.Pageviews),
-									   DbHelper.MakeInParam("@credits",(DbType)SqlDbType.Int,4,userInfo.Credits),
-									   DbHelper.MakeInParam("@extcredits1",(DbType)SqlDbType.Float,8,userInfo.Extcredits1),
-									   DbHelper.MakeInParam("@extcredits2",(DbType)SqlDbType.Float,8,userInfo.Extcredits2),
-									   DbHelper.MakeInParam("@extcredits3",(DbType)SqlDbType.Float,8,userInfo.Extcredits3),
-									   DbHelper.MakeInParam("@extcredits4",(DbType)SqlDbType.Float,8,userInfo.Extcredits4),
-									   DbHelper.MakeInParam("@extcredits5",(DbType)SqlDbType.Float,8,userInfo.Extcredits5),
-									   DbHelper.MakeInParam("@extcredits6",(DbType)SqlDbType.Float,8,userInfo.Extcredits6),
-									   DbHelper.MakeInParam("@extcredits7",(DbType)SqlDbType.Float,8,userInfo.Extcredits7),
-									   DbHelper.MakeInParam("@extcredits8",(DbType)SqlDbType.Float,8,userInfo.Extcredits8),
-									   DbHelper.MakeInParam("@avatarshowid",(DbType)SqlDbType.Int,4,0),
-									   DbHelper.MakeInParam("@email",(DbType)SqlDbType.Char,50,userInfo.Email),
-									   DbHelper.MakeInParam("@bday",(DbType)SqlDbType.Char,19,userInfo.Bday),
-									   DbHelper.MakeInParam("@sigstatus",(DbType)SqlDbType.Int,4,userInfo.Sigstatus),
-									   DbHelper.MakeInParam("@tpp",(DbType)SqlDbType.Int,4,userInfo.Tpp),
-									   DbHelper.MakeInParam("@ppp",(DbType)SqlDbType.Int,4,userInfo.Ppp),
-									   DbHelper.MakeInParam("@templateid",(DbType)SqlDbType.SmallInt,2,userInfo.Templateid),
-									   DbHelper.MakeInParam("@pmsound",(DbType)SqlDbType.Int,4,userInfo.Pmsound),
-									   DbHelper.MakeInParam("@showemail",(DbType)SqlDbType.Int,4,userInfo.Showemail),
-									   DbHelper.MakeInParam("@newsletter",(DbType)SqlDbType.Int,4,userInfo.Newsletter),
-									   DbHelper.MakeInParam("@invisible",(DbType)SqlDbType.Int,4,userInfo.Invisible),
-									   DbHelper.MakeInParam("@newpm",(DbType)SqlDbType.Int,4,userInfo.Newpm),
-									   DbHelper.MakeInParam("@newpmcount",(DbType)SqlDbType.Int,4,userInfo.Newpmcount),
-									   DbHelper.MakeInParam("@accessmasks",(DbType)SqlDbType.Int,4,userInfo.Accessmasks),
-									   DbHelper.MakeInParam("@onlinestate",(DbType)SqlDbType.Int,4,userInfo.Onlinestate),
-									   DbHelper.MakeInParam("@website",(DbType)SqlDbType.VarChar,80,userInfo.Website),
-									   DbHelper.MakeInParam("@icq",(DbType)SqlDbType.VarChar,12,userInfo.Icq),
-									   DbHelper.MakeInParam("@qq",(DbType)SqlDbType.VarChar,12,userInfo.Qq),
-									   DbHelper.MakeInParam("@yahoo",(DbType)SqlDbType.VarChar,40,userInfo.Yahoo),
-									   DbHelper.MakeInParam("@msn",(DbType)SqlDbType.VarChar,40,userInfo.Msn),
-									   DbHelper.MakeInParam("@skype",(DbType)SqlDbType.VarChar,40,userInfo.Skype),
-									   DbHelper.MakeInParam("@location",(DbType)SqlDbType.VarChar,30,userInfo.Location),
-									   DbHelper.MakeInParam("@customstatus",(DbType)SqlDbType.VarChar,30,userInfo.Customstatus),
-									   DbHelper.MakeInParam("@avatar",(DbType)SqlDbType.VarChar,255,""),
-									   DbHelper.MakeInParam("@avatarwidth",(DbType)SqlDbType.Int,4,0),
-									   DbHelper.MakeInParam("@avatarheight",(DbType)SqlDbType.Int,4,0),
-									   DbHelper.MakeInParam("@medals",(DbType)SqlDbType.VarChar,300, userInfo.Medals),
-									   DbHelper.MakeInParam("@bio",(DbType)SqlDbType.NVarChar,500,userInfo.Bio),
-									   DbHelper.MakeInParam("@signature",(DbType)SqlDbType.NVarChar,500,userInfo.Signature),
-									   DbHelper.MakeInParam("@sightml",(DbType)SqlDbType.NVarChar,1000,userInfo.Sightml),
-									   DbHelper.MakeInParam("@authstr",(DbType)SqlDbType.VarChar,20,userInfo.Authstr),
-									   DbHelper.MakeInParam("@authtime",(DbType)SqlDbType.SmallDateTime,4,userInfo.Authtime),
-									   DbHelper.MakeInParam("@authflag",(DbType)SqlDbType.TinyInt,1,userInfo.Authflag),
+                                       DbHelper.MakeInParam("@username",(DbType)SqlDbType.NChar,20,userInfo.Username),
+                                       DbHelper.MakeInParam("@nickname",(DbType)SqlDbType.NChar,20,userInfo.Nickname),
+                                       DbHelper.MakeInParam("@password",(DbType)SqlDbType.Char,32,userInfo.Password),
+                                       DbHelper.MakeInParam("@secques",(DbType)SqlDbType.Char,8,userInfo.Secques),
+                                       DbHelper.MakeInParam("@spaceid",(DbType)SqlDbType.Int,4,userInfo.Spaceid),
+                                       DbHelper.MakeInParam("@gender",(DbType)SqlDbType.Int,4,userInfo.Gender),
+                                       DbHelper.MakeInParam("@adminid",(DbType)SqlDbType.Int,4,userInfo.Adminid),
+                                       DbHelper.MakeInParam("@groupid",(DbType)SqlDbType.SmallInt,2,userInfo.Groupid),
+                                       DbHelper.MakeInParam("@groupexpiry",(DbType)SqlDbType.NVarChar,50,userInfo.Groupexpiry),
+                                       DbHelper.MakeInParam("@extgroupids",(DbType)SqlDbType.Char,60,userInfo.Extgroupids),
+                                       DbHelper.MakeInParam("@regip",(DbType)SqlDbType.Char,15,userInfo.Regip),
+                                       DbHelper.MakeInParam("@joindate",(DbType)SqlDbType.Char,19,userInfo.Joindate),
+                                       DbHelper.MakeInParam("@lastip",(DbType)SqlDbType.Char,15,userInfo.Lastip),
+                                       DbHelper.MakeInParam("@lastvisit",(DbType)SqlDbType.Char,19,userInfo.Lastvisit),
+                                       DbHelper.MakeInParam("@lastactivity",(DbType)SqlDbType.Char,19,userInfo.Lastactivity),
+                                       DbHelper.MakeInParam("@lastpost",(DbType)SqlDbType.Char,19,userInfo.Lastpost),
+                                       DbHelper.MakeInParam("@lastpostid",(DbType)SqlDbType.Int,4,userInfo.Lastpostid),
+                                       DbHelper.MakeInParam("@lastposttitle",(DbType)SqlDbType.NChar,60,userInfo.Lastposttitle),
+                                       DbHelper.MakeInParam("@posts",(DbType)SqlDbType.Int,4,userInfo.Posts),
+                                       DbHelper.MakeInParam("@digestposts",(DbType)SqlDbType.SmallInt,2,userInfo.Digestposts),
+                                       DbHelper.MakeInParam("@oltime",(DbType)SqlDbType.Int,2,userInfo.Oltime),
+                                       DbHelper.MakeInParam("@pageviews",(DbType)SqlDbType.Int,4,userInfo.Pageviews),
+                                       DbHelper.MakeInParam("@credits",(DbType)SqlDbType.Int,4,userInfo.Credits),
+                                       DbHelper.MakeInParam("@extcredits1",(DbType)SqlDbType.Float,8,userInfo.Extcredits1),
+                                       DbHelper.MakeInParam("@extcredits2",(DbType)SqlDbType.Float,8,userInfo.Extcredits2),
+                                       DbHelper.MakeInParam("@extcredits3",(DbType)SqlDbType.Float,8,userInfo.Extcredits3),
+                                       DbHelper.MakeInParam("@extcredits4",(DbType)SqlDbType.Float,8,userInfo.Extcredits4),
+                                       DbHelper.MakeInParam("@extcredits5",(DbType)SqlDbType.Float,8,userInfo.Extcredits5),
+                                       DbHelper.MakeInParam("@extcredits6",(DbType)SqlDbType.Float,8,userInfo.Extcredits6),
+                                       DbHelper.MakeInParam("@extcredits7",(DbType)SqlDbType.Float,8,userInfo.Extcredits7),
+                                       DbHelper.MakeInParam("@extcredits8",(DbType)SqlDbType.Float,8,userInfo.Extcredits8),
+                                       DbHelper.MakeInParam("@avatarshowid",(DbType)SqlDbType.Int,4,0),
+                                       DbHelper.MakeInParam("@email",(DbType)SqlDbType.Char,50,userInfo.Email),
+                                       DbHelper.MakeInParam("@bday",(DbType)SqlDbType.Char,19,userInfo.Bday),
+                                       DbHelper.MakeInParam("@sigstatus",(DbType)SqlDbType.Int,4,userInfo.Sigstatus),
+                                       DbHelper.MakeInParam("@tpp",(DbType)SqlDbType.Int,4,userInfo.Tpp),
+                                       DbHelper.MakeInParam("@ppp",(DbType)SqlDbType.Int,4,userInfo.Ppp),
+                                       DbHelper.MakeInParam("@templateid",(DbType)SqlDbType.SmallInt,2,userInfo.Templateid),
+                                       DbHelper.MakeInParam("@pmsound",(DbType)SqlDbType.Int,4,userInfo.Pmsound),
+                                       DbHelper.MakeInParam("@showemail",(DbType)SqlDbType.Int,4,userInfo.Showemail),
+                                       DbHelper.MakeInParam("@newsletter",(DbType)SqlDbType.Int,4,userInfo.Newsletter),
+                                       DbHelper.MakeInParam("@invisible",(DbType)SqlDbType.Int,4,userInfo.Invisible),
+                                       DbHelper.MakeInParam("@newpm",(DbType)SqlDbType.Int,4,userInfo.Newpm),
+                                       DbHelper.MakeInParam("@newpmcount",(DbType)SqlDbType.Int,4,userInfo.Newpmcount),
+                                       DbHelper.MakeInParam("@accessmasks",(DbType)SqlDbType.Int,4,userInfo.Accessmasks),
+                                       DbHelper.MakeInParam("@onlinestate",(DbType)SqlDbType.Int,4,userInfo.Onlinestate),
+                                       DbHelper.MakeInParam("@website",(DbType)SqlDbType.VarChar,80,userInfo.Website),
+                                       DbHelper.MakeInParam("@icq",(DbType)SqlDbType.VarChar,12,userInfo.Icq),
+                                       DbHelper.MakeInParam("@qq",(DbType)SqlDbType.VarChar,12,userInfo.Qq),
+                                       DbHelper.MakeInParam("@yahoo",(DbType)SqlDbType.VarChar,40,userInfo.Yahoo),
+                                       DbHelper.MakeInParam("@msn",(DbType)SqlDbType.VarChar,40,userInfo.Msn),
+                                       DbHelper.MakeInParam("@skype",(DbType)SqlDbType.VarChar,40,userInfo.Skype),
+                                       DbHelper.MakeInParam("@location",(DbType)SqlDbType.VarChar,30,userInfo.Location),
+                                       DbHelper.MakeInParam("@customstatus",(DbType)SqlDbType.VarChar,30,userInfo.Customstatus),
+                                       DbHelper.MakeInParam("@avatar",(DbType)SqlDbType.VarChar,255,""),
+                                       DbHelper.MakeInParam("@avatarwidth",(DbType)SqlDbType.Int,4,0),
+                                       DbHelper.MakeInParam("@avatarheight",(DbType)SqlDbType.Int,4,0),
+                                       DbHelper.MakeInParam("@medals",(DbType)SqlDbType.VarChar,300, userInfo.Medals),
+                                       DbHelper.MakeInParam("@bio",(DbType)SqlDbType.NVarChar,500,userInfo.Bio),
+                                       DbHelper.MakeInParam("@signature",(DbType)SqlDbType.NVarChar,500,userInfo.Signature),
+                                       DbHelper.MakeInParam("@sightml",(DbType)SqlDbType.NVarChar,1000,userInfo.Sightml),
+                                       DbHelper.MakeInParam("@authstr",(DbType)SqlDbType.VarChar,20,userInfo.Authstr),
+                                       DbHelper.MakeInParam("@authtime",(DbType)SqlDbType.SmallDateTime,4,userInfo.Authtime),
+                                       DbHelper.MakeInParam("@authflag",(DbType)SqlDbType.TinyInt,1,userInfo.Authflag),
                                        DbHelper.MakeInParam("@realname",(DbType)SqlDbType.NVarChar,10,userInfo.Realname),
                                        DbHelper.MakeInParam("@idcard",(DbType)SqlDbType.VarChar,20,userInfo.Idcard),
                                        DbHelper.MakeInParam("@mobile",(DbType)SqlDbType.VarChar,20,userInfo.Mobile),
                                        DbHelper.MakeInParam("@phone",(DbType)SqlDbType.VarChar,20,userInfo.Phone),
                                        DbHelper.MakeInParam("@ignorepm",(DbType)SqlDbType.NVarChar,1000,userInfo.Ignorepm),
                                        DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,userInfo.Uid)
-								   };
+                                   };
 
             return TypeConverter.ObjectToInt(DbHelper.ExecuteNonQuery(CommandType.StoredProcedure,
                                                                       string.Format("{0}updateuser", BaseConfigs.GetTablePrefix),
@@ -2455,10 +2452,10 @@ namespace Discuz.Data.SqlServer
         public void UpdateAuthStr(int uid, string authStr, int authFlag)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
-									   DbHelper.MakeInParam("@authstr", (DbType)SqlDbType.Char, 20, authStr),
-									   DbHelper.MakeInParam("@authflag", (DbType)SqlDbType.Int, 4, authFlag) 
-								   };
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
+                                       DbHelper.MakeInParam("@authstr", (DbType)SqlDbType.Char, 20, authStr),
+                                       DbHelper.MakeInParam("@authflag", (DbType)SqlDbType.Int, 4, authFlag) 
+                                   };
             DbHelper.ExecuteNonQuery(CommandType.StoredProcedure, string.Format("{0}updateuserauthstr", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -2470,20 +2467,20 @@ namespace Discuz.Data.SqlServer
         public void UpdateUserProfile(UserInfo userInfo)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, userInfo.Uid), 
-									   DbHelper.MakeInParam("@nickname",(DbType)SqlDbType.Char,20,userInfo.Nickname),
-									   DbHelper.MakeInParam("@gender", (DbType)SqlDbType.Int, 4, userInfo.Gender), 
-									   DbHelper.MakeInParam("@email", (DbType)SqlDbType.Char, 50, userInfo.Email), 
-									   DbHelper.MakeInParam("@bday", (DbType)SqlDbType.Char, 10, userInfo.Bday), 
-									   DbHelper.MakeInParam("@showemail", (DbType)SqlDbType.Int, 4, userInfo.Showemail),
-									   DbHelper.MakeInParam("@website", (DbType)SqlDbType.VarChar, 80, userInfo.Website), 
-									   DbHelper.MakeInParam("@icq", (DbType)SqlDbType.VarChar, 12, userInfo.Icq), 
-									   DbHelper.MakeInParam("@qq", (DbType)SqlDbType.VarChar, 12, userInfo.Qq), 
-									   DbHelper.MakeInParam("@yahoo", (DbType)SqlDbType.VarChar, 40, userInfo.Yahoo), 
-									   DbHelper.MakeInParam("@msn", (DbType)SqlDbType.VarChar, 40, userInfo.Msn), 
-									   DbHelper.MakeInParam("@skype", (DbType)SqlDbType.VarChar, 40, userInfo.Skype), 
-									   DbHelper.MakeInParam("@location", (DbType)SqlDbType.NVarChar, 30, userInfo.Location), 
-									   DbHelper.MakeInParam("@bio", (DbType)SqlDbType.NVarChar, 500, userInfo.Bio),
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, userInfo.Uid), 
+                                       DbHelper.MakeInParam("@nickname",(DbType)SqlDbType.Char,20,userInfo.Nickname),
+                                       DbHelper.MakeInParam("@gender", (DbType)SqlDbType.Int, 4, userInfo.Gender), 
+                                       DbHelper.MakeInParam("@email", (DbType)SqlDbType.Char, 50, userInfo.Email), 
+                                       DbHelper.MakeInParam("@bday", (DbType)SqlDbType.Char, 10, userInfo.Bday), 
+                                       DbHelper.MakeInParam("@showemail", (DbType)SqlDbType.Int, 4, userInfo.Showemail),
+                                       DbHelper.MakeInParam("@website", (DbType)SqlDbType.VarChar, 80, userInfo.Website), 
+                                       DbHelper.MakeInParam("@icq", (DbType)SqlDbType.VarChar, 12, userInfo.Icq), 
+                                       DbHelper.MakeInParam("@qq", (DbType)SqlDbType.VarChar, 12, userInfo.Qq), 
+                                       DbHelper.MakeInParam("@yahoo", (DbType)SqlDbType.VarChar, 40, userInfo.Yahoo), 
+                                       DbHelper.MakeInParam("@msn", (DbType)SqlDbType.VarChar, 40, userInfo.Msn), 
+                                       DbHelper.MakeInParam("@skype", (DbType)SqlDbType.VarChar, 40, userInfo.Skype), 
+                                       DbHelper.MakeInParam("@location", (DbType)SqlDbType.NVarChar, 30, userInfo.Location), 
+                                       DbHelper.MakeInParam("@bio", (DbType)SqlDbType.NVarChar, 500, userInfo.Bio),
                                        DbHelper.MakeInParam("@signature", (DbType)SqlDbType.NVarChar, 500, userInfo.Signature),
                                        DbHelper.MakeInParam("@sigstatus", (DbType)SqlDbType.Int, 4, userInfo.Sigstatus),
                                        DbHelper.MakeInParam("@sightml", (DbType)SqlDbType.NVarChar, 1000, userInfo.Sightml),
@@ -2491,7 +2488,7 @@ namespace Discuz.Data.SqlServer
                                        DbHelper.MakeInParam("@idcard",(DbType)SqlDbType.VarChar,20,userInfo.Idcard),
                                        DbHelper.MakeInParam("@mobile",(DbType)SqlDbType.VarChar,20,userInfo.Mobile),
                                        DbHelper.MakeInParam("@phone",(DbType)SqlDbType.VarChar,20,userInfo.Phone)
-								   };
+                                   };
 
             DbHelper.ExecuteNonQuery(CommandType.StoredProcedure, string.Format("{0}updateuserprofile", BaseConfigs.GetTablePrefix), parms);
         }
@@ -2504,12 +2501,12 @@ namespace Discuz.Data.SqlServer
         public void UpdateUserForumSetting(UserInfo userInfo)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,userInfo.Uid),
-									   DbHelper.MakeInParam("@tpp",(DbType)SqlDbType.Int,4,userInfo.Tpp),
-									   DbHelper.MakeInParam("@ppp",(DbType)SqlDbType.Int,4,userInfo.Ppp),
-									   DbHelper.MakeInParam("@invisible",(DbType)SqlDbType.Int,4,userInfo.Invisible),
-									   DbHelper.MakeInParam("@customstatus",(DbType)SqlDbType.VarChar,30,userInfo.Customstatus)
-								   };
+                                       DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,userInfo.Uid),
+                                       DbHelper.MakeInParam("@tpp",(DbType)SqlDbType.Int,4,userInfo.Tpp),
+                                       DbHelper.MakeInParam("@ppp",(DbType)SqlDbType.Int,4,userInfo.Ppp),
+                                       DbHelper.MakeInParam("@invisible",(DbType)SqlDbType.Int,4,userInfo.Invisible),
+                                       DbHelper.MakeInParam("@customstatus",(DbType)SqlDbType.VarChar,30,userInfo.Customstatus)
+                                   };
 
             DbHelper.ExecuteNonQuery(CommandType.StoredProcedure, string.Format("{0}updateuserforumsetting", BaseConfigs.GetTablePrefix), parms);
         }
@@ -2557,12 +2554,12 @@ namespace Discuz.Data.SqlServer
         public void UpdateUserPreference(int uid, string avatar, int avatarWidth, int avatarHeight, int templateId)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,uid),
-									   DbHelper.MakeInParam("@avatar",(DbType)SqlDbType.VarChar,255,avatar),
-									   DbHelper.MakeInParam("@avatarwidth",(DbType)SqlDbType.Int,4,avatarWidth),
-									   DbHelper.MakeInParam("@avatarheight",(DbType)SqlDbType.Int,4,avatarHeight),
+                                       DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,uid),
+                                       DbHelper.MakeInParam("@avatar",(DbType)SqlDbType.VarChar,255,avatar),
+                                       DbHelper.MakeInParam("@avatarwidth",(DbType)SqlDbType.Int,4,avatarWidth),
+                                       DbHelper.MakeInParam("@avatarheight",(DbType)SqlDbType.Int,4,avatarHeight),
                                        DbHelper.MakeInParam("@templateid", (DbType)SqlDbType.SmallInt, 4, templateId)
-								   };
+                                   };
             DbHelper.ExecuteNonQuery(CommandType.StoredProcedure, string.Format("{0}updateuserpreference", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -2576,9 +2573,9 @@ namespace Discuz.Data.SqlServer
         public void UpdateUserPassword(int uid, string passWord, bool originalPassWord)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
-									   DbHelper.MakeInParam("@password", (DbType)SqlDbType.Char, 32, originalPassWord ? Utils.MD5(passWord) : passWord)
-								   };
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
+                                       DbHelper.MakeInParam("@password", (DbType)SqlDbType.Char, 32, originalPassWord ? Utils.MD5(passWord) : passWord)
+                                   };
             DbHelper.ExecuteNonQuery(CommandType.StoredProcedure, string.Format("{0}updateuserpassword", BaseConfigs.GetTablePrefix), parms);
         }
 
@@ -2592,9 +2589,9 @@ namespace Discuz.Data.SqlServer
         public void UpdateUserSecques(int uid, string secques)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
-									   DbHelper.MakeInParam("@secques", (DbType)SqlDbType.Char, 8, secques)
-								   };
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
+                                       DbHelper.MakeInParam("@secques", (DbType)SqlDbType.Char, 8, secques)
+                                   };
             string commandText = string.Format("UPDATE [{0}users] SET [secques]=@secques WHERE [uid]=@uid", BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
         }
@@ -2606,9 +2603,9 @@ namespace Discuz.Data.SqlServer
         public void UpdateUserLastvisit(int uid, string ip)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid),
-									   DbHelper.MakeInParam("@ip", (DbType)SqlDbType.Char,15, ip)
-								   };
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid),
+                                       DbHelper.MakeInParam("@ip", (DbType)SqlDbType.Char,15, ip)
+                                   };
             string commandText = string.Format("UPDATE [{0}users] SET [lastvisit]=GETDATE(), [lastip]=@ip WHERE [uid] =@uid",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -2618,8 +2615,8 @@ namespace Discuz.Data.SqlServer
         {
             DbParameter[] parms = {
                                         DbHelper.MakeInParam("@onlinestate", (DbType)SqlDbType.Int, 4, onlineState),
-									    DbHelper.MakeInParam("@activitytime", (DbType)SqlDbType.DateTime, 8, DateTime.Parse(activityTime))
-								   };
+                                        DbHelper.MakeInParam("@activitytime", (DbType)SqlDbType.DateTime, 8, DateTime.Parse(activityTime))
+                                   };
             string commandText = string.Format("UPDATE [{0}users] SET [onlinestate]=@onlinestate,[lastactivity] = @activitytime WHERE [uid] IN ({1})",
                                                 BaseConfigs.GetTablePrefix,
                                                 uidList);
@@ -2631,8 +2628,8 @@ namespace Discuz.Data.SqlServer
             DbParameter[] parms = {
                                         DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid),
                                         DbHelper.MakeInParam("@onlinestate", (DbType)SqlDbType.Int, 4, onlineState),
-									    DbHelper.MakeInParam("@activitytime", (DbType)SqlDbType.DateTime, 8, DateTime.Parse(activityTime))
-								   };
+                                        DbHelper.MakeInParam("@activitytime", (DbType)SqlDbType.DateTime, 8, DateTime.Parse(activityTime))
+                                   };
             string commandText = string.Format("UPDATE [{0}users] SET [onlinestate]=@onlinestate,[lastactivity] = @activitytime WHERE [uid]=@uid",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -2642,8 +2639,8 @@ namespace Discuz.Data.SqlServer
         {
             DbParameter[] parms = {
                                         DbHelper.MakeInParam("@onlinestate", (DbType)SqlDbType.Int, 4, onlineState),
-									    DbHelper.MakeInParam("@activitytime", (DbType)SqlDbType.DateTime, 8, DateTime.Parse(activityTime))
-								   };
+                                        DbHelper.MakeInParam("@activitytime", (DbType)SqlDbType.DateTime, 8, DateTime.Parse(activityTime))
+                                   };
             string commandText = string.Format("UPDATE [{0}users] SET [onlinestate]=@onlinestate,[lastvisit] = @activitytime WHERE [uid] IN ({1})",
                                                 BaseConfigs.GetTablePrefix,
                                                 uidList);
@@ -2655,8 +2652,8 @@ namespace Discuz.Data.SqlServer
             DbParameter[] parms = {
                                         DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid),
                                         DbHelper.MakeInParam("@onlinestate", (DbType)SqlDbType.Int, 4, onlineState),
-									    DbHelper.MakeInParam("@activitytime", (DbType)SqlDbType.DateTime, 8, DateTime.Parse(activityTime))
-								   };
+                                        DbHelper.MakeInParam("@activitytime", (DbType)SqlDbType.DateTime, 8, DateTime.Parse(activityTime))
+                                   };
             string commandText = string.Format("UPDATE [{0}users] SET [onlinestate]=@onlinestate,[lastvisit] = @activitytime WHERE [uid]=@uid",
                                                 BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
@@ -2669,9 +2666,9 @@ namespace Discuz.Data.SqlServer
         public void UpdateUserLastActivity(int uid, string activityTime)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid),
-									   DbHelper.MakeInParam("@activitytime", (DbType)SqlDbType.DateTime, 8, DateTime.Parse(activityTime))
-								   };
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid),
+                                       DbHelper.MakeInParam("@activitytime", (DbType)SqlDbType.DateTime, 8, DateTime.Parse(activityTime))
+                                   };
             string commandText = string.Format("UPDATE [{0}users] SET [lastactivity] = @activitytime  WHERE [uid] = @uid", BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
         }
@@ -2685,9 +2682,9 @@ namespace Discuz.Data.SqlServer
         public int SetUserNewPMCount(int uid, int pmNum)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
-									   DbHelper.MakeInParam("@value", (DbType)SqlDbType.Int, 4, pmNum)
-			                      };
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
+                                       DbHelper.MakeInParam("@value", (DbType)SqlDbType.Int, 4, pmNum)
+                                  };
             string commandText = string.Format("UPDATE [{0}users] SET [newpmcount]=@value WHERE [uid]=@uid", BaseConfigs.GetTablePrefix);
             return DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
         }
@@ -2700,9 +2697,9 @@ namespace Discuz.Data.SqlServer
         public void UpdateMedals(int uid, string medals)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
-									   DbHelper.MakeInParam("@medals", (DbType)SqlDbType.VarChar, 300, medals)
-								   };
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
+                                       DbHelper.MakeInParam("@medals", (DbType)SqlDbType.VarChar, 300, medals)
+                                   };
             string commandText = string.Format("UPDATE [{0}userfields] SET [medals]=@medals WHERE [uid]=@uid", BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
 
@@ -2711,9 +2708,9 @@ namespace Discuz.Data.SqlServer
         public int DecreaseNewPMCount(int uid, int subVal)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
-									   DbHelper.MakeInParam("@subval", (DbType)SqlDbType.Int, 4, subVal)
-			                        };
+                                       DbHelper.MakeInParam("@uid", (DbType)SqlDbType.Int, 4, uid), 
+                                       DbHelper.MakeInParam("@subval", (DbType)SqlDbType.Int, 4, subVal)
+                                    };
             try
             {
                 string commandText = string.Format("UPDATE [{0}users] SET [newpmcount]=CASE WHEN [newpmcount] >= 0 THEN [newpmcount]-@subval ELSE 0 END WHERE [uid]=@uid", BaseConfigs.GetTablePrefix);
@@ -2748,9 +2745,9 @@ namespace Discuz.Data.SqlServer
         public void UpdateUserSpaceId(int spaceId, int userId)
         {
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@spaceid",(DbType)SqlDbType.Int,4,spaceId),
-									   DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,userId)
-								   };
+                                       DbHelper.MakeInParam("@spaceid",(DbType)SqlDbType.Int,4,spaceId),
+                                       DbHelper.MakeInParam("@uid",(DbType)SqlDbType.Int,4,userId)
+                                   };
             string commandText = string.Format("UPDATE [{0}users] SET [spaceid]=@spaceid WHERE [uid]=@uid", BaseConfigs.GetTablePrefix);
             DbHelper.ExecuteNonQuery(CommandType.Text, commandText, parms);
         }
@@ -2758,8 +2755,8 @@ namespace Discuz.Data.SqlServer
         public DataTable GetUserIdByAuthStr(string authStr)
         {
             DbParameter[] parms = {
-										  DbHelper.MakeInParam("@authstr",(DbType)SqlDbType.VarChar,20,authStr)
-				                    };
+                                          DbHelper.MakeInParam("@authstr",(DbType)SqlDbType.VarChar,20,authStr)
+                                    };
             string commandText = string.Format("SELECT [uid] FROM [{0}userfields] WHERE DateDiff(d,[authtime],getdate())<=3  AND [authstr]=@authstr",
                                                 BaseConfigs.GetTablePrefix);
             return DbHelper.ExecuteDataset(CommandType.Text, commandText, parms).Tables[0];
@@ -2790,32 +2787,32 @@ namespace Discuz.Data.SqlServer
                 timeOut = 9999;
 
             DbParameter[] parms = {
-									   DbHelper.MakeInParam("@onlinestate",(DbType)SqlDbType.Int,4,onlinestate),
-									   DbHelper.MakeInParam("@userid",(DbType)SqlDbType.Int,4,onlineUserInfo.Userid),
-									   DbHelper.MakeInParam("@ip",(DbType)SqlDbType.VarChar,15,onlineUserInfo.Ip),
-									   DbHelper.MakeInParam("@username",(DbType)SqlDbType.NVarChar,40,onlineUserInfo.Username),
-									   DbHelper.MakeInParam("@nickname",(DbType)SqlDbType.NVarChar,40,onlineUserInfo.Nickname),
-									   DbHelper.MakeInParam("@password",(DbType)SqlDbType.Char,32,onlineUserInfo.Password),
-									   DbHelper.MakeInParam("@groupid",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Groupid),
-									   DbHelper.MakeInParam("@olimg",(DbType)SqlDbType.VarChar,80,onlineUserInfo.Olimg),
-									   DbHelper.MakeInParam("@adminid",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Adminid),
-									   DbHelper.MakeInParam("@invisible",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Invisible),
-									   DbHelper.MakeInParam("@action",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Action),
-									   DbHelper.MakeInParam("@lastactivity",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Lastactivity),
-									   DbHelper.MakeInParam("@lastposttime",(DbType)SqlDbType.DateTime,8,TypeConverter.StrToDateTime(onlineUserInfo.Lastposttime)),
-									   DbHelper.MakeInParam("@lastpostpmtime",(DbType)SqlDbType.DateTime,8,TypeConverter.StrToDateTime(onlineUserInfo.Lastpostpmtime)),
-									   DbHelper.MakeInParam("@lastsearchtime",(DbType)SqlDbType.DateTime,8,TypeConverter.StrToDateTime(onlineUserInfo.Lastsearchtime)),
-									   DbHelper.MakeInParam("@lastupdatetime",(DbType)SqlDbType.DateTime,8,TypeConverter.StrToDateTime(onlineUserInfo.Lastupdatetime)),
-									   DbHelper.MakeInParam("@forumid",(DbType)SqlDbType.Int,4,onlineUserInfo.Forumid),
-									   DbHelper.MakeInParam("@forumname",(DbType)SqlDbType.NVarChar,50,""),
-									   DbHelper.MakeInParam("@titleid",(DbType)SqlDbType.Int,4,onlineUserInfo.Titleid),
-									   DbHelper.MakeInParam("@title",(DbType)SqlDbType.NVarChar,80,""),
-									   DbHelper.MakeInParam("@verifycode",(DbType)SqlDbType.VarChar,10,onlineUserInfo.Verifycode),
-									   DbHelper.MakeInParam("@newpms",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Newpms),
-									   DbHelper.MakeInParam("@newnotices",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Newnotices)
+                                       DbHelper.MakeInParam("@onlinestate",(DbType)SqlDbType.Int,4,onlinestate),
+                                       DbHelper.MakeInParam("@userid",(DbType)SqlDbType.Int,4,onlineUserInfo.Userid),
+                                       DbHelper.MakeInParam("@ip",(DbType)SqlDbType.VarChar,15,onlineUserInfo.Ip),
+                                       DbHelper.MakeInParam("@username",(DbType)SqlDbType.NVarChar,40,onlineUserInfo.Username),
+                                       DbHelper.MakeInParam("@nickname",(DbType)SqlDbType.NVarChar,40,onlineUserInfo.Nickname),
+                                       DbHelper.MakeInParam("@password",(DbType)SqlDbType.Char,32,onlineUserInfo.Password),
+                                       DbHelper.MakeInParam("@groupid",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Groupid),
+                                       DbHelper.MakeInParam("@olimg",(DbType)SqlDbType.VarChar,80,onlineUserInfo.Olimg),
+                                       DbHelper.MakeInParam("@adminid",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Adminid),
+                                       DbHelper.MakeInParam("@invisible",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Invisible),
+                                       DbHelper.MakeInParam("@action",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Action),
+                                       DbHelper.MakeInParam("@lastactivity",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Lastactivity),
+                                       DbHelper.MakeInParam("@lastposttime",(DbType)SqlDbType.DateTime,8,TypeConverter.StrToDateTime(onlineUserInfo.Lastposttime)),
+                                       DbHelper.MakeInParam("@lastpostpmtime",(DbType)SqlDbType.DateTime,8,TypeConverter.StrToDateTime(onlineUserInfo.Lastpostpmtime)),
+                                       DbHelper.MakeInParam("@lastsearchtime",(DbType)SqlDbType.DateTime,8,TypeConverter.StrToDateTime(onlineUserInfo.Lastsearchtime)),
+                                       DbHelper.MakeInParam("@lastupdatetime",(DbType)SqlDbType.DateTime,8,TypeConverter.StrToDateTime(onlineUserInfo.Lastupdatetime)),
+                                       DbHelper.MakeInParam("@forumid",(DbType)SqlDbType.Int,4,onlineUserInfo.Forumid),
+                                       DbHelper.MakeInParam("@forumname",(DbType)SqlDbType.NVarChar,50,""),
+                                       DbHelper.MakeInParam("@titleid",(DbType)SqlDbType.Int,4,onlineUserInfo.Titleid),
+                                       DbHelper.MakeInParam("@title",(DbType)SqlDbType.NVarChar,80,""),
+                                       DbHelper.MakeInParam("@verifycode",(DbType)SqlDbType.VarChar,10,onlineUserInfo.Verifycode),
+                                       DbHelper.MakeInParam("@newpms",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Newpms),
+                                       DbHelper.MakeInParam("@newnotices",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Newnotices)
                                        //DbHelper.MakeInParam("@newfriendrequest",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Newfriendrequest),
                                        //DbHelper.MakeInParam("@newapprequest",(DbType)SqlDbType.SmallInt,2,onlineUserInfo.Newapprequest)
-								   };
+                                   };
 
             //当在线表被布署到别的数据库时
             if (EntLibConfigs.GetConfig() != null)

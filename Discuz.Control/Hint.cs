@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Data;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Web.UI;
-using System.Web.UI.HtmlControls;
-using System.Web.UI.WebControls;
 using System.ComponentModel;
 
 namespace Discuz.Control

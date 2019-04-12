@@ -1,13 +1,10 @@
 using System;
 using System.Web;
 using System.Data;
-using System.Collections.Generic;
 
 using Discuz.Common;
-using Discuz.Data;
 using Discuz.Config;
 using Discuz.Entity;
-using Discuz.Common.Generic;
 
 namespace Discuz.Forum
 {

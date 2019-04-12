@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace Discuz.Entity
+﻿namespace Discuz.Entity
 {
-	/// <summary>
-	/// 在线用户信息描述类
-	/// </summary>
-	public class OnlineUserInfo
+    /// <summary>
+    /// 在线用户信息描述类
+    /// </summary>
+    public class OnlineUserInfo
 	{
 		
 		private int m_olid;	//唯一ID

@@ -1,15 +1,11 @@
 using System;
-using System.Text;
-using System.IO;
 using System.Data;
-using System.Data.SqlClient;
 
 using Discuz.Data;
 using Discuz.Entity;
 using Discuz.Config;
 using System.Data.Common;
 using Discuz.Common;
-using Discuz.Common.Generic;
 
 namespace Discuz.Space.Data
 {

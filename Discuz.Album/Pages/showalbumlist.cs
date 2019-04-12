@@ -1,13 +1,8 @@
-﻿using System;
-using System.Data;
-using System.Data.SqlClient;
-using System.IO;
-
+﻿
 using Discuz.Common;
 using Discuz.Common.Generic;
 using Discuz.Forum;
 using Discuz.Entity;
-using Discuz.Config;
 using Discuz.Album.Data;
 
 namespace Discuz.Album.Pages

@@ -1,18 +1,15 @@
 ﻿using System;
-	
+
 using Discuz.Common;
-using Discuz.Space.Entities;
-using Discuz.Space.Manage;
 using Discuz.Space.Provider;
 using Discuz.Entity;
-using Discuz.Data;
 
 namespace Discuz.Space.Manage
 {
-	/// <summary>
+    /// <summary>
     ///	按日期显示日志列表控件
-	/// </summary>
-	public class ajaxuserbloglistbydate :DiscuzSpaceUCBase
+    /// </summary>
+    public class ajaxuserbloglistbydate :DiscuzSpaceUCBase
 	{
         public int currentpage = DNTRequest.GetInt("currentpage", 1);
 

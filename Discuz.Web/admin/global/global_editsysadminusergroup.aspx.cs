@@ -1,11 +1,7 @@
 using System;
 using System.Data;
-using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Config;
 using Discuz.Entity;
 using Discuz.Plugin.Album;
 using Discuz.Plugin.Space;
@@ -16,7 +12,7 @@ namespace Discuz.Web.Admin
     /// <summary>
     /// 编辑系统管理组
     /// </summary>
-    
+
     public partial class editsysadminusergroup : AdminPage
     {
         public UserGroupInfo userGroupInfo = new UserGroupInfo();

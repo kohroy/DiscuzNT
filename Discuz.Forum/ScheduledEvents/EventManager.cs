@@ -1,6 +1,3 @@
-using System;
-using System.Diagnostics;
-using System.Web;
 using System.Threading;
 
 using Discuz.Config;
@@ -9,12 +6,12 @@ using Discuz.Common;
 
 namespace Discuz.Forum.ScheduledEvents
 {
-	/// <summary>
-	/// EventManager is called from the EventHttpModule (or another means of scheduling a Timer). Its sole purpose
-	/// is to iterate over an array of Events and deterimine of the Event's IEvent should be processed. All events are
-	/// added to the managed threadpool. 
-	/// </summary>
-	public class EventManager
+    /// <summary>
+    /// EventManager is called from the EventHttpModule (or another means of scheduling a Timer). Its sole purpose
+    /// is to iterate over an array of Events and deterimine of the Event's IEvent should be processed. All events are
+    /// added to the managed threadpool. 
+    /// </summary>
+    public class EventManager
 	{
         public static string RootPath;
 

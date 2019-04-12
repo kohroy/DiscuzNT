@@ -1,18 +1,16 @@
 ﻿using System.Text;
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Space.Entities;
 using Discuz.Space.Provider;
 using Discuz.Config;
 using Discuz.Entity;
-using Discuz.Space.Data;
 
 namespace Discuz.Space.Manage
 {
-	/// <summary>
-	/// DiscuzSpace用户控件基类
-	/// </summary>
-	public class DiscuzSpaceUCBase: System.Web.UI.UserControl
+    /// <summary>
+    /// DiscuzSpace用户控件基类
+    /// </summary>
+    public class DiscuzSpaceUCBase: System.Web.UI.UserControl
 	{
 		protected internal string username = "";
 

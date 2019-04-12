@@ -6,7 +6,6 @@ using Discuz.Space.Provider;
 using Discuz.Entity;
 using Discuz.Forum;
 using System.Data;
-using Discuz.Plugin.Album;
 
 namespace Discuz.Space
 {

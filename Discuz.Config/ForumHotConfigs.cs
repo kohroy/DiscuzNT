@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Discuz.Config
+﻿namespace Discuz.Config
 {
     public class ForumHotConfigs
     {

@@ -1,7 +1,5 @@
 using System;
 using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Forum;
 using Discuz.Config;
 
@@ -11,7 +9,7 @@ namespace Discuz.Web.Admin
     /// <summary>
     /// ËÑË÷ÒýÇæÓÅ»¯
     /// </summary>
-    
+
     public partial class searchengine : AdminPage
     {
         protected void Page_Load(object sender, EventArgs e)

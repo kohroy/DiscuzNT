@@ -1,11 +1,9 @@
-using System;
-
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// EnumValue 的摘要说明。
-	/// </summary>
-	public class EnumValue
+    /// <summary>
+    /// EnumValue 的摘要说明。
+    /// </summary>
+    public class EnumValue
 	{
 		public EnumValue()
 		{

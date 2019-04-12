@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Data;
-using System.Text;
 using System.Web;
 using Discuz.Common;
 using Discuz.Common.Generic;

@@ -1,14 +1,13 @@
 using System;
 using Microsoft.Win32;
-using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace Discuz.Common
 {
-	/// <summary>
-	/// SysInfo 的摘要说明。
-	/// </summary>
-	public class SysInfo
+    /// <summary>
+    /// SysInfo 的摘要说明。
+    /// </summary>
+    public class SysInfo
 	{
 		#region CpuUsage类
 		/// <summary>

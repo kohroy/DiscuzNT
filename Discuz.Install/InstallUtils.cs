@@ -2,7 +2,6 @@
 using System.IO;
 using System.Text;
 using System.Web;
-using System.Web.UI;
 
 using Discuz.Common;
 using Discuz.Forum;

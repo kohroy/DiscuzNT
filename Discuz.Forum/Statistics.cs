@@ -1,19 +1,15 @@
 using System;
 using System.Data;
-using System.Data.Common;
 
 using Discuz.Common;
-using Discuz.Data;
-using Discuz.Config;
-using Discuz.Entity;
 using Discuz.Cache;
 
 namespace Discuz.Forum
 {
-	/// <summary>
-	/// 论坛统计类
-	/// </summary>
-	public class Statistics
+    /// <summary>
+    /// 论坛统计类
+    /// </summary>
+    public class Statistics
 	{
 		/// <summary>
 		/// 获得统计列

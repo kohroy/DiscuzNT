@@ -1,12 +1,8 @@
-﻿using System;
-using System.Data;
-
+﻿
 using Discuz.Common;
 using Discuz.Common.Generic;
 using Discuz.Entity;
 using Discuz.Forum;
-using Discuz.Config;
-using Discuz.Web.UI;
 
 
 namespace Discuz.Web

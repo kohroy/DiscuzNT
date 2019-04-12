@@ -1,24 +1,16 @@
 ﻿using System;
 using System.Data;
-using System.Data.Common;
 
 using Discuz.Common;
-using Discuz.Space.Entities;
 using Discuz.Entity;
-using Discuz.Data;
-using Discuz.Config;
-using Discuz.Cache;
-using System.Collections;
-using Discuz.Space.Utilities;
-using Discuz.Common.Generic;
 using Discuz.Space.Data;
 
 namespace Discuz.Space.Provider
 {
-	/// <summary>
-	/// SpaceTemplateProvider 的摘要说明。
-	/// </summary>
-	public class BlogProvider
+    /// <summary>
+    /// SpaceTemplateProvider 的摘要说明。
+    /// </summary>
+    public class BlogProvider
 	{
 		public BlogProvider()
 		{}

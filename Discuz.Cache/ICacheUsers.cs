@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Data;
-using System.Collections.Generic;
-using System.Text;
 using Discuz.Entity;
 
 namespace Discuz.Cache.Data

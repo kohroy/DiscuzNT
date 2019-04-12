@@ -6,11 +6,6 @@ using System.Web.UI;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Button = Discuz.Control.Button;
-using CheckBoxList = Discuz.Control.CheckBoxList;
-using DataGrid = Discuz.Control.DataGrid;
-using DropDownList = Discuz.Control.DropDownList;
-using TextBox = Discuz.Control.TextBox;
 using Discuz.Config;
 using Discuz.Plugin.Payment.Alipay;
 using Discuz.Plugin.Payment;
@@ -21,7 +16,7 @@ namespace Discuz.Web.Admin
     /// <summary>
     /// ª˝∑÷…Ë÷√
     /// </summary>
-    
+
     public partial class scoreset : AdminPage
     {
         public DataSet dsSrc = new DataSet();

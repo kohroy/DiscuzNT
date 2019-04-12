@@ -1,13 +1,12 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// 在线用户信息集合类
-	/// </summary>
-	//[Serializable]
-	public class NoticeinfoCollection: CollectionBase
+    /// <summary>
+    /// 在线用户信息集合类
+    /// </summary>
+    //[Serializable]
+    public class NoticeinfoCollection: CollectionBase
 	{
 
 		/// <summary>

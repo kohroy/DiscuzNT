@@ -1,21 +1,17 @@
 using Discuz.Common;
-using Discuz.Forum;
- 
-using Discuz.Space.Utilities;
 using Discuz.Space.Provider;
 using Discuz.Config;
 using Discuz.Entity;
 using System.Text;
-using Discuz.Data;
 using System.Text.RegularExpressions;
 using Discuz.Space.Data;
 
 namespace Discuz.Space.Modules
 {
-	/// <summary>
-	/// NewPostModule 的摘要说明。
-	/// </summary>
-	public class NewPostModule :  BlogModule
+    /// <summary>
+    /// NewPostModule 的摘要说明。
+    /// </summary>
+    public class NewPostModule :  BlogModule
 	{
 		
 		private string filename = BaseConfigs.GetForumPath+"/space/Modules/builtin/blog/defaultmodule.config";

@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Xml.Serialization;
 
 namespace Discuz.Config
 {
-	/// <summary>
-	/// FTP配置信息类
-	/// </summary>
-	[Serializable]
+    /// <summary>
+    /// FTP配置信息类
+    /// </summary>
+    [Serializable]
     public class FTPConfigInfo : IConfigInfo
     {
 

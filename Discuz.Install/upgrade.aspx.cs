@@ -265,14 +265,14 @@ namespace Discuz.Install
         {
             ScheduleConfigInfo sci = ScheduleConfigs.GetConfig();
             //检查该事件是否存在
-            foreach (Discuz.Config.Event ev1 in sci.Events)
+            foreach (Config.Event ev1 in sci.Events)
             {
                 if (ev1.Key == "InvitationEvent")
                     return;
             }
 
             //建立新的邀请计划任务
-            Discuz.Config.Event ev = new Discuz.Config.Event();
+            Config.Event ev = new Config.Event();
             ev.Key = "InvitationEvent";
             ev.Enabled = true;
             ev.IsSystemEvent = true;

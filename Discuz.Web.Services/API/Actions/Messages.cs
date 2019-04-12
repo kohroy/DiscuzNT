@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using Discuz.Common;
 using Discuz.Entity;
 using Discuz.Forum;
@@ -150,7 +149,7 @@ namespace Discuz.Web.Services.API.Actions
             mgr.Messages = newList.ToArray();
 
             if (Format == FormatType.JSON)
-                return JavaScriptConvert.SerializeObject(mgr);
+                return JsonConvert.SerializeObject(mgr);
 
             return Util.AddMessageCDATA(SerializationHelper.Serialize(mgr));
 

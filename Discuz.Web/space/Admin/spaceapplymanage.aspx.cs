@@ -1,19 +1,10 @@
 ﻿using System;
 using System.Data;
-using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Web.UI;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Space;
-
-using Button = Discuz.Control.Button;
-using CheckBoxList = Discuz.Control.CheckBoxList;
-using DataGrid = Discuz.Control.DataGrid;
-using DropDownList = Discuz.Control.DropDownList;
-using TextBox = Discuz.Control.TextBox;
-using Discuz.Control;
 using Discuz.Config;
 using Discuz.Entity;
 #if NET1
@@ -25,7 +16,7 @@ using Discuz.Space.Data;
 
 namespace Discuz.Space.Admin
 {
-	
+
 #if NET1
     public class SpaceApplyManage : AdminPage
 #else

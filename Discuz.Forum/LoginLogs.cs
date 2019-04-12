@@ -1,17 +1,14 @@
 using System.Data;
 
 using Discuz.Common;
-using Discuz.Data;
-using Discuz.Config;
-using Discuz.Entity;
 
 namespace Discuz.Forum
 {
 
-	/// <summary>
-	/// 登录日志操作类
-	/// </summary>
-	public class LoginLogs
+    /// <summary>
+    /// 登录日志操作类
+    /// </summary>
+    public class LoginLogs
 	{
         private static object lockHelper = new object();
 

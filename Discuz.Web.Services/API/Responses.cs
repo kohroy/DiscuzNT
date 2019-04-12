@@ -1,7 +1,5 @@
-using System;
 using System.Xml.Serialization;
 using Newtonsoft.Json;
-using Discuz.Entity;
 
 namespace Discuz.Web.Services.API
 {

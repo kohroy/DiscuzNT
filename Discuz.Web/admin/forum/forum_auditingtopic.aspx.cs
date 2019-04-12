@@ -1,11 +1,5 @@
 using System;
-using System.Data;
-using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Forum;
-using Discuz.Config;
-using Discuz.Entity;
 using Discuz.Common;
 
 namespace Discuz.Web.Admin
@@ -13,7 +7,7 @@ namespace Discuz.Web.Admin
     /// <summary>
     /// 查找要审核的主题 
     /// </summary>
-    
+
     public partial class auditingtopic : AdminPage
     {
         protected void Page_Load(object sender, EventArgs e)

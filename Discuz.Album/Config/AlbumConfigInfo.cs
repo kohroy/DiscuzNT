@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 using Discuz.Config;
 
 namespace Discuz.Album.Config

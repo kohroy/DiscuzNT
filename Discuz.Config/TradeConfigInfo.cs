@@ -1,9 +1,8 @@
 using System;
-using System.Text;
 
 namespace Discuz.Config
 {
-    
+
     /// <summary>
     /// 交易配置信息类
     /// </summary>

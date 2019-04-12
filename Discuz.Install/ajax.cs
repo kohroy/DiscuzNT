@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 using Discuz.Common;
-using Discuz.Config;
-using Discuz.Config.Provider;
 
 namespace Discuz.Install
 {

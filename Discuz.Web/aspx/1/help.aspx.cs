@@ -1,17 +1,8 @@
-using System;
-using System.Data;
-using System.Configuration;
-using System.Collections;
 using System.Diagnostics;
 using System.Web;
-using System.Web.Security;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Web.UI.HtmlControls;
 
 using Discuz.Config;
 using Discuz.Forum;
-using Discuz.Web.UI;
 using Discuz.Entity;
 using Discuz.Common;
 using Discuz.Common.Generic;

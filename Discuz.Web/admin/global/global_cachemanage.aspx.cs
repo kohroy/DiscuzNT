@@ -1,12 +1,8 @@
 using System;
-using System.IO;
-using System.Web.UI;
 using Discuz.Cache;
-using Discuz.Control;
 using Discuz.Forum;
 
 using Discuz.Aggregation;
-using Discuz.Common;
 
 namespace Discuz.Web.Admin
 {

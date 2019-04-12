@@ -1,14 +1,11 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using System.Web;
 
 using Discuz.Common;
-using Discuz.Entity;
 using Discuz.Forum;
 using Discuz.Plugin.Payment;
 using Discuz.Plugin.Payment.Alipay;
 using Discuz.Web.UI;
-using Discuz.Plugin.PasswordMode;
 
 namespace Discuz.Web
 {

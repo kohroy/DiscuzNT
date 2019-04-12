@@ -1,9 +1,6 @@
 using System;
 using System.Data;
 using System.Web.UI.WebControls;
-using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Config;
@@ -14,7 +11,7 @@ namespace Discuz.Web.Admin
     /// <summary>
     /// ±à¼­¹ã¸æ
     /// </summary>
-    
+
     public partial class editadvs : AdminPage
     {
         /// <summary>

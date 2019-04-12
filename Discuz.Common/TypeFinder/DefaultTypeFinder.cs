@@ -1,16 +1,13 @@
 using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Reflection;
 using System.Collections;
-using System.Web;
 using System.Diagnostics;
-using System.Configuration;
 using System.IO;
 
 namespace Discuz.Common.TypeFinder
 {
-	
+
     public class DefaultTypeFinder : Discuz.Common.TypeFinder.ITypeFinder
     {
 		#region Private Fields

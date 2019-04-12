@@ -1,12 +1,10 @@
-using System;
-
 namespace Discuz.Entity
 {
 
-	/// <summary>
-	/// 简短的用户信息描述类
-	/// </summary>    
-	public class ShortUserInfo
+    /// <summary>
+    /// 简短的用户信息描述类
+    /// </summary>    
+    public class ShortUserInfo
 	{
 		
 		private int m_uid;	//用户uid

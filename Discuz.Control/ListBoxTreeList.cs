@@ -4,15 +4,12 @@ using System.Web;
 using System.Web.UI.WebControls;
 using System.ComponentModel;
 
-using Discuz.Common;
-using Discuz.Data;
-
 namespace Discuz.Control
 {
-	/// <summary>
+    /// <summary>
     /// 树形列表框控件。
-	/// </summary>
-	[DefaultProperty("Text"),ToolboxData("<{0}:ListBoxTreeList runat=server></{0}:ListBoxTreeList>")]
+    /// </summary>
+    [DefaultProperty("Text"),ToolboxData("<{0}:ListBoxTreeList runat=server></{0}:ListBoxTreeList>")]
     public class ListBoxTreeList : Discuz.Control.WebControl
 	{
         /// <summary>

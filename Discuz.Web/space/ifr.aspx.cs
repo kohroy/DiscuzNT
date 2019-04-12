@@ -1,20 +1,16 @@
-using System;
 using System.Text;
 using System.Web;
-using System.Web.UI;
 using Discuz.Common;
-using Discuz.Forum;
-using Discuz.Space.Entities;
 using Discuz.Space.Pages;
 using Discuz.Entity;
 using Discuz.Config;
 
 namespace Discuz.Space
 {
-	/// <summary>
-	/// Iframe模块转换器
-	/// </summary>
-	public class ifr : SpaceBasePage
+    /// <summary>
+    /// Iframe模块转换器
+    /// </summary>
+    public class ifr : SpaceBasePage
 	{
 		private const string IFRAME_HTML = @"<html><head><style type=""text/css"">
 <!--

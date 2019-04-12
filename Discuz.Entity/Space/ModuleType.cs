@@ -1,8 +1,6 @@
-using System;
-
 namespace Discuz.Entity
 {
-	public enum ModuleType
+    public enum ModuleType
 	{
 		/// <summary>
 		/// RssÄ£¿é

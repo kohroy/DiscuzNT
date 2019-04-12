@@ -1,21 +1,13 @@
 using System;
-using System.Text.RegularExpressions;
-using System.Reflection;
-using System.Web.UI.MobileControls;
 using System.Collections;
 using System.Data;
-using System.Web;
-using System.Data.Common;
 using System.Collections.Generic;
 using System.Text;
-using System.IO;
 
 using Discuz.Common;
 using Discuz.Config;
 using Discuz.Forum;
-using Discuz.Web.UI;
 using Discuz.Entity;
-using Discuz.Plugin.PasswordMode;
 
 namespace Discuz.Web
 {

@@ -1,14 +1,12 @@
-using Discuz.Common;
-using Discuz.Data;
 using Discuz.Entity;
 using Discuz.Common.Generic;
 
 namespace Discuz.Forum
 {
-	/// <summary>
-	/// 版主操作类
-	/// </summary>
-	public class Moderators
+    /// <summary>
+    /// 版主操作类
+    /// </summary>
+    public class Moderators
 	{
 		/// <summary>
 		/// 获得所有版主信息

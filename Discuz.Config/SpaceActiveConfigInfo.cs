@@ -1,13 +1,12 @@
-﻿using System;
-using Discuz.Common;
+﻿using Discuz.Common;
 
 namespace Discuz.Config
 {
 
-	/// <summary>
+    /// <summary>
     /// 空间开通配置信息类
-	/// </summary>
-	public class SpaceActiveConfigInfo : IConfigInfo
+    /// </summary>
+    public class SpaceActiveConfigInfo : IConfigInfo
     {
         #region 私有字段
         private string m_allowPostcount = "0"; //允许通过回复数开通个人空间

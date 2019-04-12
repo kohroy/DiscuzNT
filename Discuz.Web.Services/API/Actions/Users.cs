@@ -82,7 +82,7 @@ namespace Discuz.Web.Services.API.Actions
 
             if (Format == FormatType.JSON)
             {
-                return Util.RemoveJsonNull(JavaScriptConvert.SerializeObject(userlist.ToArray()));
+                return Util.RemoveJsonNull(JsonConvert.SerializeObject(userlist.ToArray()));
             }
             if (userlist.Count < 1)
             {
@@ -181,7 +181,7 @@ namespace Discuz.Web.Services.API.Actions
 
             try
             {
-                ufe = JavaScriptConvert.DeserializeObject<UserForEditing>(GetParam("user_info").ToString());
+                ufe = JsonConvert.DeserializeObject<UserForEditing>(GetParam("user_info").ToString());
             }
             catch
             {
@@ -582,7 +582,7 @@ namespace Discuz.Web.Services.API.Actions
 
             if (Format == FormatType.JSON)
             {
-                return Util.RemoveJsonNull(JavaScriptConvert.SerializeObject(userListResult.ToArray()));
+                return Util.RemoveJsonNull(JsonConvert.SerializeObject(userListResult.ToArray()));
             }
 
             if (userListResult.Count < 1)

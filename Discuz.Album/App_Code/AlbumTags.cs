@@ -1,14 +1,11 @@
-﻿using System;
-using System.Text;
+﻿using System.Text;
 using Discuz.Common;
 using Discuz.Entity;
 using Discuz.Forum.ScheduledEvents;
 using Discuz.Common.Generic;
 using System.Data;
-using Discuz.Data;
 using Discuz.Config;
 using Discuz.Album.Data;
-using Discuz.Forum;
 
 namespace Discuz.Album
 {

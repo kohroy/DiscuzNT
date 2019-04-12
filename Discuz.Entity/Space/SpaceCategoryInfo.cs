@@ -1,11 +1,9 @@
-﻿using System;
-
-namespace Discuz.Entity
+﻿namespace Discuz.Entity
 {
-　　/// <summary>
-	/// SpaceCategoryInfo 的摘要说明。
-	/// </summary>
-	public class SpaceCategoryInfo
+    /// <summary>
+    /// SpaceCategoryInfo 的摘要说明。
+    /// </summary>
+    public class SpaceCategoryInfo
 　　{
 		private int _categoryid;
 		public int CategoryID

@@ -2,8 +2,6 @@ using System;
 using System.Web.UI.WebControls;
 
 using Discuz.Forum;
-using DataGrid = Discuz.Control.DataGrid;
-using Discuz.Config;
 using Discuz.Entity;
 using Discuz.Common.Generic;
 
@@ -12,7 +10,7 @@ namespace Discuz.Web.Admin
     /// <summary>
     /// 系统管理组列表
     /// </summary>
-    
+
     public partial class sysadminusergroupgrid : AdminPage
     {
 

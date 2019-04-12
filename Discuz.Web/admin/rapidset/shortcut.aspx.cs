@@ -5,16 +5,11 @@ using System.Net;
 using System.Web.UI.WebControls;
 using System.Web.UI;
 using System.Xml;
-
-using Discuz.Control;
 using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Web.Admin.AutoUpdateManager;
 using Discuz.Config;
-using Discuz.Entity;
 using System.Text;
-using System.Diagnostics;
-using System.Reflection;
 using System.Web;
 using System.Text.RegularExpressions;
 using Discuz.Common.Xml;

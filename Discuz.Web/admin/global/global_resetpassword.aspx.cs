@@ -1,13 +1,8 @@
 using System;
-using System.Data;
 using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Forum;
 using Discuz.Common;
-using Discuz.Config;
 using Discuz.Entity;
-using Discuz.Plugin.PasswordMode;
 
 namespace Discuz.Web.Admin
 {

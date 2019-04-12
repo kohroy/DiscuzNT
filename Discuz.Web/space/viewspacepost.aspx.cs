@@ -1,19 +1,17 @@
 ﻿using Discuz.Common;
-using Discuz.Space.Entities;
 using Discuz.Space.Pages;
 using Discuz.Entity;
 using Discuz.Space.Provider;
-using Discuz.Data;
 using Discuz.Config;
 using System.Web;
 using System;
 
 namespace Discuz.Space
 {
-	/// <summary>
+    /// <summary>
     /// 显示日志内容页面
-	/// </summary>
-	public class viewspacepost : SpaceBasePage
+    /// </summary>
+    public class viewspacepost : SpaceBasePage
 	{
 		public int postid = 0;
 

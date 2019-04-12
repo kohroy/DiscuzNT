@@ -1,9 +1,7 @@
 ﻿using System;
 #if NET1
 #else
-using System.Collections.Generic;
 #endif
-using System.Text;
 
 namespace Discuz.Web.Services.API
 {

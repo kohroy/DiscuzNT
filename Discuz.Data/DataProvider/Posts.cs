@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Data;
-using System.Text;
 
 using Discuz.Entity;
 using Discuz.Common;

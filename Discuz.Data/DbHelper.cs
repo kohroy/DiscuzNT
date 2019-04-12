@@ -1,6 +1,5 @@
 using System;
 using System.Data;
-using System.Xml;
 using System.Data.Common;
 using System.Collections;
 
@@ -41,7 +40,7 @@ namespace Discuz.Data
 
         #endregion
 
-#if DEBUG                      
+#if DEBUG
         private static string m_querydetail = "";
         public static string QueryDetail
         {
@@ -57,7 +56,7 @@ namespace Discuz.Data
             string paramdetails = "";
             if (cmdParams != null && cmdParams.Length > 0)
             {
-                foreach(DbParameter param in cmdParams)
+                foreach (DbParameter param in cmdParams)
                 {
                     if (param == null)
                     {
@@ -320,8 +319,8 @@ namespace Discuz.Data
 
             DbCommand cmd = connection.CreateCommand();
             cmd.CommandText = spName;
-            cmd.CommandType = CommandType.StoredProcedure;            
-            
+            cmd.CommandType = CommandType.StoredProcedure;
+
             // 检索cmd指定的存储过程的参数信息,并填充到cmd的Parameters参数集中.
             Provider.DeriveParameters(cmd);
             connection.Close();
@@ -448,7 +447,7 @@ namespace Discuz.Data
             }
         }
 
-     
+
         /// <summary>
         /// 执行指定连接字符串并返回刚插入的自增ID,类型的DbCommand.如果没有提供参数,不返回结果.
         /// </summary>
@@ -788,7 +787,7 @@ namespace Discuz.Data
                     {
                         ExecuteNonQuery(CommandType.Text, query);
                     }
-                    catch { ;}
+                    catch {; }
                 }
 
                 if (lastPos == -1)
@@ -918,8 +917,8 @@ namespace Discuz.Data
                 da.SelectCommand = cmd;
                 DataSet ds = new DataSet();
 
-#if DEBUG                
-               DateTime dt1 = DateTime.Now;
+#if DEBUG
+                DateTime dt1 = DateTime.Now;
 #endif
                 // 填充DataSet.
                 da.Fill(ds);
@@ -939,7 +938,7 @@ namespace Discuz.Data
             }
         }
 
-     
+
         /// <summary>
         /// 执行指定数据库连接对象的命令,指定参数值,返回DataSet.
         /// </summary>
@@ -1145,7 +1144,7 @@ namespace Discuz.Data
         }
 
 
-      
+
         /// <summary>
         /// 执行指定数据库连接字符串的数据阅读器.
         /// </summary>
@@ -1407,7 +1406,7 @@ namespace Discuz.Data
             }
         }
 
-      
+
         /// <summary>
         /// 执行指定数据库连接对象的命令,返回结果集中的第一行第一列.
         /// </summary>
@@ -1463,7 +1462,7 @@ namespace Discuz.Data
             return retval;
         }
 
-      
+
         /// <summary>
         /// 执行指定数据库连接对象的命令,指定参数值,返回结果集中的第一行第一列.
         /// </summary>
@@ -1900,7 +1899,7 @@ namespace Discuz.Data
                 connection.Close();
         }
         #endregion
-       
+
 
         #region 检索指定的存储过程的参数集
 
@@ -2149,15 +2148,15 @@ namespace Discuz.Data
                     da.SelectCommand = cmd;
                     DataSet ds = new DataSet();
 
-#if DEBUG                
-               DateTime dt1 = DateTime.Now;
+#if DEBUG
+                    DateTime dt1 = DateTime.Now;
 #endif
                     // 填充DataSet.
                     da.Fill(ds);
-#if DEBUG                
-                DateTime dt2 = DateTime.Now;
+#if DEBUG
+                    DateTime dt2 = DateTime.Now;
 
-                m_querydetail += GetQueryDetail(cmd.CommandText, dt1, dt2, commandParameters);
+                    m_querydetail += GetQueryDetail(cmd.CommandText, dt1, dt2, commandParameters);
 #endif
                     m_querycount++;
 
@@ -2221,15 +2220,15 @@ namespace Discuz.Data
                     // 创建数据阅读器
                     DbDataReader dataReader;
 
-#if DEBUG                
-                DateTime dt1 = DateTime.Now;
+#if DEBUG
+                    DateTime dt1 = DateTime.Now;
 #endif
                     dataReader = cmd.ExecuteReader(CommandBehavior.CloseConnection);
 
-#if DEBUG                
-                DateTime dt2 = DateTime.Now;
+#if DEBUG
+                    DateTime dt2 = DateTime.Now;
 
-                m_querydetail += GetQueryDetail(cmd.CommandText, dt1, dt2, commandParameters);
+                    m_querydetail += GetQueryDetail(cmd.CommandText, dt1, dt2, commandParameters);
 #endif
                     m_querycount++;
                     // 清除参数,以便再次使用..
@@ -2342,7 +2341,7 @@ namespace Discuz.Data
             return true;
         }
 
-    
+
         /// <summary>
         /// 获取使用的数据库(或快照)链接串
         /// </summary>
@@ -2362,7 +2361,7 @@ namespace Discuz.Data
                         return EntLibConfigs.GetConfig().Onlinetableconnect.SqlServerConn;
                     }
                 }
-            }           
+            }
             //使用读写分离方案时
             if (DbSnapConfigs.GetConfig() != null && DbSnapConfigs.GetConfig().AppDbSnap)
             {
@@ -2375,7 +2374,7 @@ namespace Discuz.Data
                         snapLogList.Add(string.Format("{{'SouceID' : {0}, 'DbconnectString' : '{1}', 'CommandText' : '{2}', 'PostDateTime' : '{3}'}},",
                                          dbSnapInfo.SouceID,
                                          dbSnapInfo.DbconnectString,
-                                         commandText.Replace("'",""),
+                                         commandText.Replace("'", ""),
                                          Discuz.Common.Utils.GetDateTime()));
 
                     return dbSnapInfo.DbconnectString;

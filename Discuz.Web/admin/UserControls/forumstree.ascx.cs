@@ -1,13 +1,10 @@
 using System.Text;
 using System.Web.UI;
-using System.Web.UI.WebControls;
 using System;
 using System.Data;
 
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Entity;
-using Discuz.Config;
 
 namespace Discuz.Web.Admin
 {

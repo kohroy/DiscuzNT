@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Web;
 using System.Web.Services;
 using System.IO;
-using System.Text;
 using System.Web.Hosting;
-using System.Drawing.Drawing2D;
 using System.Drawing;
 using System.Drawing.Imaging;
 

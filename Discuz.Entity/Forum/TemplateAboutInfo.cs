@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Discuz.Entity
+﻿namespace Discuz.Entity
 {
     /// <summary>
     /// 模板说明结构, 每个模板目录下均可使用指定结构的xml文件来说明该模板的基本信息

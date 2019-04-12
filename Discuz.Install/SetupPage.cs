@@ -14,7 +14,7 @@ namespace Discuz.Install
     /// <summary>
     /// SetupPage 的摘要说明。
     /// </summary>
-    public class SetupPage : System.Web.UI.Page
+    public class SetupPage : Page
     {
 
         public static readonly string producename = Utils.GetAssemblyProductName();  //当前产品版本名称

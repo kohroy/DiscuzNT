@@ -1,10 +1,5 @@
-﻿using System;
-using System.Data;
-using System.Data.SqlClient;
-using System.Text;
-using Discuz.Common;
+﻿using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Web.UI;
 
 namespace Discuz.Web
 {

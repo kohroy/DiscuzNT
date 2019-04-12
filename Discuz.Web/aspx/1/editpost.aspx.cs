@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections;
 using System.Data;
 using System.Text;
-using System.IO;
 using System.Text.RegularExpressions;
 
 using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Config;
 using Discuz.Entity;
-using Discuz.Web.UI;
 using Discuz.Common.Generic;
 using Discuz.Plugin.Album;
 

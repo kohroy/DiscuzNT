@@ -1,11 +1,8 @@
 using System;
 using System.Xml;
-using System.Text;
 using System.Data;
-using System.Data.Common;
 
 using Discuz.Common;
-using Discuz.Data;
 using Discuz.Config;
 using Discuz.Entity;
 

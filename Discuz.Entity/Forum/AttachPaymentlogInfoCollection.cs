@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// AttachPaymentlogInfoCollection 的摘要说明。
-	/// </summary>
-	public class AttachPaymentlogInfoCollection: CollectionBase
+    /// <summary>
+    /// AttachPaymentlogInfoCollection 的摘要说明。
+    /// </summary>
+    public class AttachPaymentlogInfoCollection: CollectionBase
 	{
 
 		/// <summary>

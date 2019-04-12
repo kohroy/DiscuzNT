@@ -1,11 +1,9 @@
-using System;
-
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// UserExtcreditsInfo 的摘要说明。
-	/// </summary>
-	public class UserExtcreditsInfo
+    /// <summary>
+    /// UserExtcreditsInfo 的摘要说明。
+    /// </summary>
+    public class UserExtcreditsInfo
 	{
     	private string m_name; //积分名称
 		private string m_unit; //积分单位

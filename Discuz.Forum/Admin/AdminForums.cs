@@ -1,8 +1,4 @@
-﻿using System;
-using System.Data;
-using System.Data.Common;
-using System.Data.SqlClient;
-using System.Text;
+﻿using System.Data;
 
 using Discuz.Common;
 using Discuz.Config;

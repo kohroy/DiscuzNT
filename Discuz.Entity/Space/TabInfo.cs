@@ -1,11 +1,9 @@
-using System;
-
 namespace Discuz.Entity
 {
-	/// <summary>
-	/// TabInfo 的摘要说明。
-	/// </summary>
-	public class TabInfo
+    /// <summary>
+    /// TabInfo 的摘要说明。
+    /// </summary>
+    public class TabInfo
 	{
 		public TabInfo()
 		{

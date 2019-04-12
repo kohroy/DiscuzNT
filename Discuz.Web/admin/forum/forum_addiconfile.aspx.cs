@@ -1,11 +1,7 @@
 using System;
 using System.Web.UI;
-
-using Discuz.Control;
 using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Config;
-using Discuz.Entity;
 
 namespace Discuz.Web.Admin
 {

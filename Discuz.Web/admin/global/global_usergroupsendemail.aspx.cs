@@ -1,14 +1,9 @@
 using System;
 using System.Data;
 using System.Threading;
-using System.Web.UI.WebControls;
-using System.Web.UI;
 using System.Web;
-
-using Discuz.Control;
 using Discuz.Forum;
 using Discuz.Config;
-using Discuz.Entity;
 using Discuz.Common;
 
 namespace Discuz.Web.Admin
@@ -16,7 +11,7 @@ namespace Discuz.Web.Admin
     /// <summary>
     /// 用户组邮件发送. 
     /// </summary>
-     
+
     public partial class usergroupsendemail : AdminPage
     {
         public string groupidlist = "";

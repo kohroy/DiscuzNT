@@ -1,19 +1,15 @@
-﻿using System;
-
+﻿
 using Discuz.Common;
-using Discuz.Space.Entities;
 using Discuz.Space.Provider;
 using Discuz.Entity;
-using Discuz.Data;
 using Discuz.Config;
-using Discuz.Common.Generic;
 
 namespace Discuz.Space.Manage
 {
-	/// <summary>
+    /// <summary>
     ///	日志列表控件
-	/// </summary>
-	public class ajaxbloglist : DiscuzSpaceUCBase
+    /// </summary>
+    public class ajaxbloglist : DiscuzSpaceUCBase
 	{
         public int currentpage = DNTRequest.GetInt("currentpage", 1);
 	

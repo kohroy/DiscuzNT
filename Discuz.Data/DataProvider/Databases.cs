@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text;
-
-namespace Discuz.Data
+﻿namespace Discuz.Data
 {
     public class Databases
     {

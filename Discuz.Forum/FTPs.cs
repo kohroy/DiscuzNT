@@ -1,12 +1,9 @@
-﻿using System;
-using System.Text;
-
+﻿
 using Discuz.Common;
 using Discuz.Config;
-using System.Diagnostics;
 namespace Discuz.Forum
 {
-    
+
     /// <summary>
     /// FTP操作类
     /// </summary>

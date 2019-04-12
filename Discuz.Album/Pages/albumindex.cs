@@ -1,19 +1,17 @@
-﻿using System;
-using System.Data;
+﻿using System.Data;
 using Discuz.Common;
 using Discuz.Forum;
 using Discuz.Entity;
 using Discuz.Config;
 using Discuz.Aggregation;
-using System.Xml;
 using Discuz.Album.Data;
 
 namespace Discuz.Album.Pages
 {
-	/// <summary>
-	/// 相册聚合首页
-	/// </summary>
-	public class albumindex : PageBase
+    /// <summary>
+    /// 相册聚合首页
+    /// </summary>
+    public class albumindex : PageBase
     {
         #region 变量声明
         /// <summary>

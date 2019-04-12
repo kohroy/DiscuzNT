@@ -1,9 +1,5 @@
 ﻿using Discuz.Common;
 using Discuz.Forum;
-using Discuz.Web.UI;
-using Discuz.Config;
-using Discuz.Entity;
-using Discuz.Common.Generic;
 
 namespace Discuz.Web
 {

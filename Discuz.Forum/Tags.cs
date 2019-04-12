@@ -4,11 +4,8 @@ using System.Text;
 using System.Data;
 
 using Discuz.Common;
-using Discuz.Config;
 using Discuz.Entity;
 using Discuz.Common.Generic;
-using Discuz.Data;
-using Discuz.Forum.ScheduledEvents;
 
 namespace Discuz.Forum
 {

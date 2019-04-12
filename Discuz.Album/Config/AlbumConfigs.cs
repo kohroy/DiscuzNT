@@ -1,7 +1,4 @@
-﻿using System;
-using System.Text;
-
-namespace Discuz.Album.Config
+﻿namespace Discuz.Album.Config
 {
     /// <summary>
     /// 相册配置操作类

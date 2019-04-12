@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Discuz.Entity;
+﻿using Discuz.Entity;
 using System.Data;
-using Discuz.Common.Generic;
 
 namespace Discuz.Plugin.Space
 {

@@ -1,17 +1,13 @@
 using System;
 using System.Web.UI;
 
-using Discuz.Control;
-using Discuz.Common;
-using Discuz.Forum;
-
 namespace Discuz.Web.Admin
 {
     /// <summary>
     /// 上传用户头像
     /// </summary>
-    
-   public partial class uploadavatar : AdminPage
+
+    public partial class uploadavatar : AdminPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {

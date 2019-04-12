@@ -4,14 +4,13 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 
 using Discuz.Forum;
-using DataGrid = Discuz.Control.DataGrid;
 
 namespace Discuz.Web.Admin
 {
     /// <summary>
     /// URL÷ÿ∂®œÚ
     /// </summary>
-    
+
     public partial class urlgrid : AdminPage
     {
         public DataSet dsSrc = new DataSet();
